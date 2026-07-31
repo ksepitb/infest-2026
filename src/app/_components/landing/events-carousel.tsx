@@ -16,35 +16,35 @@ const events: EventItem[] = [
     title: "Pre-Event Workshop",
     description:
       "Workshop online interaktif bersama para ahli keuangan dan mentor ternama untuk membekali peserta dengan pengetahuan dasar valuasi saham dan analisis bisnis.",
-    image: "/images/event1.png",
+    image: "/images/lantik.jpg",
   },
   {
     id: 2,
     title: "Equity Research Competition",
     description:
       "Lomba analisis ekuitas dan saham tingkat nasional untuk menguji kemampuan riset keuangan, penilaian valuasi perusahaan, serta memberikan rekomendasi investasi profesional.",
-    image: "/images/event2.png",
+    image: "/images/lantik.jpg",
   },
   {
     id: 3,
     title: "Event",
     description:
       "Rangkaian acara INFEST 2025 terdiri dari workshop online interaktif sebagai pre-event, yang dilengkapi dengan diskusi dan studi kasus. Acara ini akan ditutup dengan seminar puncak yang diselenggarakan secara hybrid, menampilkan tiga sesi berbeda yang dibawakan oleh para pembicara berpengalaman.",
-    image: "/images/event1.png",
+    image: "/images/lantik.jpg",
   },
   {
     id: 4,
     title: "Business Case Competition",
     description:
       "Kompetisi studi kasus bisnis yang menantang mahasiswa dalam merumuskan strategi bisnis yang inovatif, solutif, dan berdampak nyata bagi industri pasar modal.",
-    image: "/images/event2.png",
+    image: "/images/lantik.jpg",
   },
   {
     id: 5,
     title: "Awarding & Networking",
     description:
       "Malam penganugerahan bagi pemenang kompetisi INFEST 2026 serta kesempatan berjejaring dengan investor, profesional, dan peserta dari seluruh Indonesia.",
-    image: "/images/event1.png",
+    image: "/images/lantik.jpg",
   },
 ];
 
@@ -62,7 +62,7 @@ export function EventsCarousel() {
   return (
     <div className="relative w-full py-8">
       {/* 3D Coverflow Stage */}
-      <div className="relative flex h-[420px] w-full items-center justify-center overflow-hidden sm:h-[480px]">
+      <div className="relative flex h-[300px] w-full items-center justify-center overflow-hidden sm:h-[320px]">
         {events.map((event, index) => {
           let offset = index - activeIndex;
           if (offset < -2) offset += events.length;
@@ -107,7 +107,7 @@ export function EventsCarousel() {
           return (
             <div
               key={event.id}
-              className={`absolute top-0 flex h-full w-[85%] max-w-[580px] flex-col overflow-hidden rounded-3xl bg-dark-purple shadow-[0_0_35px_rgba(240,74,201,0.25)] backdrop-blur-md transition-all duration-500 ease-out sm:w-[580px] ${transformStyle}`}
+              className={`bg-dark-purple absolute top-0 flex h-[280px] w-full max-w-[720px] flex-col overflow-hidden rounded-3xl shadow-[0_0_35px_rgba(240,74,201,0.25)] backdrop-blur-md transition-all duration-500 ease-out sm:h-[300px] sm:w-[500px] ${transformStyle}`}
               onClick={() => setActiveIndex(index)}
               style={{ zIndex, opacity }}
             >
@@ -126,18 +126,22 @@ export function EventsCarousel() {
 
                 {/* Content Overlay (Centered active card detail) */}
                 <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
-                  <h3 className="mb-2 text-2xl font-bold text-infest-white sm:text-3xl">
+                  <h3 className="text-highlight-gradient-dark-bg glow-text-1 mb-2 text-2xl font-bold drop-shadow-[6px_4px_22.1px_rgba(0,0,0,0.50)] sm:text-4xl">
                     {event.title}
                   </h3>
-                  <p className="mb-6 text-xs leading-relaxed text-infest-white/90 sm:text-sm">
+                  <p className="text-infest-white/90 mb-6 text-xs leading-relaxed font-medium sm:text-sm">
                     {event.description}
                   </p>
-                  <a
-                    className="inline-flex items-center justify-center rounded-full bg-white px-6 py-2 text-xs font-bold tracking-wide text-dark-purple shadow-[0_0_15px_rgba(255,255,255,0.4)] transition hover:bg-white/90"
-                    href="#register"
-                  >
-                    See More
-                  </a>
+                  <div className="flex justify-end">
+                    <a
+                      className="bg-infest-white hover:bg-infest-white/70 inline-flex cursor-pointer items-center justify-center rounded-full px-6 py-2 text-sm font-bold tracking-wide shadow-[0_0_15px_rgba(255,255,255,0.4)] transition"
+                      href="#register"
+                    >
+                      <span className="text-gradient-4 drop-shadow-[6px_4px_22.1px_rgba(0,0,0,0.50)]">
+                        See More
+                      </span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -154,7 +158,7 @@ export function EventsCarousel() {
           type="button"
         >
           <svg
-            className="h-5 w-5 cursor-pointer"
+            className="hover:text-infest-pink h-5 w-5 cursor-pointer transition-all hover:scale-125"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -174,10 +178,10 @@ export function EventsCarousel() {
             <button
               key={ev.id}
               aria-label={`Go to slide ${i + 1}`}
-              className={`h-2.5 rounded-full transition-all duration-300 ${
+              className={`rounded-full transition-all duration-300 ${
                 i === activeIndex
-                  ? "w-8 bg-infest-pink shadow-[0_0_12px_#F04AC9]"
-                  : "w-2.5 bg-white/30 hover:bg-white/60"
+                  ? "bg-infest-pink h-3.5 w-3.5 shadow-[0_0_10px_#F04AC9]"
+                  : "h-2.5 w-2.5 bg-white/30 hover:bg-white/60"
               }`}
               onClick={() => setActiveIndex(i)}
               type="button"
@@ -192,7 +196,7 @@ export function EventsCarousel() {
           type="button"
         >
           <svg
-            className="h-5 w-5 cursor-pointer"
+            className="hover:text-infest-pink h-5 w-5 cursor-pointer transition-all hover:scale-125"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"

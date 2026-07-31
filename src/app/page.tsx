@@ -59,8 +59,6 @@ export default function Home() {
         <div className="absolute top-[30%] left-[-10%] h-[500px] w-[500px] rounded-full bg-[#8E00A6]/20 blur-[150px]" />
         <div className="absolute top-[65%] right-[-10%] h-[600px] w-[600px] rounded-full bg-[#530074]/30 blur-[160px]" />
 
-       
-
         {/* Dotted matrix SVG ornament */}
         <Image
           alt=""
@@ -85,8 +83,28 @@ export default function Home() {
         className="relative z-10 flex min-h-screen flex-col items-center justify-center px-6 pt-32 pb-20 text-center"
         id="home"
       >
+        {/* Left Ornament */}
+        <div className="pointer-events-none absolute left-0 top-[20%] z-0 select-none opacity-80 md:top-[25%] lg:top-[10%]">
+          <Image
+            src="/images/ornament1-left.png"
+            alt=""
+            width={600}
+            height={600}
+            className="w-[200px] object-contain sm:w-[250px] md:w-[300px] lg:w-[600px]"
+          />
+        </div>
+        {/* Right Ornament */}
+        <div className="pointer-events-none absolute right-0 top-[20%] z-0 select-none opacity-80 md:top-[25%] lg:top-[10%]">
+          <Image
+            src="/images/ornament1-right.png"
+            alt=""
+            width={600}
+            height={600}
+            className="w-[200px] object-contain sm:w-[250px] md:w-[300px] lg:w-[600px]"
+          />
+        </div>
         {/* Badge */}
-        <div className="inline-flex w-[230px] h-[50px] items-center justify-center gap-2 rounded-[41px] bg-light-purple text-sm font-bold tracking-wider text-white shadow-[0_4px_4px_rgba(0,0,0,0.25),inset_0_10px_18.8px_#A68FC2] backdrop-blur-md mt-10">
+        <div className="bg-light-purple mt-10 inline-flex h-[50px] w-[230px] items-center justify-center gap-2 rounded-[41px] text-sm font-bold tracking-wider text-white shadow-[0_4px_4px_rgba(0,0,0,0.25),inset_0_10px_18.8px_#A68FC2] backdrop-blur-md">
           <Image
             alt="KSEP ITB"
             className="h-8 w-8 object-contain"
@@ -101,7 +119,7 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center">
           <Image
             alt="INFEST 2026 Logo"
-            className="h-auto w-full max-w-[280px] sm:max-w-[450px] md:max-w-[600px] lg:max-w-[720px] mt-10 drop-shadow-[0_0_35px_rgba(240,74,201,0.5)]"
+            className="mt-10 h-auto w-full max-w-[280px] drop-shadow-[0_0_35px_rgba(240,74,201,0.5)] sm:max-w-[450px] md:max-w-[600px] lg:max-w-[720px]"
             height={206}
             priority
             src="/images/logo-landing-page.png"
@@ -109,7 +127,7 @@ export default function Home() {
           />
 
           {/* Subtitle: investment festival */}
-          <p className="mt-10 text-base tracking-[0.2em] font-medium text-infest-white/80 italic sm:text-xl md:text-2xl glow-text-1 drop-shadow-[0_0_35px_rgba(240,74,201,0.5)]">
+          <p className="text-infest-white/80 glow-text-1 mt-10 text-base font-medium tracking-[0.2em] italic drop-shadow-[0_0_35px_rgba(240,74,201,0.5)] sm:text-xl md:text-2xl">
             I n v e s t m e n t &nbsp; F e s t i v a l
           </p>
         </div>
@@ -140,14 +158,22 @@ export default function Home() {
 
       {/* What is INFEST? Section */}
       <section className="relative z-10 px-6 py-20" id="about">
-        <div className="mx-auto max-w-6xl">
+        {/* Ornament 2 centered behind heading */}
+        <div className="pointer-events-none absolute left-[50%] top-[-18%] w-full scale-125 z-0 -translate-x-1/2 select-none opacity-85">
+          <Image
+            src="/images/ornament2.png"
+            alt=""
+            width={1920}
+            height={600}
+            className="w-full object-contain"
+          />
+        </div>
+        <div className="mx-auto max-w-6xl relative z-10">
           <div className="mb-14 flex items-center justify-center">
             <div className="">
-              <h2 className="text-5xl sm:text-[60px] font-bold tracking-wide ">
-                <span className="glow-text-3 text-infest-white">
-                  What is{" "}
-                </span>
-                <span className="text-highlight-gradient-dark-bg font-extrabold glow-text-1">
+              <h2 className="text-5xl font-bold tracking-wide sm:text-[60px]">
+                <span className="glow-text-3 text-infest-white">What is </span>
+                <span className="text-highlight-gradient-dark-bg glow-text-1 font-extrabold">
                   INFEST?
                 </span>
               </h2>
@@ -157,17 +183,20 @@ export default function Home() {
           {/* Cards Grid */}
           <div className="grid gap-8 md:grid-cols-2">
             {/* Card 1 */}
-            <div className="mx-auto flex h-[320px] w-full max-w-[808px] items-center justify-center rounded-[28.204px] bg-lighter-purple py-[70px] pr-[37px] pl-[38px] shadow-[inset_6px_6px_9.9px_rgba(255,255,255,0.33)] text-center">
-              <p className="text-base sm:text-lg font-medium leading-relaxed text-white/90">
+            <div className="bg-lighter-purple mx-auto flex h-[320px] w-full max-w-[808px] items-center justify-center rounded-[28.204px] py-[70px] pr-[37px] pl-[38px] text-center shadow-[inset_6px_6px_9.9px_rgba(255,255,255,0.33)]">
+              <p className="text-base leading-relaxed font-medium text-white/90 sm:text-lg">
                 Acara tahunan yang diselenggarakan oleh{" "}
-                <strong className="font-bold text-accent-color">KSEP ITB</strong>{" "}
+                <strong className="text-accent-color font-bold">
+                  KSEP ITB
+                </strong>{" "}
                 dengan tujuan memberikan edukasi mengenai investasi dan pasar
                 modal kepada mahasiswa dan masyarakat sekitar. Dimeriahkan
                 dengan lomba equity research competition{" "}
-                <strong className="font-bold text-accent-color">(ERC)</strong>,
+                <strong className="text-accent-color font-bold">(ERC)</strong>,
                 business case competition{" "}
-                <strong className="font-bold text-accent-color">(BCC)</strong>, dan{" "}
-                <strong className="font-bold text-accent-color">
+                <strong className="text-accent-color font-bold">(BCC)</strong>,
+                dan{" "}
+                <strong className="text-accent-color font-bold">
                   talkshow/seminar
                 </strong>{" "}
                 yang menjadi acara utama.
@@ -175,17 +204,17 @@ export default function Home() {
             </div>
 
             {/* Card 2 */}
-            <div className="mx-auto flex h-[320px] w-full max-w-[808px] items-center justify-center rounded-[28.204px] bg-lighter-purple py-[70px] pr-[37px] pl-[38px] shadow-[inset_6px_6px_9.9px_rgba(255,255,255,0.33)] text-center">
-              <p className="text-base sm:text-lg font-medium leading-relaxed text-white/90 ">
+            <div className="bg-lighter-purple mx-auto flex h-[320px] w-full max-w-[808px] items-center justify-center rounded-[28.204px] py-[70px] pr-[37px] pl-[38px] text-center shadow-[inset_6px_6px_9.9px_rgba(255,255,255,0.33)]">
+              <p className="text-base leading-relaxed font-medium text-white/90 sm:text-lg">
                 INFEST 2025, dengan tema{" "}
-                <strong className="font-bold text-accent-color">
+                <strong className="text-accent-color font-bold">
                   &quot;Navigating the Future: Smart Investment in the Times of
                   Changes,&quot;
                 </strong>{" "}
                 berfokus pada strategi investasi cerdas untuk menghadapi
                 masa-masa penuh perubahan. Acara ini akan membekali peserta
                 dengan pola pikir yang{" "}
-                <strong className="font-bold text-accent-color">
+                <strong className="text-accent-color font-bold">
                   proaktif dan tangguh
                 </strong>
                 , serta membahas pemanfaatan teknologi seperti AI dalam
@@ -198,16 +227,14 @@ export default function Home() {
       </section>
 
       {/* Our Events Section */}
-      <section className="relative z-10 px-6 py-20" id="events">
+      <section className="relative z-10 px-6 py-20">
         <div className="mx-auto max-w-6xl">
           {/* Capsule Pill Header */}
           <div className="mb-12 flex justify-center">
-            <div className="flex h-[90px] w-full max-w-[400px] items-center justify-center rounded-[100px] bg-lighter-purple shadow-[inset_0_10px_18.8px_#A68FC2]">
-              <h2 className="text-3xl sm:text-[50px] font-bold tracking-wide [filter:drop-shadow(0_4px_4px_rgba(0,0,0,0.25))]">
+            <div className="bg-lighter-purple flex h-[90px] w-full max-w-[400px] items-center justify-center rounded-[100px] shadow-[inset_0_10px_18.8px_#A68FC2]">
+              <h2 className="text-3xl font-bold tracking-wide [filter:drop-shadow(0_4px_4px_rgba(0,0,0,0.25))] sm:text-[50px]">
                 <span className="text-infest-white">Our </span>
-                <span className="text-highlight-gradient-dark-bg">
-                  Events
-                </span>
+                <span className="text-highlight-gradient-dark-bg">Events</span>
               </h2>
             </div>
           </div>
@@ -218,30 +245,38 @@ export default function Home() {
 
       {/* The Timeline Section */}
       <section className="relative z-10 px-6 py-24" id="timeline">
-        <div className="mx-auto max-w-6xl">
+        {/* Ornament 3 Left */}
+        <div className="pointer-events-none absolute left-[-15%] top-[-60%] z-0 select-none opacity-80">
+          <Image
+            src="/images/ornament3-left.png"
+            alt=""
+            width={1000}
+            height={1000}
+            className="w-[300px] object-contain sm:w-[600px] md:w-[1000px]"
+          />
+        </div>
+        <div className="mx-auto max-w-5xl relative z-10">
           {/* Section Title */}
-          <div className="mb-20 text-center">
-            <h2 className="text-4xl font-black sm:text-6xl">
-              <span className="text-stroke-white text-white">The </span>
-              <span className="bg-gradient-to-r from-[#F75AE0] via-[#EF35DB] to-[#A000C8] bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(240,74,201,0.5)]">
-                Timeline
-              </span>
+          <div className="mb-32 text-left">
+            <h2 className="text-4xl font-bold sm:text-6xl">
+              <span className="text-infest-white glow-text-3">The </span>
+              <span className="text-highlight-gradient-dark-bg">Timeline</span>
             </h2>
           </div>
 
           {/* Timeline Track with Staggered Cards */}
-          <div className="relative mx-auto my-12 max-w-5xl">
+          <div className="relative mt-40 mb-28">
             {/* Horizontal Glowing Axis Line */}
-            <div className="absolute top-1/2 right-0 left-0 h-1 -translate-y-1/2 bg-gradient-to-r from-[#F04AC9]/20 via-[#F04AC9] to-[#F04AC9]/20 shadow-[0_0_15px_#F04AC9]" />
+            <div className="bg-light-purple absolute top-1/2 right-0 left-0 h-1 -translate-y-1/2 rounded-full" />
 
             {/* Navigation Arrows at line ends */}
             <button
               aria-label="Previous timeline"
-              className="absolute top-1/2 -left-6 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#F04AC9]/40 bg-[#160228] text-white shadow-[0_0_15px_rgba(240,74,201,0.3)] transition hover:scale-110 md:-left-12"
+              className="absolute top-1/2 -left-6 z-20 -translate-y-1/2 text-white/70 transition duration-200 hover:scale-125 hover:text-white md:-left-12"
               type="button"
             >
               <svg
-                className="h-5 w-5"
+                className="h-8 w-8 cursor-pointer"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -250,18 +285,18 @@ export default function Home() {
                   d="M15 19l-7-7 7-7"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth={2.5}
+                  strokeWidth={2}
                 />
               </svg>
             </button>
 
             <button
               aria-label="Next timeline"
-              className="absolute top-1/2 -right-6 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#F04AC9]/40 bg-[#160228] text-white shadow-[0_0_15px_rgba(240,74,201,0.3)] transition hover:scale-110 md:-right-12"
+              className="absolute top-1/2 -right-6 z-20 -translate-y-1/2 text-white/70 transition duration-200 hover:scale-125 hover:text-white md:-right-12"
               type="button"
             >
               <svg
-                className="h-5 w-5"
+                className="h-8 w-8 cursor-pointer"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -270,7 +305,7 @@ export default function Home() {
                   d="M9 5l7 7-7 7"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth={2.5}
+                  strokeWidth={2}
                 />
               </svg>
             </button>
@@ -286,20 +321,20 @@ export default function Home() {
                     className="relative flex flex-col items-center justify-center"
                   >
                     {/* Node Circle on Axis Line */}
-                    <div className="z-10 h-6 w-6 rounded-full border-2 border-white bg-[#EF35DB] shadow-[0_0_15px_#EF35DB]" />
+                    <div className="bg-infest-pink z-10 h-5 w-5 rounded-full shadow-[0_0_15px_#EF35DB]" />
 
                     {/* Card (Top or Bottom) */}
                     <div
-                      className={`w-36 rounded-2xl border border-[#F04AC9]/40 bg-[#1A0330]/90 p-3 text-center shadow-[0_0_20px_rgba(124,29,185,0.25)] backdrop-blur-md sm:w-44 ${
+                      className={`bg-gradient-custom w-36 rounded-2xl p-4 text-center backdrop-blur-md sm:w-44 ${
                         isTop
                           ? "absolute bottom-10 mb-2"
                           : "absolute top-10 mt-2"
                       }`}
                     >
-                      <h4 className="text-xs font-black text-white sm:text-sm">
+                      <h4 className="text-xs font-bold text-white sm:text-sm">
                         {item.title}
                       </h4>
-                      <p className="mt-1 text-[10px] font-medium text-[#E5C7F7] sm:text-xs">
+                      <p className="mt-1.5 text-[10px] font-medium text-[#E5C7F7] sm:text-xs">
                         {item.date}
                       </p>
                     </div>
@@ -313,19 +348,25 @@ export default function Home() {
 
       {/* Frequently Asked Questions Section */}
       <section className="relative z-10 px-6 py-20" id="faq">
-        <div className="mx-auto max-w-4xl">
+        {/* Ornament 3 Right */}
+        <div className="pointer-events-none absolute right-[-20%] top-[-90%] z-0 select-none opacity-80">
+          <Image
+            src="/images/ornament3-right.png"
+            alt=""
+            width={1000}
+            height={1000}
+            className="w-[300px] object-contain sm:w-[600px] md:w-[1000px]"
+          />
+        </div>
+        <div className="mx-auto max-w-4xl relative z-10">
           {/* Header Banner Bar */}
           <div className="mb-14 flex items-center justify-center">
-            <div className="w-full rounded-full border border-[#F04AC9]/30 bg-gradient-to-r from-transparent via-[#4B0068]/60 to-transparent py-4 text-center shadow-[0_0_40px_rgba(240,74,201,0.2)] backdrop-blur-md">
-              <h2 className="text-3xl font-black sm:text-5xl">
-                <span className="text-stroke-white text-white">
-                  Frequently Asked{" "}
-                </span>
-                <span className="bg-gradient-to-r from-[#F75AE0] to-[#EF35DB] bg-clip-text text-transparent">
-                  Questions
-                </span>
-              </h2>
-            </div>
+            <h2 className="text-3xl font-bold sm:text-5xl">
+              <span className="text-infest-white glow-text-3">
+                Frequently Asked{" "}
+              </span>
+              <span className="text-highlight-gradient-dark-bg">Questions</span>
+            </h2>
           </div>
 
           {/* Accordion List */}
@@ -336,24 +377,27 @@ export default function Home() {
               return (
                 <div
                   key={index}
-                  className="overflow-hidden rounded-full border border-[#F04AC9]/40 bg-[#1D0333]/90 shadow-[0_0_20px_rgba(124,29,185,0.2)] backdrop-blur-md transition-all duration-300 hover:border-[#F04AC9]/70"
+                  className="overflow-hidden backdrop-blur-md transition-all duration-300"
                   style={{
-                    borderRadius: isOpen ? "24px" : "9999px",
+                    borderRadius: isOpen ? "20px" : "100px",
+                    background: "#6B0078",
+                    boxShadow:
+                      "inset 5px 6px 4.5px 0px rgba(255, 254, 255, 0.25)",
                   }}
                 >
                   <button
-                    className="flex w-full items-center justify-between px-8 py-4 text-left text-base font-bold text-white sm:text-lg"
+                    className="flex w-full cursor-pointer items-center justify-between px-8 py-4 text-left text-base font-medium text-white sm:text-lg"
                     onClick={() => toggleFaq(index)}
                     type="button"
                   >
                     <span>{faq.question}</span>
                     <span
-                      className={`ml-4 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/10 text-[#F04AC9] transition-transform duration-300 ${
+                      className={`text-infest-white ml-4 flex h-8 w-8 shrink-0 items-center justify-center transition-transform duration-300 ${
                         isOpen ? "rotate-180" : ""
                       }`}
                     >
                       <svg
-                        className="h-5 w-5"
+                        className="h-6 w-6"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -369,7 +413,7 @@ export default function Home() {
                   </button>
 
                   {isOpen && (
-                    <div className="border-t border-[#F04AC9]/20 px-8 py-5 text-sm leading-relaxed text-[#E5C7F7] sm:text-base">
+                    <div className="border-infest-white/10 border-t px-8 py-5 text-sm leading-relaxed text-[#E5C7F7] sm:text-base">
                       {faq.answer}
                     </div>
                   )}

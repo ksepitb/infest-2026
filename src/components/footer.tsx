@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export interface ContactInfo {
   name: string;
   phone: string;
@@ -24,8 +26,31 @@ const defaultEventContacts: ContactInfo[] = [
 const defaultCompetitionContacts: ContactInfo[] = [
   { name: "Muhammad Orkhan", phone: "08119900125", lineId: "orkhan12345678" },
   { name: "Muhammad Orkhan", phone: "08119900125", lineId: "orkhan12345678" },
-  { name: "Muhammad Orkhan", phone: "08119900125", lineId: "orkhan12345678" },
 ];
+
+function WhatsappIcon({ className }: { className?: string }) {
+  return (
+    <Image
+      src="/images/whatsapp-icon.png"
+      alt="WhatsApp"
+      width={16}
+      height={16}
+      className={className}
+    />
+  );
+}
+
+function LineIcon({ className }: { className?: string }) {
+  return (
+    <Image
+      src="/images/line-logo.png"
+      alt="Line"
+      width={16}
+      height={16}
+      className={className}
+    />
+  );
+}
 
 export function Footer({
   eventContacts = defaultEventContacts,
@@ -36,32 +61,31 @@ export function Footer({
   copyrightText = "© INFEST ITB 2026",
 }: FooterProps) {
   return (
-    <footer className="relative z-10 border-t border-white/10 px-6 pt-16 pb-12">
+    <footer className="relative z-10 border-t border-white/50 px-6 pt-16 pb-12">
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-12 md:grid-cols-2">
           {/* Social Media Column */}
-          <div>
-            <h3 className="text-2xl font-black tracking-wide sm:text-3xl">
-              <span className="text-stroke-white text-white">Social </span>
-              <span className="bg-gradient-to-r from-[#F75AE0] to-[#EF35DB] bg-clip-text text-transparent">
-                Media
+          <div className="flex flex-col items-center text-center">
+            <h3 className="text-2xl font-bold tracking-wide sm:text-3xl">
+              <span className="text-highlight-gradient-dark-horizontal bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(240,74,201,0.4)]">
+                Social Media
               </span>
             </h3>
-            <p className="mt-4 max-w-sm text-sm text-[#E5C7F7]">
+            <p className="mt-4 max-w-sm text-sm text-white/70">
               Follow us on social media to find out the latest updates on our
               event
             </p>
 
             {/* Social Icons */}
-            <div className="mt-6 flex items-center gap-4">
+            <div className="mt-6 flex items-center justify-center gap-4 text-white/70">
               {/* LinkedIn */}
               <a
                 aria-label="LinkedIn"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white transition hover:border-[#F04AC9] hover:bg-[#F04AC9]/20"
+                className="flex h-10 w-10 items-center justify-center transition-colors duration-200 hover:text-white"
                 href={linkedinUrl}
               >
                 <svg
-                  className="h-5 w-5"
+                  className="h-8 w-8"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -72,26 +96,11 @@ export function Footer({
               {/* Instagram */}
               <a
                 aria-label="Instagram"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white transition hover:border-[#F04AC9] hover:bg-[#F04AC9]/20"
+                className="flex h-10 w-10 items-center justify-center rounded-full transition-colors duration-200 hover:text-white"
                 href={instagramUrl}
               >
                 <svg
-                  className="h-5 w-5"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                </svg>
-              </a>
-
-              {/* Instagram */}
-              <a
-                aria-label="Instagram"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white transition hover:border-[#F04AC9] hover:bg-[#F04AC9]/20"
-                href={instagramUrl}
-              >
-                <svg
-                  className="h-5 w-5"
+                  className="h-8 w-8"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -102,11 +111,11 @@ export function Footer({
               {/* TikTok */}
               <a
                 aria-label="TikTok"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white transition hover:border-[#F04AC9] hover:bg-[#F04AC9]/20"
+                className="flex h-10 w-10 items-center justify-center transition-colors duration-200 hover:text-white"
                 href={tiktokUrl}
               >
                 <svg
-                  className="h-5 w-5"
+                  className="h-8 w-8"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -117,27 +126,28 @@ export function Footer({
           </div>
 
           {/* Contact Information Column */}
-          <div>
-            <h3 className="text-2xl font-black tracking-wide sm:text-3xl">
-              <span className="text-stroke-white text-white">Contact </span>
-              <span className="bg-gradient-to-r from-[#F75AE0] to-[#EF35DB] bg-clip-text text-transparent">
-                Information
+          <div className="flex flex-col items-center">
+            <h3 className="text-center text-2xl font-bold tracking-wide sm:text-3xl">
+              <span className="text-highlight-gradient-dark-horizontal drop-shadow-[0_0_10px_rgba(240,74,201,0.4)]">
+                Contact Information
               </span>
             </h3>
 
-            <div className="mt-6 grid grid-cols-2 gap-8 text-xs text-white/90 sm:text-sm">
+            <div className="mt-6 grid w-full max-w-lg grid-cols-2 gap-x-16 gap-y-8 text-xs text-white/90 sm:text-sm">
               {/* Event Contacts */}
-              <div>
-                <h4 className="mb-4 font-bold text-white">Event</h4>
+              <div className="text-left">
+                <h4 className="mb-4 font-bold text-infest-white text-xl">Event</h4>
                 <div className="space-y-4">
                   {eventContacts.map((contact, index) => (
                     <div key={index} className="space-y-1">
                       <p className="font-semibold text-white">{contact.name}</p>
-                      <p className="flex items-center gap-1.5 text-white/70">
-                        <span>📞</span> {contact.phone}
+                      <p className="flex items-center justify-start gap-1.5 text-white/70">
+                        <WhatsappIcon className="h-4 w-4 shrink-0 text-white/70" />
+                        <span>{contact.phone}</span>
                       </p>
-                      <p className="flex items-center gap-1.5 text-white/70">
-                        <span>💬</span> {contact.lineId}
+                      <p className="flex items-center justify-start gap-1.5 text-white/70">
+                        <LineIcon className="h-4 w-4 shrink-0 text-white/70" />
+                        <span>{contact.lineId}</span>
                       </p>
                     </div>
                   ))}
@@ -145,17 +155,19 @@ export function Footer({
               </div>
 
               {/* Competition Contacts */}
-              <div>
-                <h4 className="mb-4 font-bold text-white">Competition</h4>
+              <div className="text-right">
+                <h4 className="mb-4 font-bold text-infest-white text-xl">Competition</h4>
                 <div className="space-y-4">
                   {competitionContacts.map((contact, index) => (
                     <div key={index} className="space-y-1">
                       <p className="font-semibold text-white">{contact.name}</p>
-                      <p className="flex items-center gap-1.5 text-white/70">
-                        <span>📞</span> {contact.phone}
+                      <p className="flex items-center justify-end gap-1.5 text-white/70">
+                        <span>{contact.phone}</span>
+                        <WhatsappIcon className="h-4 w-4 shrink-0 text-white/70" />
                       </p>
-                      <p className="flex items-center gap-1.5 text-white/70">
-                        <span>💬</span> {contact.lineId}
+                      <p className="flex items-center justify-end gap-1.5 text-white/70">
+                        <span>{contact.lineId}</span>
+                        <LineIcon className="h-4 w-4 shrink-0 text-white/70" />
                       </p>
                     </div>
                   ))}

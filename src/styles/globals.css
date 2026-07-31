@@ -14,6 +14,13 @@
   --gradient-4: linear-gradient(227deg, #380356 8.17%, #6B0078 28.17%, #E306D9 54.3%, rgba(31, 0, 48, 0.50) 91.45%);
   --highlight-gradient-dark-bg: linear-gradient(180deg, var(--Pink, #E306D9) 0%, var(--Broken-White, #FFFEFF) 100%);
   --highlight-gradient-light-bg: linear-gradient(180deg, var(--Dark-Purple, #380356) 0%, var(--Pink, #E306D9) 100%);
+  --highlight-gradient-dark-bg-horizontal: linear-gradient(
+    270deg,
+    var(--pink, #E306D9) 0%,
+    var(--infest-white, #FFFEFF) 50%,
+    var(--pink, #E306D9) 100%
+  );
+  --gradient-custom:linear-gradient(227deg, var(--dark-purple, #380356) 6.54%, var(--light-purple, #93009C) 74.3%, var(--light-purple, #93009C) 91.45%);
 
 }
 @theme {
@@ -33,6 +40,7 @@
   --background-image-gradient-4: var(--gradient-4);
   --background-image-highlight-light: var(--highlight-gradient-light-bg);
   --background-image-highlight-dark: var(--highlight-gradient-dark-bg);
+  --background-image-gradient-custom: var(--gradient-custom)
 }
 
 @layer utilities {
@@ -71,6 +79,14 @@
   display: inline-block;        /* Optional: keeps gradient bounds tight to the text */
 }
 
+@utility text-gradient-4{
+  background: var(--gradient-4);
+  -webkit-background-clip: text; /* Clips background to text in WebKit browsers */
+  background-clip: text;         /* Standard syntax */
+  -webkit-text-fill-color: transparent; /* Makes text transparent to reveal gradient */
+  display: inline-block;        /* Optional: keeps gradient bounds tight to the text */ 
+}
+
 @utility text-shadow-links {
   filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 }
@@ -94,6 +110,22 @@
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 700;
+}
+
+@utility gradient-custom{
+  background: var(--gradient-custom);
+  -webkit-background-clip: text; /* Clips background to text in WebKit browsers */
+  background-clip: text;         /* Standard syntax */
+  -webkit-text-fill-color: transparent; /* Makes text transparent to reveal gradient */
+  display: inline-block;        /* Optional: keeps gradient bounds tight to the text */ 
+}
+
+@utility text-highlight-gradient-dark-horizontal {
+  background-image: var(--highlight-gradient-dark-bg-horizontal);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
 
