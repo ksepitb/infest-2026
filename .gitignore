@@ -44,3 +44,15 @@ yarn-error.log*
 
 # idea files
 .idea
+
+# figma
+figma
+
+# omo
+.omo
+
+# playwright
+.playwright-mcp
+
+# vscode
+.vscode

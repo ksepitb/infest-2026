@@ -1,6 +1,6 @@
 # infest-2026
 
-A T3 Stack app built with Next.js, Better Auth, Prisma, tRPC, and Tailwind CSS.
+Infest Web is A T3 Stack app built with Next.js, Better Auth, Prisma, tRPC, and Tailwind CSS.
 
 ## Tech Stack
 
@@ -126,3 +126,13 @@ Deploy to Vercel, or any platform that supports Next.js:
 3. Build and start the app.
 
 For detailed guides, see the [T3 deployment docs](https://create.t3.gg/en/deployment).
+
+## The Team
+
+| Name | Username | Role |
+|------|---------|------|
+| Nicholas Wise | nicholaswisee | PRESIDEN KSEP ITB |
+| Muhammad Orkhan | vescentongit | PM / Fullstack |
+| Bagas Anugrah | bagasapt-spec | Fullstack |
+| Threegie Gendhis | threegiegendhis | Frontend |
+| Avicenna Ananda | colezzes | Fullstack | 

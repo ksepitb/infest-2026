@@ -1,6 +1,141 @@
 @import "tailwindcss";
 
-@theme {
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+:root {
+  --dark-purple: #380356;
+  --lighter-purple: #6B0078;
+  --light-purple: #93009C;
+  --infest-pink: #E306D9;
+  --infest-white: #FFFEFF;
+  --accent-color: #FFB800;
+  --gradient-1: linear-gradient(209deg, rgba(0, 0, 0, 0.40) 41.02%, rgba(56, 3, 86, 0.40) 68.62%, rgba(107, 0, 120, 0.00) 103.44%), linear-gradient(#000, #000);
+  --gradient-2: linear-gradient(227deg, rgba(0, 0, 0, 0.40) 2.22%, rgba(56, 3, 86, 0.24) 19.11%, rgba(107, 0, 120, 0.12) 55.33%, rgba(56, 3, 86, 0.24) 79.5%, rgba(0, 0, 0, 0.40) 98.89%), linear-gradient(0deg, rgba(56, 3, 86, 0.70) 0%, rgba(56, 3, 86, 0.70) 100%), linear-gradient(#000, #000);
+  --gradient-3: linear-gradient(180deg, rgba(56, 3, 86, 0.60) -4.56%, rgba(19, 1, 29, 0.42) 64.79%, rgba(0, 0, 0, 0.60) 104.56%), linear-gradient(#000, #000);
+  --gradient-4: linear-gradient(227deg, #380356 8.17%, #6B0078 28.17%, #E306D9 54.3%, rgba(31, 0, 48, 0.50) 91.45%);
+  --highlight-gradient-dark-bg: linear-gradient(180deg, var(--Pink, #E306D9) 0%, var(--Broken-White, #FFFEFF) 100%);
+  --highlight-gradient-light-bg: linear-gradient(180deg, var(--Dark-Purple, #380356) 0%, var(--Pink, #E306D9) 100%);
+  --highlight-gradient-dark-bg-horizontal: linear-gradient(
+    270deg,
+    var(--pink, #E306D9) 0%,
+    var(--infest-white, #FFFEFF) 50%,
+    var(--pink, #E306D9) 100%
+  );
+  --gradient-custom:linear-gradient(227deg, var(--dark-purple, #380356) 6.54%, var(--light-purple, #93009C) 74.3%, var(--light-purple, #93009C) 91.45%);
+
 }
+@theme {
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --color-dark-purple: var(--dark-purple);
+  --color-lighter-purple: var(--lighter-purple);
+  --color-light-purple: var(--light-purple);
+  --color-infest-pink: var(--infest-pink);
+  --color-infest-white: var(--infest-white);
+  --color-accent-color: var(--accent-color);
+
+  --background-image-gradient-1: var(--gradient-1);
+  --background-image-gradient-2: var(--gradient-2);
+  --background-image-gradient-3: var(--gradient-3);
+  --background-image-gradient-4: var(--gradient-4);
+  --background-image-highlight-light: var(--highlight-gradient-light-bg);
+  --background-image-highlight-dark: var(--highlight-gradient-dark-bg);
+  --background-image-gradient-custom: var(--gradient-custom)
+}
+
+@layer utilities {
+  .text-stroke-white {
+    -webkit-text-stroke: 1.5px #ffffff;
+    color: transparent;
+  }
+  .text-stroke-pink {
+    -webkit-text-stroke: 1.5px #f04ac9;
+    color: transparent;
+  }
+  .glow-pink {
+    box-shadow: 0 0 25px rgba(240, 74, 201, 0.4);
+  }
+  .glow-purple {
+    box-shadow: 0 0 35px rgba(124, 29, 185, 0.35);
+  }
+  .glow-text-pink {
+    text-shadow: 0 0 20px rgba(240, 74, 201, 0.6);
+  }
+}
+
+@utility text-highlight-gradient-dark-bg {
+  background: var(--highlight-gradient-dark-bg);
+  -webkit-background-clip: text; /* Clips background to text in WebKit browsers */
+  background-clip: text;         /* Standard syntax */
+  -webkit-text-fill-color: transparent; /* Makes text transparent to reveal gradient */
+  display: inline-block;        /* Optional: keeps gradient bounds tight to the text */
+}
+
+@utility text-highlight-gradient-light-bg {
+  background: var(--highlight-gradient-light-bg);
+  -webkit-background-clip: text; /* Clips background to text in WebKit browsers */
+  background-clip: text;         /* Standard syntax */
+  -webkit-text-fill-color: transparent; /* Makes text transparent to reveal gradient */
+  display: inline-block;        /* Optional: keeps gradient bounds tight to the text */
+}
+
+@utility text-gradient-4{
+  background: var(--gradient-4);
+  -webkit-background-clip: text; /* Clips background to text in WebKit browsers */
+  background-clip: text;         /* Standard syntax */
+  -webkit-text-fill-color: transparent; /* Makes text transparent to reveal gradient */
+  display: inline-block;        /* Optional: keeps gradient bounds tight to the text */ 
+}
+
+@utility text-shadow-links {
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+@utility glow-text-1 {
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.25), 0 0 32px rgba(255, 254, 255, 0.40), 0 0 40px rgba(255, 254, 255, 0.25);
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@utility glow-text-2{
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.50), 0 0 32px rgba(0, 0, 0, 0.40), 0 0 40px rgba(0, 0, 0, 0.60);
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@utility glow-text-3 {
+  text-shadow: 0 0 8px #380356, 0 0 32px #380356, 0 0 40px #380356;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@utility gradient-custom{
+  background: var(--gradient-custom);
+  -webkit-background-clip: text; /* Clips background to text in WebKit browsers */
+  background-clip: text;         /* Standard syntax */
+  -webkit-text-fill-color: transparent; /* Makes text transparent to reveal gradient */
+  display: inline-block;        /* Optional: keeps gradient bounds tight to the text */ 
+}
+
+@utility text-highlight-gradient-dark-horizontal {
+  background-image: var(--highlight-gradient-dark-bg-horizontal);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
