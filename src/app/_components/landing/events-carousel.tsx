@@ -107,7 +107,7 @@ export function EventsCarousel() {
           return (
             <div
               key={event.id}
-              className={`absolute top-0 flex h-full w-[85%] max-w-[580px] cursor-pointer flex-col overflow-hidden rounded-3xl border border-[#F04AC9]/40 bg-[#160228]/90 shadow-[0_0_35px_rgba(240,74,201,0.25)] backdrop-blur-md transition-all duration-500 ease-out sm:w-[580px] ${transformStyle}`}
+              className={`absolute top-0 flex h-full w-[85%] max-w-[580px] flex-col overflow-hidden rounded-3xl bg-dark-purple shadow-[0_0_35px_rgba(240,74,201,0.25)] backdrop-blur-md transition-all duration-500 ease-out sm:w-[580px] ${transformStyle}`}
               onClick={() => setActiveIndex(index)}
               style={{ zIndex, opacity }}
             >
@@ -126,14 +126,14 @@ export function EventsCarousel() {
 
                 {/* Content Overlay (Centered active card detail) */}
                 <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
-                  <h3 className="mb-2 text-2xl font-black text-white sm:text-3xl">
+                  <h3 className="mb-2 text-2xl font-bold text-infest-white sm:text-3xl">
                     {event.title}
                   </h3>
-                  <p className="mb-6 text-xs leading-relaxed text-white/90 sm:text-sm">
+                  <p className="mb-6 text-xs leading-relaxed text-infest-white/90 sm:text-sm">
                     {event.description}
                   </p>
                   <a
-                    className="inline-flex items-center justify-center rounded-full bg-white px-6 py-2 text-xs font-black tracking-wide text-[#140228] shadow-[0_0_15px_rgba(255,255,255,0.4)] transition hover:bg-white/90"
+                    className="inline-flex items-center justify-center rounded-full bg-white px-6 py-2 text-xs font-bold tracking-wide text-dark-purple shadow-[0_0_15px_rgba(255,255,255,0.4)] transition hover:bg-white/90"
                     href="#register"
                   >
                     See More
@@ -149,12 +149,12 @@ export function EventsCarousel() {
       <div className="mt-8 flex items-center justify-center gap-6">
         <button
           aria-label="Previous event"
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white backdrop-blur-sm transition hover:border-[#F04AC9] hover:bg-[#F04AC9]/20"
+          className=""
           onClick={prevSlide}
           type="button"
         >
           <svg
-            className="h-5 w-5"
+            className="h-5 w-5 cursor-pointer"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -176,7 +176,7 @@ export function EventsCarousel() {
               aria-label={`Go to slide ${i + 1}`}
               className={`h-2.5 rounded-full transition-all duration-300 ${
                 i === activeIndex
-                  ? "w-8 bg-[#F04AC9] shadow-[0_0_12px_#F04AC9]"
+                  ? "w-8 bg-infest-pink shadow-[0_0_12px_#F04AC9]"
                   : "w-2.5 bg-white/30 hover:bg-white/60"
               }`}
               onClick={() => setActiveIndex(i)}
@@ -187,12 +187,12 @@ export function EventsCarousel() {
 
         <button
           aria-label="Next event"
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white backdrop-blur-sm transition hover:border-[#F04AC9] hover:bg-[#F04AC9]/20"
+          className=""
           onClick={nextSlide}
           type="button"
         >
           <svg
-            className="h-5 w-5"
+            className="h-5 w-5 cursor-pointer"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
