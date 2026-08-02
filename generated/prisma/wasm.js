@@ -174,7 +174,7 @@ const config = {
       value: "prisma-client-js",
     },
     output: {
-      value: "D:\\infest-2026\\web\\generated\\prisma",
+      value: "C:\\Users\\LENOVO\\infest-2026\\generated\\prisma",
       fromEnvVar: null,
     },
     config: {
@@ -188,12 +188,11 @@ const config = {
       },
     ],
     previewFeatures: [],
-    sourceFilePath: "D:\\infest-2026\\web\\prisma\\schema.prisma",
+    sourceFilePath: "C:\\Users\\LENOVO\\infest-2026\\prisma\\schema.prisma",
     isCustomOutput: true,
   },
   relativeEnvPaths: {
     rootEnvPath: null,
-    schemaEnvPath: "../../.env",
   },
   relativePath: "../../prisma",
   clientVersion: "6.19.3",
