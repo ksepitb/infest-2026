@@ -195,6 +195,7 @@ const config = {
   },
   relativeEnvPaths: {
     rootEnvPath: null,
+    schemaEnvPath: "../../.env",
   },
   relativePath: "../../prisma",
   clientVersion: "6.19.3",
