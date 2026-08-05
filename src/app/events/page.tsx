@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { HeaderLogo } from "~/app/_components/event-page/logo-infest";
 import { Navbar } from "~/components/navbar";
 import { Footer } from "~/components/footer";
 
@@ -6,7 +7,6 @@ import { SectionBadge } from "~/app/_components/event-page/section-badge";
 import { GradientDivider } from "~/app/_components/event-page/theme-divider";
 import { DayCard, Highlight } from "~/app/_components/event-page/day-card";
 import { LocationPill } from "~/app/_components/event-page/location-pill";
-import { glowTextShadow } from "~/app/_components/event-page/styles";
 import { HighlightsCarousel } from "~/app/_components/event-page/highlight";
 
 function ThemeDescription() {
@@ -26,39 +26,83 @@ function ThemeDescription() {
 
 export default function EventsPage() {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-gradient-to-b from-[#3A0CA3] via-[#4B0F91] to-[#12001F] pb-24">
+    <main className="relative min-h-screen overflow-x-hidden bg-[#16001F] text-white antialiased pb-24">
+      {/* Background Vector Ornaments & Glows */}
+      <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+        {/* Glow ambient spots */}
+        <div className="absolute top-[-10%] left-1/2 h-[650px] w-[900px] -translate-x-1/2 rounded-full bg-[#530074]/35 blur-[140px]" />
+        <div className="absolute top-[30%] left-[-10%] h-[500px] w-[500px] rounded-full bg-[#8E00A6]/20 blur-[150px]" />
+        <div className="absolute top-[65%] right-[-10%] h-[600px] w-[600px] rounded-full bg-[#530074]/30 blur-[160px]" />
+
+        {/* Dotted matrix SVG ornament */}
+        <Image
+          alt=""
+          className="absolute bottom-[450px] left-[-40px] w-[300px] opacity-25 mix-blend-screen md:w-[420px]"
+          height={500}
+          src="/images/dotted1.svg"
+          width={500}
+        />
+        <Image
+          alt=""
+          className="absolute right-[-40px] bottom-20 w-[300px] opacity-25 mix-blend-screen md:w-[420px]"
+          height={500}
+          src="/images/dotted1.svg"
+          width={500}
+        />
+      </div>
+
       <Navbar />
 
-      {/* ================= Hero: Pre Event & Main Event ================= */}
-      <section className="relative mx-auto flex max-w-5xl flex-col items-center px-6 pt-28 text-center">
-        {/*
-          Logo "INFEST" — export langsung dari Figma sebagai SVG
-          (klik logo di Figma > Copy as > Copy as SVG), lalu taruh
-          filenya di /public/images/infest-logo.svg
-        */}
-        <Image
-          src="/images/infest-logo.svg"
-          alt="INFEST"
-          width={254}
-          height={185}
-          className="mb-6 h-20 w-auto lg:h-28"
-        />
-        <h1
-          style={{ ...glowTextShadow, color: "#FFF", letterSpacing: "-1.92px" }}
-          className="w-full max-w-[807px] font-poppins text-[40px] font-bold leading-[100%] lg:text-[96px]"
-        >
-          Pre Event &amp; Main Event
-        </h1>
+      {/* ================= Hero ================= */}
+      <section className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-6 pt-28 text-center">
+        {/* Container khusus ornamen selebar layar */}
+        <div className="pointer-events-none absolute left-1/2 top-0 z-0 w-screen -translate-x-1/2">
+          {/* Left Ornament */}
+          <div className="absolute left-0 top-[20%] select-none opacity-80 md:top-[25%] lg:top-[10%]">
+            <Image
+              src="/images/ornament1-left.png"
+              alt=""
+              width={600}
+              height={600}
+              className="w-[200px] object-contain sm:w-[250px] md:w-[300px] lg:w-[600px]"
+            />
+          </div>
+          {/* Right Ornament */}
+          <div className="absolute right-0 top-[20%] select-none opacity-80 md:top-[25%] lg:top-[10%]">
+            <Image
+              src="/images/ornament1-right.png"
+              alt=""
+              width={600}
+              height={600}
+              className="w-[200px] object-contain sm:w-[250px] md:w-[300px] lg:w-[600px]"
+            />
+          </div>
+        </div>
+
+        <section className="relative mx-auto flex max-w-7xl flex-col items-center px-6 pt-28 text-center">
+          <HeaderLogo />
+        </section>
       </section>
 
       {/* ================= Pre-Events ================= */}
-      <section className="relative mx-auto mt-20 flex max-w-5xl flex-col items-center gap-24 px-6">
+      <section className="relative z-10 mx-auto mt-20 flex max-w-5xl flex-col items-center gap-24 px-6">
+        {/* Ornament 2 centered behind heading (Full Width Screen) */}
+        <div className="pointer-events-none absolute left-1/2 top-[-18%] z-0 w-screen -translate-x-1/2 scale-125 select-none opacity-85">
+          <Image
+            src="/images/ornament2.png"
+            alt=""
+            width={1920}
+            height={600}
+            className="w-full object-contain"
+          />
+        </div>
+
         <SectionBadge>Pre-Events</SectionBadge>
 
         <DayCard
           dayLabel="DAY 00"
           title="Workshop"
-          imageSrc="/images/speakers/speaker-1.jpg"
+          imageSrc="/images/speakers/speaker.png"
           imageAlt="Pembicara Workshop"
           imagePosition="right"
           boxed
@@ -68,7 +112,7 @@ export default function EventsPage() {
         <DayCard
           dayLabel="DAY 00"
           title="The 5-Day Trading Challenge"
-          imageSrc="/images/speakers/speaker-2.jpg"
+          imageSrc="/images/speakers/speaker.png"
           imageAlt="Pembicara Trading Challenge"
           imagePosition="left"
           boxed
@@ -77,7 +121,7 @@ export default function EventsPage() {
       </section>
 
       {/* ================= Main Event ================= */}
-      <section className="relative mx-auto mt-24 flex max-w-5xl flex-col items-center gap-20 px-6">
+      <section className="relative z-10 mx-auto mt-24 flex max-w-5xl flex-col items-center gap-20 px-6">
         <SectionBadge>Main Event</SectionBadge>
 
         <GradientDivider>Theme of Event</GradientDivider>
@@ -85,7 +129,7 @@ export default function EventsPage() {
         <DayCard
           dayLabel="DAY 00"
           title="Judul Talkshow Main Event"
-          imageSrc="/images/speakers/speaker-3.jpg"
+          imageSrc="/images/speakers/speaker.png"
           imageAlt="Pembicara Main Event"
           imagePosition="left"
           boxed
@@ -94,17 +138,43 @@ export default function EventsPage() {
       </section>
 
       {/* ================= Date of the Event ================= */}
-      <section className="relative mx-auto mt-20 flex max-w-5xl flex-col items-center gap-10 px-6">
+      <section className="relative z-10 mx-auto mt-20 flex max-w-5xl flex-col items-center gap-10 px-6">
+        {/* Ornament 3 Left (Full Width Screen Edge) */}
+        <div className="pointer-events-none absolute left-1/2 top-[-60%] z-0 w-screen -translate-x-1/2">
+          <div className="absolute left-[-5%] select-none opacity-80">
+            <Image
+              src="/images/ornament3-left.png"
+              alt=""
+              width={1000}
+              height={1000}
+              className="w-[300px] object-contain sm:w-[600px] md:w-[1000px]"
+            />
+          </div>
+        </div>
+
         <GradientDivider>Date of the Event</GradientDivider>
         <LocationPill location="Aula CC Timur Institut Teknologi Bandung" />
       </section>
 
       {/* ================= Last Year's Highlights ================= */}
-      <section className="relative mt-24 px-6">
+      <section className="relative z-10 mt-24 px-6">
+        {/* Ornament 3 Right (Full Width Screen Edge) */}
+        <div className="pointer-events-none absolute left-1/2 top-[-90%] z-0 w-screen -translate-x-1/2">
+          <div className="absolute right-[-5%] select-none opacity-80">
+            <Image
+              src="/images/ornament3-right.png"
+              alt=""
+              width={1000}
+              height={1000}
+              className="w-[300px] object-contain sm:w-[600px] md:w-[1000px]"
+            />
+          </div>
+        </div>
+
         <HighlightsCarousel />
       </section>
 
-      <div className="mt-24">
+      <div className="relative z-10 mt-24">
         <Footer />
       </div>
     </main>
