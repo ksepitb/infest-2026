@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export interface NavLink {
   href: string;
@@ -17,7 +18,7 @@ interface NavbarProps {
 
 const defaultLinks: NavLink[] = [
   { href: "/#home", label: "Home" },
-  { href: "/#events", label: "Event" },
+  { href: "/events", label: "Event" },
   { href: "/#erc", label: "ERC" },
   { href: "/#bcc", label: "BCC" },
 ];
@@ -30,6 +31,7 @@ function MobileMenu({
   links: NavLink[];
   registerHref: string;
   activeSection: string;
+  pathname: string;
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -105,6 +107,7 @@ export function Navbar({
   logoSrc = "/images/INFEST PUTIH.svg",
 }: NavbarProps) {
   const [activeSection, setActiveSection] = useState("home");
+  const pathname = usePathname();
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -145,7 +148,10 @@ export function Navbar({
 
         <nav className="hidden items-center gap-18 md:flex">
           {links.map((link) => {
-            const isActive = link.href.endsWith(`#${activeSection}`);
+            const isActive =
+            pathname === "/events"
+            ? link.href === "/events"
+            : link.href.endsWith(`#${activeSection}`);
             return (
               <Link
                 key={link.href}
@@ -177,6 +183,7 @@ export function Navbar({
         </div>
 
         <MobileMenu
+          pathname={pathname}
           activeSection={activeSection}
           links={links}
           registerHref={registerHref}
