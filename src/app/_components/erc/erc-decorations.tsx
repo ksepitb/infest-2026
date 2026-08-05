@@ -8,7 +8,7 @@ export function ErcDecorations() {
     >
       <Image
         alt=""
-        className="object-cover object-top opacity-80"
+        className="object-cover object-top opacity-100 mix-blend-screen"
         fill
         priority
         sizes="100vw"

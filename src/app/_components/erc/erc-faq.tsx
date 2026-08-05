@@ -47,11 +47,8 @@ export function FaqAccordion({ items }: { items: FaqItem[] }) {
         return (
           <div
             key={index}
-            className="flex w-full flex-col overflow-hidden rounded-[24px] backdrop-blur-md transition-all duration-300"
-            style={{
-              background: "#6B0078",
-              boxShadow: "inset 5px 6px 4.5px 0px rgba(255, 254, 255, 0.25)",
-            }}
+            className="flex w-full flex-col overflow-hidden bg-[#6B0078] shadow-[inset_5px_6px_4.5px_0px_rgba(255,254,255,0.25)] backdrop-blur-md transition-all duration-300 ease-in-out"
+            style={{ borderRadius: isOpen ? "20px" : "100px" }}
           >
             {/* Header Tombol Locked (Posisi & Radius Atas Tetap Kunci) */}
             <button
@@ -61,8 +58,8 @@ export function FaqAccordion({ items }: { items: FaqItem[] }) {
             >
               <span>{faq.question}</span>
               <span
-                className={`text-infest-white ml-4 flex h-8 w-8 shrink-0 items-center justify-center transition-transform duration-300 ${
-                  isOpen ? "rotate-180" : ""
+                className={`text-infest-white ml-4 flex h-8 w-8 shrink-0 items-center justify-center transition-transform duration-300 ease-in-out ${
+                  isOpen ? "rotate-180" : "rotate-0"
                 }`}
               >
                 <svg
@@ -83,18 +80,14 @@ export function FaqAccordion({ items }: { items: FaqItem[] }) {
 
             {/* Container Tirai: Merekah & Meluncur Turun Ke Bawah */}
             <div
-              className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${
-                isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+              className={`grid transition-all duration-300 ease-in-out ${
+                isOpen
+                  ? "grid-rows-[1fr] opacity-100"
+                  : "grid-rows-[0fr] opacity-0"
               }`}
             >
               <div className="overflow-hidden">
-                <div
-                  className={`border-t border-white/10 px-8 py-5 text-sm leading-relaxed text-[#E5C7F7] transition-all duration-300 ease-in-out sm:text-base ${
-                    isOpen
-                      ? "translate-y-0 opacity-100"
-                      : "-translate-y-4 opacity-0"
-                  }`}
-                >
+                <div className="border-t border-white/10 px-8 py-5 text-sm leading-relaxed text-[#E5C7F7] sm:text-base">
                   {faq.answer}
                 </div>
               </div>
@@ -109,17 +102,17 @@ export function FaqAccordion({ items }: { items: FaqItem[] }) {
 export function ErcFaq() {
   return (
     <section
-      className="relative z-10 flex w-full scroll-mt-32 flex-col justify-start px-6 py-20"
+      className="relative z-10 mx-auto flex w-full max-w-[1509px] scroll-mt-32 flex-col items-center justify-start px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:px-8 lg:py-24"
       id="erc-faq"
     >
-      <div className="relative z-10 mx-auto w-full max-w-4xl">
-        {/* Header Title */}
-        <SectionHeader
-          title="Frequently Asked"
-          highlightText="Questions"
-          className="mb-14"
-        />
+      {/* Header Title */}
+      <SectionHeader
+        title="Frequently Asked"
+        highlightText="Questions"
+        className="mb-14"
+      />
 
+      <div className="relative z-10 mx-auto w-full max-w-4xl break-words">
         {/* Accordion List */}
         <FaqAccordion items={ercFaqItems} />
       </div>

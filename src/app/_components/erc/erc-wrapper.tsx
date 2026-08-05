@@ -18,7 +18,7 @@ export function ErcWrapper() {
           className="object-cover object-top opacity-90"
         />
       </div>
-      <div className="relative z-10 mx-auto flex w-full max-w-[1609px] flex-col items-center justify-start gap-16 px-4 py-12 md:px-8 lg:gap-[169px] lg:py-20">
+      <div className="relative z-10 mx-auto flex w-full max-w-[1509px] flex-col items-center justify-start gap-16 px-4 py-12 sm:px-6 sm:py-16 md:px-8 md:py-20 lg:gap-[169px] lg:px-8 lg:py-24">
         <ErcHero />
         <ErcDescription />
         <ErcPrizePool />

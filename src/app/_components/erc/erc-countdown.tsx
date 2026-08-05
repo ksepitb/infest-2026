@@ -59,11 +59,11 @@ export function ErcCountdown() {
 
   return (
     <section
-      className="relative z-10 mx-auto flex w-full max-w-[1175px] scroll-mt-32 flex-col items-center gap-8 px-4 py-10 lg:gap-[60px] lg:py-[80px]"
+      className="relative z-10 mx-auto flex w-full max-w-[1509px] scroll-mt-32 flex-col items-center gap-8 px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:gap-[60px] lg:px-8 lg:py-24"
       id="erc-countdown"
     >
       <SectionHeader title="Registration" highlightText="Countdown" />
-      <div className="flex w-full flex-col items-center gap-4">
+      <div className="flex w-full flex-col items-center gap-4 break-words">
         <div className="flex min-h-[180px] w-full max-w-[462px] items-center justify-between gap-4 rounded-[26.2px] border border-white/30 bg-[linear-gradient(70deg,#FFB800_0%,rgba(147,0,156,0.8)_54%,#380356_100%)] p-6 text-center shadow-[0_24px_74px_rgba(151,71,255,0.32)] lg:h-[207px] lg:gap-[52px] lg:p-[52px]">
           <CountdownUnit label="Hours" value={timeLeft.hours} />
           <CountdownUnit label="Minutes" value={timeLeft.minutes} />

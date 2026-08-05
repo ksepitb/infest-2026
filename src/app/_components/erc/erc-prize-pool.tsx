@@ -37,15 +37,15 @@ const prizes: PrizeItem[] = [
 export function ErcPrizePool() {
   return (
     <section
-      className="mx-auto flex w-full max-w-[976px] scroll-mt-32 flex-col items-center gap-[61px] px-4 py-10 lg:py-[80px]"
+      className="mx-auto flex w-full max-w-[1509px] scroll-mt-32 flex-col items-center gap-[61px] px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:px-8 lg:py-24"
       id="erc-prize-pool"
     >
       <SectionHeader title="Prize" highlightText="Pool" />
-      <div className="flex w-full flex-col items-center gap-6">
+      <div className="flex w-full max-w-full flex-col items-center gap-6">
         {prizes.map((item) => (
           <div
             key={item.rank}
-            className="flex w-full max-w-[976px] flex-col items-center justify-start gap-4 sm:flex-row sm:gap-6 lg:gap-[24px]"
+            className="flex w-full max-w-[976px] flex-col items-center justify-start gap-4 break-words sm:flex-row sm:gap-6 lg:gap-[24px]"
           >
             <div className={item.badgeClassName}>
               <span className={item.textClassName}>{item.rank}</span>
