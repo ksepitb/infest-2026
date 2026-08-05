@@ -86,7 +86,6 @@ export function HighlightsCarousel() {
         }}
         className="relative overflow-hidden"
       >
-        {/* Judul: Font Size 60px dengan padding & line-height proporsional agar tidak terpotong */}
         <h2
           style={{
             width: "1182px",
@@ -109,7 +108,6 @@ export function HighlightsCarousel() {
           Last Year&apos;s Highlights
         </h2>
 
-        {/* Carousel Area */}
         <div className="relative flex h-[320px] w-full items-center justify-center">
           {IMAGES.map((src, index) => {
             const cardStyle = getCardStyle(index);
@@ -137,7 +135,6 @@ export function HighlightsCarousel() {
           })}
         </div>
 
-        {/* Controls: Panah & Dot Indicator SVG */}
         <div className="z-40 flex items-center justify-center gap-4">
           <button
             onClick={handlePrev}

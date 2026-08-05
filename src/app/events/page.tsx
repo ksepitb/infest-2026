@@ -34,7 +34,6 @@ export default function EventsPage() {
         <div className="absolute top-[30%] left-[-10%] h-[500px] w-[500px] rounded-full bg-[#8E00A6]/20 blur-[150px]" />
         <div className="absolute top-[65%] right-[-10%] h-[600px] w-[600px] rounded-full bg-[#530074]/30 blur-[160px]" />
 
-        {/* Dotted matrix SVG ornament */}
         <Image
           alt=""
           className="absolute bottom-[450px] left-[-40px] w-[300px] opacity-25 mix-blend-screen md:w-[420px]"
@@ -53,9 +52,7 @@ export default function EventsPage() {
 
       <Navbar />
 
-      {/* ================= Hero ================= */}
       <section className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-6 pt-28 text-center">
-        {/* Container khusus ornamen selebar layar */}
         <div className="pointer-events-none absolute left-1/2 top-0 z-0 w-screen -translate-x-1/2">
           {/* Left Ornament */}
           <div className="absolute left-0 top-[20%] select-none opacity-80 md:top-[25%] lg:top-[10%]">
@@ -67,7 +64,6 @@ export default function EventsPage() {
               className="w-[200px] object-contain sm:w-[250px] md:w-[300px] lg:w-[600px]"
             />
           </div>
-          {/* Right Ornament */}
           <div className="absolute right-0 top-[20%] select-none opacity-80 md:top-[25%] lg:top-[10%]">
             <Image
               src="/images/ornament1-right.png"
@@ -84,9 +80,7 @@ export default function EventsPage() {
         </section>
       </section>
 
-      {/* ================= Pre-Events ================= */}
       <section className="relative z-10 mx-auto mt-20 flex max-w-5xl flex-col items-center gap-24 px-6">
-        {/* Ornament 2 centered behind heading (Full Width Screen) */}
         <div className="pointer-events-none absolute left-1/2 top-[-18%] z-0 w-screen -translate-x-1/2 scale-125 select-none opacity-85">
           <Image
             src="/images/ornament2.png"
@@ -120,7 +114,6 @@ export default function EventsPage() {
         />
       </section>
 
-      {/* ================= Main Event ================= */}
       <section className="relative z-10 mx-auto mt-24 flex max-w-5xl flex-col items-center gap-20 px-6">
         <SectionBadge>Main Event</SectionBadge>
 
@@ -137,9 +130,7 @@ export default function EventsPage() {
         />
       </section>
 
-      {/* ================= Date of the Event ================= */}
       <section className="relative z-10 mx-auto mt-20 flex max-w-5xl flex-col items-center gap-10 px-6">
-        {/* Ornament 3 Left (Full Width Screen Edge) */}
         <div className="pointer-events-none absolute left-1/2 top-[-60%] z-0 w-screen -translate-x-1/2">
           <div className="absolute left-[-5%] select-none opacity-80">
             <Image
@@ -156,9 +147,7 @@ export default function EventsPage() {
         <LocationPill location="Aula CC Timur Institut Teknologi Bandung" />
       </section>
 
-      {/* ================= Last Year's Highlights ================= */}
       <section className="relative z-10 mt-24 px-6">
-        {/* Ornament 3 Right (Full Width Screen Edge) */}
         <div className="pointer-events-none absolute left-1/2 top-[-90%] z-0 w-screen -translate-x-1/2">
           <div className="absolute right-[-5%] select-none opacity-80">
             <Image

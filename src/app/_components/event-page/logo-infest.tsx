@@ -5,10 +5,9 @@ import Image from "next/image";
 export function HeaderLogo() {
   return (
     <div className="flex w-full flex-col items-center justify-center gap-6 lg:flex-row lg:items-center lg:justify-center lg:gap-10">
-      {/* 1. LOGO GABUNGAN INFEST + ARROW + 2026 */}
       <div className="filter drop-shadow-[0_0_25px_rgba(255,255,255,0.7)]">
         <Image
-          src="/images/INFEST PUTIH.svg" // <-- SESUAIKAN NAMA FILE DAN LOKASI GAMBAR ANDA DI SINI
+          src="/images/INFEST PUTIH.svg" 
           alt="INFEST 2026 Logo"
           width={450}
           height={150}
@@ -17,7 +16,6 @@ export function HeaderLogo() {
         />
       </div>
 
-      {/* 2. TEKS PRE-EVENT & MAIN EVENT */}
       <div className="flex flex-col justify-center text-center lg:text-left">
         <h1
           style={{

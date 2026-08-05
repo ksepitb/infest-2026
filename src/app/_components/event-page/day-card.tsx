@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { ReactNode } from "react";
 import { ACCENT_GOLD, glowTextShadow } from "./styles";
 
@@ -71,17 +72,44 @@ export function DayCard({
   );
 
   const image = (
-    <div
-      style={{
-        backgroundImage: `url(${imageSrc})`,
-        backgroundColor: "rgba(0,0,0,0.3)",
-        backgroundSize: "cover",
-        backgroundPosition: "top center",
-      }}
-      role="img"
-      aria-label={imageAlt}
-      className="aspect-[72/95] w-[220px] shrink-0 rounded-[24px] border-2 border-white/80 shadow-lg lg:w-[320px]"
-    />
+    <div className="relative flex h-[360px] w-[270px] shrink-0 items-end justify-center lg:h-[460px] lg:w-[350px]">
+      
+      <div
+        className="relative h-[72%] w-full rounded-[28px]"
+        style={{
+    
+          WebkitMaskImage: "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0.2) 80%, rgba(0,0,0,0) 100%)",
+          maskImage: "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0.2) 80%, rgba(0,0,0,0) 100%)",
+          
+          backgroundImage: `
+            linear-gradient(180deg, rgba(56, 3, 86, 0.00) -7.45%, rgba(19, 1, 29, 0.42) 25.27%, rgba(0, 0, 0, 0.60) 99.04%),
+            url(/images/frame-speaker.png)
+          `,
+          backgroundPosition: "center, -0.131px -223.613px",
+          backgroundSize: "cover, 100% 163.133%",
+          backgroundRepeat: "no-repeat",
+
+          border: "2px solid #FFFEFF",
+          boxShadow: "0 0 15px rgba(255, 254, 255, 0.2)",
+        }}
+      />
+      
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 top-0 z-10 flex items-end justify-center overflow-hidden rounded-b-[28px]">
+        <div 
+          className="relative h-[118%] w-[92%]"
+          style={{ aspectRatio: "72 / 95" }}
+        >
+          <Image
+            src={imageSrc}
+            alt={imageAlt}
+            fill
+            priority
+            className="object-contain object-bottom filter drop-shadow-[0_12px_24px_rgba(0,0,0,0.6)]"
+          />
+        </div>
+      </div>
+
+    </div>
   );
 
   const textColumn = (

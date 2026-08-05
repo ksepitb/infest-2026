@@ -24,7 +24,6 @@ export function LocationPill({ location }: LocationPillProps) {
           />
         </div>
 
-        {/* Box Pill: Ditambahkan padding kanan (pr-8 lg:pr-12) */}
         <div
           style={locationPillStyle}
           className="z-0 -ml-10 flex w-full items-center gap-4 py-3 pl-8 pr-8 lg:-ml-16 lg:h-[95px] lg:gap-6 lg:pl-20 lg:pr-12"
