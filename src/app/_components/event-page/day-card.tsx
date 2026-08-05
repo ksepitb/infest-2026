@@ -1,9 +1,9 @@
 import type { ReactNode } from "react";
-import { ACCENT_GOLD, glowTextShadow, descriptionBoxStyle } from "./styles";
+import { ACCENT_GOLD, glowTextShadow } from "./styles";
 
 type DayCardProps = {
   dayLabel: string;
-  title: string; 
+  title: string;
   description: ReactNode;
   imageSrc: string;
   imageAlt: string;
@@ -24,80 +24,84 @@ export function DayCard({
   imagePosition,
   boxed = false,
 }: DayCardProps) {
+  const contentMaxWidth = boxed ? "760px" : "858px";
+
   const heading = (
-    <h3 className="text-center font-poppins font-bold leading-none">
-        <span
-            style={{ ...glowTextShadow, color: ACCENT_GOLD, letterSpacing: "-1.8px" }}
-            className="text-[28px] lg:text-[64px]"
-        >
+    <h3 className="w-full text-left font-poppins font-bold leading-tight">
+      <span
+        style={{ ...glowTextShadow, color: ACCENT_GOLD, letterSpacing: "-1.8px" }}
+        className="text-[28px] lg:text-[56px]"
+      >
         {dayLabel}
       </span>{" "}
       <span
         style={{ ...glowTextShadow, color: "#FFF", letterSpacing: "-1.8px" }}
-        className="text-[28px] lg:text-[64px]"
+        className="text-[28px] lg:text-[56px]"
       >
         - {title}
       </span>
     </h3>
   );
 
-    const paragraph = boxed ? (
+  const paragraph = boxed ? (
     <div
-        className="mx-auto flex w-full max-w-[760px] items-center justify-center rounded-[18px] px-[36px] py-[24px]"
-        style={{
+      className="flex w-full items-center justify-center rounded-[24px] px-[32px] py-[28px]"
+      style={{
         backgroundColor: "#000",
         backgroundImage:
-            "linear-gradient(180deg, rgba(56, 3, 86, 0.60) -4.56%, rgba(19, 1, 29, 0.42) 64.79%, rgba(0, 0, 0, 0.60) 104.56%)",
+          "linear-gradient(180deg, rgba(56, 3, 86, 0.60) -4.56%, rgba(19, 1, 29, 0.42) 64.79%, rgba(0, 0, 0, 0.60) 104.56%)",
         boxShadow:
-            "0 0 8px 0 #380356, 0 0 32px 0 #380356, 0 0 40px 0 #380356",
-        }}
+          "0 0 8px 0 #380356, 0 0 32px 0 #380356, 0 0 40px 0 #380356",
+      }}
     >
-        <p
+      <p
         style={{ textShadow: "0 4px 9.3px rgba(0,0,0,.25)" }}
-        className="w-[620px] text-center font-poppins text-[20px] font-semibold leading-[140%] text-white"
-        >
+        className="text-center font-poppins text-[15px] font-semibold leading-[150%] text-white lg:text-[18px]"
+      >
         {description}
-        </p>
+      </p>
     </div>
-    ) : (
+  ) : (
     <p
-        style={{ textShadow: "0 4px 9.3px rgba(0,0,0,.25)" }}
-        className="mx-auto max-w-[858px] text-center font-poppins text-base font-semibold leading-[125%] text-white lg:text-[24px]"
+      style={{ textShadow: "0 4px 9.3px rgba(0,0,0,.25)" }}
+      className="w-full text-center font-poppins text-base font-semibold leading-[125%] text-white lg:text-[22px]"
     >
-        {description}
+      {description}
     </p>
-    );
+  );
 
   const image = (
     <div
       style={{
-        aspectRatio: "72 / 95",
         backgroundImage: `url(${imageSrc})`,
-        backgroundColor: "lightgray",
+        backgroundColor: "rgba(0,0,0,0.3)",
         backgroundSize: "cover",
-        backgroundPosition: "50%",
+        backgroundPosition: "top center",
       }}
       role="img"
       aria-label={imageAlt}
-      className="w-[180px] shrink-0 rounded-2xl lg:w-[260px]"
+      className="aspect-[72/95] w-[220px] shrink-0 rounded-[24px] border-2 border-white/80 shadow-lg lg:w-[320px]"
     />
   );
 
-
-    const content = (
-    <div className="flex flex-col items-center gap-8">
-        {heading}
-
-        <div
-        className={`flex w-full flex-col items-center gap-5 lg:flex-row lg:items-center ${
-            imagePosition === "right" ? "lg:flex-row-reverse" : ""
-        }`}
-        >
-        {image}
-        {paragraph}
-        </div>
+  const textColumn = (
+    <div
+      className="flex w-full flex-col items-start gap-4"
+      style={{ maxWidth: contentMaxWidth }}
+    >
+      {heading}
+      {paragraph}
     </div>
-    );
+  );
 
-    return content;
+  return (
+    <div
+      className={`flex w-full flex-col items-center justify-center gap-8 lg:flex-row lg:items-center ${
+        imagePosition === "right" ? "lg:flex-row" : "lg:flex-row-reverse"
+      }`}
+    >
+      {textColumn}
+      {image}
+    </div>
+  );
 }

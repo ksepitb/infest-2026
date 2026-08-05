@@ -1,37 +1,41 @@
-import { locationCircleGradient, locationPillStyle } from "./styles";
+import { locationPillStyle } from "./styles";
 
-export function LocationPill({ location }: { location: string }) {
+type LocationPillProps = {
+  location: string;
+};
+
+export function LocationPill({ location }: LocationPillProps) {
   return (
     <div className="flex justify-center">
-      <div
-        style={locationPillStyle}
-        className="flex w-full max-w-[1000px] items-center gap-4 px-4 py-3 lg:h-[108px] lg:gap-6 lg:px-6"
-      >
-        <div
-          style={{ background: locationCircleGradient }}
-          className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full lg:h-[145px] lg:w-[145px]"
-        >
-          {/* Ikon pin lokasi */}
-          <svg
-            width="28"
-            height="28"
-            viewBox="0 0 24 24"
-            fill="none"
-            className="lg:h-10 lg:w-10"
-          >
-            <path
-              d="M12 2C7.58 2 4 5.58 4 10c0 5.25 6.5 11.24 7.03 11.72a1.5 1.5 0 0 0 1.94 0C13.5 21.24 20 15.25 20 10c0-4.42-3.58-8-8-8Zm0 10.5A2.5 2.5 0 1 1 12 7.5a2.5 2.5 0 0 1 0 5Z"
-              fill="#FFFFFF"
-            />
-          </svg>
+      <div className="relative flex w-full max-w-[900px] items-center">
+        {/* Container Ikon */}
+        <div className="relative z-10 -ml-6 flex h-20 w-20 shrink-0 items-center justify-center lg:-ml-12 lg:h-[130px] lg:w-[130px]">
+          <img
+            src="/images/base-logo-location.svg"
+            alt="Circle Base"
+            className="absolute inset-0 h-full w-full object-contain"
+          />
+
+          {/* Logo Lokasi Diperbesar (h-[65%] w-[65%]) */}
+          <img
+            src="/images/location-logo.png"
+            alt="Location Icon"
+            className="relative z-10 h-[65%] w-[65%] object-contain"
+          />
         </div>
 
-        <p
-          style={{ textShadow: "0 4px 4px rgba(0,0,0,0.25)" }}
-          className="font-poppins text-xl font-bold leading-none text-white lg:text-[40px]"
+        {/* Box Pill: Ditambahkan padding kanan (pr-8 lg:pr-12) */}
+        <div
+          style={locationPillStyle}
+          className="z-0 -ml-10 flex w-full items-center gap-4 py-3 pl-8 pr-8 lg:-ml-16 lg:h-[95px] lg:gap-6 lg:pl-20 lg:pr-12"
         >
-          {location}
-        </p>
+          <p
+            style={{ textShadow: "0 4px 4px rgba(0,0,0,0.25)" }}
+            className="font-poppins text-xl font-bold leading-none text-white lg:text-[32px]"
+          >
+            {location}
+          </p>
+        </div>
       </div>
     </div>
   );
