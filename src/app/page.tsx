@@ -84,7 +84,7 @@ export default function Home() {
         id="home"
       >
         {/* Left Ornament */}
-        <div className="pointer-events-none absolute left-0 top-[20%] z-0 select-none opacity-80 md:top-[25%] lg:top-[10%]">
+        <div className="pointer-events-none absolute top-[20%] left-0 z-0 opacity-80 select-none md:top-[25%] lg:top-[10%]">
           <Image
             src="/images/ornament1-left.png"
             alt=""
@@ -94,7 +94,7 @@ export default function Home() {
           />
         </div>
         {/* Right Ornament */}
-        <div className="pointer-events-none absolute right-0 top-[20%] z-0 select-none opacity-80 md:top-[25%] lg:top-[10%]">
+        <div className="pointer-events-none absolute top-[20%] right-0 z-0 opacity-80 select-none md:top-[25%] lg:top-[10%]">
           <Image
             src="/images/ornament1-right.png"
             alt=""
@@ -159,7 +159,7 @@ export default function Home() {
       {/* What is INFEST? Section */}
       <section className="relative z-10 px-6 py-20" id="about">
         {/* Ornament 2 centered behind heading */}
-        <div className="pointer-events-none absolute left-[50%] top-[-18%] w-full scale-125 z-0 -translate-x-1/2 select-none opacity-85">
+        <div className="pointer-events-none absolute top-[-18%] left-[50%] z-0 w-full -translate-x-1/2 scale-125 opacity-85 select-none">
           <Image
             src="/images/ornament2.png"
             alt=""
@@ -168,7 +168,7 @@ export default function Home() {
             className="w-full object-contain"
           />
         </div>
-        <div className="mx-auto max-w-6xl relative z-10">
+        <div className="relative z-10 mx-auto max-w-6xl">
           <div className="mb-14 flex items-center justify-center">
             <div className="">
               <h2 className="text-5xl font-bold tracking-wide sm:text-[60px]">
@@ -246,7 +246,7 @@ export default function Home() {
       {/* The Timeline Section */}
       <section className="relative z-10 px-6 py-24" id="timeline">
         {/* Ornament 3 Left */}
-        <div className="pointer-events-none absolute left-[-15%] top-[-60%] z-0 select-none opacity-80">
+        <div className="pointer-events-none absolute top-[-60%] left-[-15%] z-0 opacity-80 select-none">
           <Image
             src="/images/ornament3-left.png"
             alt=""
@@ -255,7 +255,7 @@ export default function Home() {
             className="w-[300px] object-contain sm:w-[600px] md:w-[1000px]"
           />
         </div>
-        <div className="mx-auto max-w-5xl relative z-10">
+        <div className="relative z-10 mx-auto max-w-5xl">
           {/* Section Title */}
           <div className="mb-32 text-left">
             <h2 className="text-4xl font-bold sm:text-6xl">
@@ -349,7 +349,7 @@ export default function Home() {
       {/* Frequently Asked Questions Section */}
       <section className="relative z-10 px-6 py-20" id="faq">
         {/* Ornament 3 Right */}
-        <div className="pointer-events-none absolute right-[-20%] top-[-90%] z-0 select-none opacity-80">
+        <div className="pointer-events-none absolute top-[-90%] right-[-20%] z-0 opacity-80 select-none">
           <Image
             src="/images/ornament3-right.png"
             alt=""
@@ -358,7 +358,7 @@ export default function Home() {
             className="w-[300px] object-contain sm:w-[600px] md:w-[1000px]"
           />
         </div>
-        <div className="mx-auto max-w-4xl relative z-10">
+        <div className="relative z-10 mx-auto max-w-4xl">
           {/* Header Banner Bar */}
           <div className="mb-14 flex items-center justify-center">
             <h2 className="text-3xl font-bold sm:text-5xl">
