@@ -4,8 +4,7 @@ export const descriptionBoxStyle: CSSProperties = {
   borderRadius: "28.204px",
   background:
     "linear-gradient(180deg, rgba(56, 3, 86, 0.60) -4.56%, rgba(19, 1, 29, 0.42) 64.79%, rgba(0, 0, 0, 0.60) 104.56%), #000",
-  boxShadow:
-    "0 0 8px 0 #380356, 0 0 32px 0 #380356, 0 0 40px 0 #380356",
+  boxShadow: "0 0 8px 0 #380356, 0 0 32px 0 #380356, 0 0 40px 0 #380356",
 };
 
 export const glowTextShadow: CSSProperties = {

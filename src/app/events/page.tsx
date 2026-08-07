@@ -14,19 +14,21 @@ function ThemeDescription() {
     <>
       INFEST 2025, dengan tema{" "}
       <Highlight>
-        &ldquo;Navigating the Future: Smart Investment in the Times of Changes,&rdquo;
+        &ldquo;Navigating the Future: Smart Investment in the Times of
+        Changes,&rdquo;
       </Highlight>{" "}
-      berfokus pada strategi investasi cerdas untuk menghadapi masa-masa penuh perubahan. Acara
-      ini akan membekali peserta dengan pola pikir yang proaktif dan tangguh, serta membahas
-      pemanfaatan teknologi seperti AI dalam mengambil keputusan investasi di tengah dinamika
-      pasar dan krisis ekonomi.
+      berfokus pada strategi investasi cerdas untuk menghadapi masa-masa penuh
+      perubahan. Acara ini akan membekali peserta dengan pola pikir yang
+      proaktif dan tangguh, serta membahas pemanfaatan teknologi seperti AI
+      dalam mengambil keputusan investasi di tengah dinamika pasar dan krisis
+      ekonomi.
     </>
   );
 }
 
 export default function EventsPage() {
   return (
-    <main className="relative min-h-screen overflow-x-hidden bg-[#16001F] text-white antialiased pb-24">
+    <main className="relative min-h-screen overflow-x-hidden bg-[#16001F] pb-24 text-white antialiased">
       {/* Background Vector Ornaments & Glows */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
         {/* Glow ambient spots */}
@@ -53,9 +55,9 @@ export default function EventsPage() {
       <Navbar />
 
       <section className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-6 pt-28 text-center">
-        <div className="pointer-events-none absolute left-1/2 top-0 z-0 w-screen -translate-x-1/2">
+        <div className="pointer-events-none absolute top-0 left-1/2 z-0 w-screen -translate-x-1/2">
           {/* Left Ornament */}
-          <div className="absolute left-0 top-[20%] select-none opacity-80 md:top-[25%] lg:top-[10%]">
+          <div className="absolute top-[20%] left-0 opacity-80 select-none md:top-[25%] lg:top-[10%]">
             <Image
               src="/images/ornament1-left.png"
               alt=""
@@ -64,7 +66,7 @@ export default function EventsPage() {
               className="w-[200px] object-contain sm:w-[250px] md:w-[300px] lg:w-[600px]"
             />
           </div>
-          <div className="absolute right-0 top-[20%] select-none opacity-80 md:top-[25%] lg:top-[10%]">
+          <div className="absolute top-[20%] right-0 opacity-80 select-none md:top-[25%] lg:top-[10%]">
             <Image
               src="/images/ornament1-right.png"
               alt=""
@@ -81,7 +83,7 @@ export default function EventsPage() {
       </section>
 
       <section className="relative z-10 mx-auto mt-20 flex max-w-5xl flex-col items-center gap-24 px-6">
-        <div className="pointer-events-none absolute left-1/2 top-[-18%] z-0 w-screen -translate-x-1/2 scale-125 select-none opacity-85">
+        <div className="pointer-events-none absolute top-[-18%] left-1/2 z-0 w-screen -translate-x-1/2 scale-125 opacity-85 select-none">
           <Image
             src="/images/ornament2.png"
             alt=""
@@ -131,8 +133,8 @@ export default function EventsPage() {
       </section>
 
       <section className="relative z-10 mx-auto mt-20 flex max-w-5xl flex-col items-center gap-10 px-6">
-        <div className="pointer-events-none absolute left-1/2 top-[-60%] z-0 w-screen -translate-x-1/2">
-          <div className="absolute left-[-5%] select-none opacity-80">
+        <div className="pointer-events-none absolute top-[-60%] left-1/2 z-0 w-screen -translate-x-1/2">
+          <div className="absolute left-[-5%] opacity-80 select-none">
             <Image
               src="/images/ornament3-left.png"
               alt=""
@@ -148,8 +150,8 @@ export default function EventsPage() {
       </section>
 
       <section className="relative z-10 mt-24 px-6">
-        <div className="pointer-events-none absolute left-1/2 top-[-90%] z-0 w-screen -translate-x-1/2">
-          <div className="absolute right-[-5%] select-none opacity-80">
+        <div className="pointer-events-none absolute top-[-90%] left-1/2 z-0 w-screen -translate-x-1/2">
+          <div className="absolute right-[-5%] opacity-80 select-none">
             <Image
               src="/images/ornament3-right.png"
               alt=""

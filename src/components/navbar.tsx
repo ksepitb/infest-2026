@@ -103,7 +103,7 @@ function MobileMenu({
 
 export function Navbar({
   links = defaultLinks,
-  registerHref = "#register",
+  registerHref = "/register",
   logoSrc = "/images/INFEST PUTIH.svg",
   activeHref,
 }: NavbarProps) {

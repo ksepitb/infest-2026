@@ -9,7 +9,7 @@ export function GradientDivider({ children }: { children: string }) {
       />
       <span
         style={{ ...glowTextShadow, color: "#FFF", letterSpacing: "-1.2px" }}
-        className="absolute px-4 text-center font-poppins text-[28px] font-semibold italic leading-none lg:text-[60px]"
+        className="font-poppins absolute px-4 text-center text-[28px] leading-none font-semibold italic lg:text-[60px]"
       >
         {children}
       </span>

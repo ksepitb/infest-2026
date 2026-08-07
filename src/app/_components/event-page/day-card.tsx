@@ -28,9 +28,13 @@ export function DayCard({
   const contentMaxWidth = boxed ? "760px" : "858px";
 
   const heading = (
-    <h3 className="w-full text-left font-poppins font-bold leading-tight">
+    <h3 className="font-poppins w-full text-left leading-tight font-bold">
       <span
-        style={{ ...glowTextShadow, color: ACCENT_GOLD, letterSpacing: "-1.8px" }}
+        style={{
+          ...glowTextShadow,
+          color: ACCENT_GOLD,
+          letterSpacing: "-1.8px",
+        }}
         className="text-[28px] lg:text-[56px]"
       >
         {dayLabel}
@@ -51,13 +55,12 @@ export function DayCard({
         backgroundColor: "#000",
         backgroundImage:
           "linear-gradient(180deg, rgba(56, 3, 86, 0.60) -4.56%, rgba(19, 1, 29, 0.42) 64.79%, rgba(0, 0, 0, 0.60) 104.56%)",
-        boxShadow:
-          "0 0 8px 0 #380356, 0 0 32px 0 #380356, 0 0 40px 0 #380356",
+        boxShadow: "0 0 8px 0 #380356, 0 0 32px 0 #380356, 0 0 40px 0 #380356",
       }}
     >
       <p
         style={{ textShadow: "0 4px 9.3px rgba(0,0,0,.25)" }}
-        className="text-center font-poppins text-[15px] font-semibold leading-[150%] text-white lg:text-[18px]"
+        className="font-poppins text-center text-[15px] leading-[150%] font-semibold text-white lg:text-[18px]"
       >
         {description}
       </p>
@@ -65,7 +68,7 @@ export function DayCard({
   ) : (
     <p
       style={{ textShadow: "0 4px 9.3px rgba(0,0,0,.25)" }}
-      className="w-full text-center font-poppins text-base font-semibold leading-[125%] text-white lg:text-[22px]"
+      className="font-poppins w-full text-center text-base leading-[125%] font-semibold text-white lg:text-[22px]"
     >
       {description}
     </p>
@@ -73,14 +76,14 @@ export function DayCard({
 
   const image = (
     <div className="relative flex h-[360px] w-[270px] shrink-0 items-end justify-center lg:h-[460px] lg:w-[350px]">
-      
       <div
         className="relative h-[72%] w-full rounded-[28px]"
         style={{
-    
-          WebkitMaskImage: "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0.2) 80%, rgba(0,0,0,0) 100%)",
-          maskImage: "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0.2) 80%, rgba(0,0,0,0) 100%)",
-          
+          WebkitMaskImage:
+            "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0.2) 80%, rgba(0,0,0,0) 100%)",
+          maskImage:
+            "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0.2) 80%, rgba(0,0,0,0) 100%)",
+
           backgroundImage: `
             linear-gradient(180deg, rgba(56, 3, 86, 0.00) -7.45%, rgba(19, 1, 29, 0.42) 25.27%, rgba(0, 0, 0, 0.60) 99.04%),
             url(/images/frame-speaker.png)
@@ -93,9 +96,9 @@ export function DayCard({
           boxShadow: "0 0 15px rgba(255, 254, 255, 0.2)",
         }}
       />
-      
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 top-0 z-10 flex items-end justify-center overflow-hidden rounded-b-[28px]">
-        <div 
+
+      <div className="pointer-events-none absolute inset-x-0 top-0 bottom-0 z-10 flex items-end justify-center overflow-hidden rounded-b-[28px]">
+        <div
           className="relative h-[118%] w-[92%]"
           style={{ aspectRatio: "72 / 95" }}
         >
@@ -104,11 +107,10 @@ export function DayCard({
             alt={imageAlt}
             fill
             priority
-            className="object-contain object-bottom filter drop-shadow-[0_12px_24px_rgba(0,0,0,0.6)]"
+            className="object-contain object-bottom drop-shadow-[0_12px_24px_rgba(0,0,0,0.6)] filter"
           />
         </div>
       </div>
-
     </div>
   );
 

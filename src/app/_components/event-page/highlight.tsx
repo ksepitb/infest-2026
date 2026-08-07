@@ -141,7 +141,11 @@ export function HighlightsCarousel() {
             className="flex h-8 w-8 items-center justify-center transition hover:scale-110"
             aria-label="Previous slide"
           >
-            <img src="/images/left-arrow.svg" alt="Previous" className="h-5 w-5" />
+            <img
+              src="/images/left-arrow.svg"
+              alt="Previous"
+              className="h-5 w-5"
+            />
           </button>
 
           <div className="flex items-center gap-2.5">
