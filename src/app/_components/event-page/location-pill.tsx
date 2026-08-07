@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { locationPillStyle } from "./styles";
 
 type LocationPillProps = {
@@ -10,18 +12,28 @@ export function LocationPill({ location }: LocationPillProps) {
       <div className="relative flex w-full max-w-[900px] items-center">
         {/* Container Ikon */}
         <div className="relative z-10 -ml-6 flex h-20 w-20 shrink-0 items-center justify-center lg:-ml-12 lg:h-[130px] lg:w-[130px]">
-          <img
-            src="/images/base-logo-location.svg"
-            alt="Circle Base"
-            className="absolute inset-0 h-full w-full object-contain"
-          />
+          <div className="absolute inset-0">
+            <Image
+              alt=""
+              aria-hidden="true"
+              className="object-contain"
+              fill
+              sizes="(max-width: 1024px) 80px, 130px"
+              src="/images/base-logo-location.svg"
+            />
+          </div>
 
           {/* Logo Lokasi Diperbesar (h-[65%] w-[65%]) */}
-          <img
-            src="/images/location-logo.png"
-            alt="Location Icon"
-            className="relative z-10 h-[65%] w-[65%] object-contain"
-          />
+          <div className="relative z-10 h-[65%] w-[65%]">
+            <Image
+              alt="Location"
+              aria-hidden="true"
+              className="object-contain"
+              fill
+              sizes="(max-width: 1024px) 52px, 84px"
+              src="/images/location-logo.png"
+            />
+          </div>
         </div>
 
         <div

@@ -3,6 +3,7 @@ import "~/styles/globals.css";
 import { type Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 
+import { PageTransition } from "~/components/page-transition";
 import { TRPCReactProvider } from "~/trpc/react";
 
 export const metadata: Metadata = {
@@ -27,9 +28,14 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${poppins.variable} ${inter.variable}`}>
+    <html
+      lang="en"
+      className={`${poppins.variable} ${inter.variable} scroll-smooth`}
+    >
       <body>
-        <TRPCReactProvider>{children}</TRPCReactProvider>
+        <TRPCReactProvider>
+          <PageTransition>{children}</PageTransition>
+        </TRPCReactProvider>
       </body>
     </html>
   );

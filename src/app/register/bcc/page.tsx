@@ -74,19 +74,19 @@ export default function BccRulesPage() {
         <Image
           alt=""
           aria-hidden="true"
-          className="absolute top-[-40%] left-[-35%] w-[1400px] opacity-80 backdrop-blur-lg"
+          className="absolute top-[-33%] left-[-35%] w-[1400px] opacity-80 backdrop-blur-lg"
           height={900}
           src="/images/registration/regis-circle-left.png"
           width={900}
         />
 
-        {/* Right circular ring ornament */}
+        
         <Image
           alt=""
           aria-hidden="true"
-          className="absolute top-[-10%] right-[-45%] w-[2400px] opacity-80 backdrop-blur-lg"
+          className="absolute top-[20%] right-[-3%] w-[2400px] opacity-80 backdrop-blur-lg"
           height={2400}
-          src="/images/registration/regis-circle-right.png"
+          src="/images/ornament1-right.png"
           width={2400}
         />
 
@@ -102,7 +102,7 @@ export default function BccRulesPage() {
         {/* Bottom Left Dotted matrix SVG ornament */}
         <Image
           alt=""
-          className="absolute bottom-[30%] left-[-40px] w-[800px] rotate-[-45deg] opacity-35 mix-blend-screen md:w-[420px]"
+          className="absolute bottom-[20%] left-[-40px] w-[800px] rotate-[-45deg] opacity-35 mix-blend-screen md:w-[420px]"
           height={800}
           src="/images/dotted1.svg"
           width={800}
@@ -118,7 +118,7 @@ export default function BccRulesPage() {
         registerHref="/register"
       />
 
-      <RulesCard rules={bccRules} title="Ketentuan Umum BCC" />
+      <RulesCard rules={bccRules} title="Ketentuan Umum ERC" />
 
       <div className="relative z-10 bg-black">
         <Footer

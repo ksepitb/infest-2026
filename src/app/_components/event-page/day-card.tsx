@@ -10,6 +10,7 @@ type DayCardProps = {
   imageAlt: string;
   imagePosition: "left" | "right";
   boxed?: boolean;
+  priority?: boolean;
 };
 
 export function Highlight({ children }: { children: ReactNode }) {
@@ -24,6 +25,7 @@ export function DayCard({
   imageAlt,
   imagePosition,
   boxed = false,
+  priority = false,
 }: DayCardProps) {
   const contentMaxWidth = boxed ? "760px" : "858px";
 
@@ -106,7 +108,7 @@ export function DayCard({
             src={imageSrc}
             alt={imageAlt}
             fill
-            priority
+            priority={priority}
             className="object-contain object-bottom drop-shadow-[0_12px_24px_rgba(0,0,0,0.6)] filter"
           />
         </div>

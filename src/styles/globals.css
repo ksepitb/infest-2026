@@ -13,6 +13,7 @@
   --gradient-3: linear-gradient(180deg, rgba(56, 3, 86, 0.60) -4.56%, rgba(19, 1, 29, 0.42) 64.79%, rgba(0, 0, 0, 0.60) 104.56%), linear-gradient(#000, #000);
   --gradient-4: linear-gradient(227deg, #380356 8.17%, #6B0078 28.17%, #E306D9 54.3%, rgba(31, 0, 48, 0.50) 91.45%);
   --gradient-6: linear-gradient(237deg, #FFB800 -3.82%, var(--light-purple, #93009C) 58.55%, #93009C 71.63%, #380356 100.81%);
+  --bg-gradient-event: linear-gradient(220deg, #210033 15.89%, #380356 31.78%, #6B0078 53.92%, rgba(227, 6, 217, 0.60) 88.55%, rgba(141, 3, 143, 0.56) 113.6%, rgba(31, 0, 48, 0.50) 133.39%);
   --highlight-bg-gradient-regis: linear-gradient(180deg, rgba(227, 6, 217, 0.20) 0%, rgba(56, 3, 86, 0.20) 24.72%, rgba(10, 1, 15, 0.17) 51.28%, rgba(0, 0, 0, 0.20) 87.88%), #000;
   --highlight-gradient-dark-bg: linear-gradient(180deg, var(--Pink, #E306D9) 0%, var(--Broken-White, #FFFEFF) 100%);
   --highlight-gradient-light-bg: linear-gradient(180deg, var(--Dark-Purple, #380356) 0%, var(--Pink, #E306D9) 100%);
@@ -38,6 +39,7 @@
   --color-infest-white: var(--infest-white);
   --color-accent-color: var(--accent-color);
   
+  --background-image-bg-gradient-event: var(--bg-gradient-event);
   --background-image-highlight-gradient-regis: var(--highlight-bg-gradient-regis);
   --background-image-gradient-1: var(--gradient-1);
   --background-image-gradient-2: var(--gradient-2);

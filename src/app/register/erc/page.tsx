@@ -74,19 +74,19 @@ export default function ErcRulesPage() {
         <Image
           alt=""
           aria-hidden="true"
-          className="absolute top-[-40%] left-[-35%] w-[1400px] opacity-80 backdrop-blur-lg"
+          className="absolute top-[-33%] left-[-35%] w-[1400px] opacity-80 backdrop-blur-lg"
           height={900}
           src="/images/registration/regis-circle-left.png"
           width={900}
         />
 
-        {/* Right circular ring ornament */}
+        
         <Image
           alt=""
           aria-hidden="true"
-          className="absolute top-[-10%] right-[-45%] w-[2400px] opacity-80 backdrop-blur-lg"
+          className="absolute top-[%] right-[-3%] w-[2400px] opacity-80 backdrop-blur-lg"
           height={2400}
-          src="/images/registration/regis-circle-right.png"
+          src="/images/ornament1-right.png"
           width={2400}
         />
 
@@ -107,8 +107,6 @@ export default function ErcRulesPage() {
           src="/images/dotted1.svg"
           width={800}
         />
-
-        {/* Center vignette to deepen contrast like the Figma */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.35)_0%,transparent_65%)]" />
       </div>
 
