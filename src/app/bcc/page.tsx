@@ -168,7 +168,7 @@ export default function BccPage() {
         <div className="absolute top-[22%] left-[28%] h-[250px] w-[250px] rounded-full bg-[#93009C]/10 blur-[80px] sm:h-[350px] sm:w-[350px]" />
       </div>
 
-      <Navbar activeHref="/bcc" links={bccLinks} registerHref="#" />
+      <Navbar />
 
       {/* Hero Section */}
       <section className="relative z-10 flex flex-col items-center px-6 pt-40 pb-12 text-center">

@@ -231,7 +231,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl">
           {/* Capsule Pill Header */}
           <div className="mb-12 flex justify-center">
-            <div className="bg-lighter-purple flex h-[90px] w-full max-w-[400px] items-center justify-center rounded-[100px] shadow-[inset_0_10px_18.8px_#A68FC2]">
+            <div className="bg-lighter-purple shadow-box-shadow-inset flex h-[90px] w-full max-w-[400px] items-center justify-center rounded-[100px]">
               <h2 className="text-3xl font-bold tracking-wide [filter:drop-shadow(0_4px_4px_rgba(0,0,0,0.25))] sm:text-[50px]">
                 <span className="text-infest-white">Our </span>
                 <span className="text-highlight-gradient-dark-bg">Events</span>
