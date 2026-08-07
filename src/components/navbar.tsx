@@ -14,24 +14,26 @@ interface NavbarProps {
   links?: NavLink[];
   registerHref?: string;
   logoSrc?: string;
+  activeHref?: string;
 }
 
 const defaultLinks: NavLink[] = [
   { href: "/#home", label: "Home" },
   { href: "/events", label: "Event" },
   { href: "/#erc", label: "ERC" },
-  { href: "/#bcc", label: "BCC" },
+  { href: "/bcc", label: "BCC" },
 ];
 
 function MobileMenu({
   links,
   registerHref,
   activeSection,
+  activeHref,
 }: {
   links: NavLink[];
   registerHref: string;
   activeSection: string;
-  pathname: string;
+  activeHref?: string;
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -71,7 +73,9 @@ function MobileMenu({
         <div className="bg-gradient-2 absolute top-full right-0 left-0 z-40 rounded-3xl px-6 py-4 shadow-[inset_2px_4px_4px_rgba(255,255,255,0.25),0_4px_4px_rgba(0,0,0,0.25)] backdrop-blur-md">
           <nav className="flex flex-col gap-4">
             {links.map((link) => {
-              const isActive = link.href.endsWith(`#${activeSection}`);
+              const isActive = activeHref
+                ? link.href === activeHref
+                : link.href.endsWith(`#${activeSection}`);
               return (
                 <Link
                   key={link.href}
@@ -105,6 +109,7 @@ export function Navbar({
   links = defaultLinks,
   registerHref = "#register",
   logoSrc = "/images/INFEST PUTIH.svg",
+  activeHref,
 }: NavbarProps) {
   const [activeSection, setActiveSection] = useState("home");
   const pathname = usePathname();
@@ -148,10 +153,11 @@ export function Navbar({
 
         <nav className="hidden items-center gap-18 md:flex">
           {links.map((link) => {
-            const isActive =
-            pathname === "/events"
-            ? link.href === "/events"
-            : link.href.endsWith(`#${activeSection}`);
+            const isActive = activeHref
+              ? link.href === activeHref
+              : pathname === "/events"
+                ? link.href === "/events"
+                : link.href.endsWith(`#${activeSection}`);
             return (
               <Link
                 key={link.href}
@@ -183,8 +189,8 @@ export function Navbar({
         </div>
 
         <MobileMenu
-          pathname={pathname}
           activeSection={activeSection}
+          activeHref={activeHref}
           links={links}
           registerHref={registerHref}
         />

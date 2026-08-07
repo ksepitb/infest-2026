@@ -136,7 +136,9 @@ export function Footer({
             <div className="mt-6 grid w-full max-w-lg grid-cols-2 gap-x-16 gap-y-8 text-xs text-white/90 sm:text-sm">
               {/* Event Contacts */}
               <div className="text-left">
-                <h4 className="mb-4 font-bold text-infest-white text-xl">Event</h4>
+                <h4 className="text-infest-white mb-4 text-xl font-bold">
+                  Event
+                </h4>
                 <div className="space-y-4">
                   {eventContacts.map((contact, index) => (
                     <div key={index} className="space-y-1">
@@ -156,7 +158,9 @@ export function Footer({
 
               {/* Competition Contacts */}
               <div className="text-right">
-                <h4 className="mb-4 font-bold text-infest-white text-xl">Competition</h4>
+                <h4 className="text-infest-white mb-4 text-xl font-bold">
+                  Competition
+                </h4>
                 <div className="space-y-4">
                   {competitionContacts.map((contact, index) => (
                     <div key={index} className="space-y-1">
