@@ -1,33 +1,29 @@
-"use client";
-
 import Image from "next/image";
 
 export function HeaderLogo() {
   return (
-    <div className="flex w-full flex-col items-center justify-center gap-6 lg:flex-row lg:items-center lg:justify-center lg:gap-10">
-      <div className="drop-shadow-[0_0_25px_rgba(255,255,255,0.7)] filter">
+    <div className="mt-8 flex w-full flex-col items-center justify-center gap-4 sm:gap-6 md:flex-row md:items-center md:gap-8 lg:gap-10">
+      {/* INFEST Wordmark */}
+      <div className="drop-shadow-[0_0_25px_rgba(255,255,255,0.5)] filter">
         <Image
-          src="/images/INFEST PUTIH.svg"
-          alt="INFEST 2026 Logo"
-          width={450}
-          height={150}
+          src="/images/INFESTPUTIH.png"
+          alt="INFEST Logo"
+          width={700}
+          height={300}
           priority
-          className="h-auto w-[280px] object-contain md:w-[380px] lg:w-[450px]"
+          className="h-auto w-[250px] object-contain sm:w-[350px] md:w-[420px] lg:w-[700px]"
         />
       </div>
 
-      <div className="flex flex-col justify-center text-center lg:text-left">
-        <h1
-          style={{
-            fontFamily: "Poppins, sans-serif",
-            textShadow:
-              "0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(227, 6, 217, 0.6)",
-          }}
-          className="text-3xl leading-[1.05] font-extrabold tracking-tight text-white md:text-5xl lg:text-[56px]"
-        >
-          <span className="block whitespace-nowrap">Pre-Event &amp;</span>
-          <span className="block whitespace-nowrap">Main Event</span>
-        </h1>
+      {/* Chevrons, Year, and Title Lockup */}
+      <div className="flex items-center gap-3 sm:gap-4 md:gap-5">
+        {/* Text Title Stack */}
+        <div className="flex flex-col justify-center text-left leading-none">
+          <h1 className="glow-text-1 text-[18px] leading-[1.1] font-bold text-white sm:text-[28px] md:text-7xl">
+            <span className="block whitespace-nowrap">Pre-Event &amp;</span>
+            <span className="block whitespace-nowrap">Main Event</span>
+          </h1>
+        </div>
       </div>
     </div>
   );

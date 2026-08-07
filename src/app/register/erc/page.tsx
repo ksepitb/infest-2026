@@ -5,7 +5,7 @@ import type { ContactInfo } from "~/components/footer";
 import { Footer } from "~/components/footer";
 import { Navbar } from "~/components/navbar";
 
-import { RulesCard } from "../_components/rules-card";
+import { RulesCard } from "../../_components/register/rules-card";
 
 export const metadata: Metadata = {
   title: "Ketentuan Umum ERC | INFEST 2026",
@@ -80,7 +80,6 @@ export default function ErcRulesPage() {
           width={900}
         />
 
-        
         <Image
           alt=""
           aria-hidden="true"

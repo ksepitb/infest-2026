@@ -4,11 +4,11 @@ import Image from "next/image";
 import { useState } from "react";
 
 const IMAGES = [
-  "/images/highlights/highlight-1.jpg",
-  "/images/highlights/highlight-2.jpg",
-  "/images/highlights/highlight-3.jpg",
-  "/images/highlights/highlight-4.jpg",
-  "/images/highlights/highlight-5.jpg",
+  "/images/event1.png",
+  "/images/event2.png",
+  "/images/lantik.jpg",
+  "/images/event1.png",
+  "/images/event2.png",
 ];
 
 export function HighlightsCarousel() {

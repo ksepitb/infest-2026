@@ -9,9 +9,9 @@ type LocationPillProps = {
 export function LocationPill({ location }: LocationPillProps) {
   return (
     <div className="flex justify-center">
-      <div className="relative flex w-full max-w-[900px] items-center">
+      <div className="relative flex w-full max-w-[800px] items-center">
         {/* Container Ikon */}
-        <div className="relative z-10 -ml-6 flex h-20 w-20 shrink-0 items-center justify-center lg:-ml-12 lg:h-[130px] lg:w-[130px]">
+        <div className="relative z-10 -ml-6 flex h-20 w-20 shrink-0 items-center justify-center lg:-ml-12 lg:h-[120px] lg:w-[120px]">
           <div className="absolute inset-0">
             <Image
               alt=""
@@ -38,11 +38,11 @@ export function LocationPill({ location }: LocationPillProps) {
 
         <div
           style={locationPillStyle}
-          className="z-0 -ml-10 flex w-full items-center gap-4 py-3 pr-8 pl-8 lg:-ml-16 lg:h-[95px] lg:gap-6 lg:pr-12 lg:pl-20"
+          className="z-0 -ml-10 flex w-full items-center gap-4 py-3 pr-8 pl-8 lg:-ml-16 lg:h-[85px] lg:gap-6 lg:pr-12 lg:pl-20"
         >
           <p
             style={{ textShadow: "0 4px 4px rgba(0,0,0,0.25)" }}
-            className="font-poppins text-xl leading-none font-bold text-white lg:text-[32px]"
+            className="font-poppins text-xl leading-none font-bold text-white lg:text-2xl"
           >
             {location}
           </p>
