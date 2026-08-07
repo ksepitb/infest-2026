@@ -1,0 +1,38 @@
+<svg width="183" height="162" viewBox="0 0 183 162" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_iin_69_150)">
+<path d="M167.543 137.735H128.484L70.9232 53.4494L45.2264 161.096H0L39.0592 0H67.9542L134.651 90.4528L143.788 0H182.961L167.543 137.735Z" fill="url(#paint0_linear_69_150)"/>
+</g>
+<defs>
+<filter id="filter0_iin_69_150" x="0" y="0" width="182.961" height="171.33" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="10.2337"/>
+<feGaussianBlur stdDeviation="5.11683"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.996078 0 0 0 0 1 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_69_150"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="38.3762"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.996078 0 0 0 0 1 0 0 0 0.3 0"/>
+<feBlend mode="normal" in2="effect1_innerShadow_69_150" result="effect2_innerShadow_69_150"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.78173446655273438 0.78173446655273438" stitchTiles="stitch" numOctaves="3" result="noise" seed="9287" />
+<feColorMatrix in="noise" type="luminanceToAlpha" result="alphaNoise" />
+<feComponentTransfer in="alphaNoise" result="coloredNoise1">
+<feFuncA type="discrete" tableValues="0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "/>
+</feComponentTransfer>
+<feComposite operator="in" in2="effect2_innerShadow_69_150" in="coloredNoise1" result="noise1Clipped" />
+<feFlood flood-color="rgba(255, 254, 255, 0.1)" result="color1Flood" />
+<feComposite operator="in" in2="noise1Clipped" in="color1Flood" result="color1" />
+<feMerge result="effect3_noise_69_150">
+<feMergeNode in="effect2_innerShadow_69_150" />
+<feMergeNode in="color1" />
+</feMerge>
+</filter>
+<linearGradient id="paint0_linear_69_150" x1="179.601" y1="18.6575" x2="38.0842" y2="168.502" gradientUnits="userSpaceOnUse">
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+</defs>
+</svg>
