@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
 
 export interface NavLink {
   href: string;
@@ -20,20 +20,18 @@ interface NavbarProps {
 const defaultLinks: NavLink[] = [
   { href: "/#home", label: "Home" },
   { href: "/events", label: "Event" },
-  { href: "/#erc", label: "ERC" },
+  { href: "/erc", label: "ERC" },
   { href: "/bcc", label: "BCC" },
 ];
 
 function MobileMenu({
   links,
   registerHref,
-  activeSection,
-  activeHref,
+  isLinkActive,
 }: {
   links: NavLink[];
   registerHref: string;
-  activeSection: string;
-  activeHref?: string;
+  isLinkActive: (href: string) => boolean;
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -73,9 +71,7 @@ function MobileMenu({
         <div className="bg-gradient-2 absolute top-full right-0 left-0 z-40 rounded-3xl px-6 py-4 shadow-[inset_2px_4px_4px_rgba(255,255,255,0.25),0_4px_4px_rgba(0,0,0,0.25)] backdrop-blur-md">
           <nav className="flex flex-col gap-4">
             {links.map((link) => {
-              const isActive = activeHref
-                ? link.href === activeHref
-                : link.href.endsWith(`#${activeSection}`);
+              const isActive = isLinkActive(link.href);
               return (
                 <Link
                   key={link.href}
@@ -111,11 +107,11 @@ export function Navbar({
   logoSrc = "/images/INFEST PUTIH.svg",
   activeHref,
 }: NavbarProps) {
-  const [activeSection, setActiveSection] = useState("home");
   const pathname = usePathname();
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
+    if (typeof window === "undefined" || pathname !== "/") return;
 
     const sections = ["home", "events", "erc", "bcc"];
     const handleScroll = () => {
@@ -135,7 +131,18 @@ export function Navbar({
     window.addEventListener("scroll", handleScroll);
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [pathname]);
+
+  const isLinkActive = (href: string) => {
+    if (activeHref) {
+      return href === activeHref;
+    }
+    if (href === pathname) return true;
+    if (pathname === "/" && href.startsWith("/#")) {
+      return href.endsWith(`#${activeSection}`);
+    }
+    return false;
+  };
 
   return (
     <header className="bg-lighter-purple fixed top-6 left-1/2 z-50 h-[75px] w-[calc(100%-2rem)] max-w-[900px] -translate-x-1/2 rounded-[100px] px-8 shadow-[inset_2px_4px_4px_rgba(255,255,255,0.25),0_4px_4px_rgba(0,0,0,0.25)] backdrop-blur-[50px] transition-all">
@@ -153,11 +160,7 @@ export function Navbar({
 
         <nav className="hidden items-center gap-18 md:flex">
           {links.map((link) => {
-            const isActive = activeHref
-              ? link.href === activeHref
-              : pathname === "/events"
-                ? link.href === "/events"
-                : link.href.endsWith(`#${activeSection}`);
+            const isActive = isLinkActive(link.href);
             return (
               <Link
                 key={link.href}
@@ -189,8 +192,7 @@ export function Navbar({
         </div>
 
         <MobileMenu
-          activeSection={activeSection}
-          activeHref={activeHref}
+          isLinkActive={isLinkActive}
           links={links}
           registerHref={registerHref}
         />

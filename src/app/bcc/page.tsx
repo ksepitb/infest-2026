@@ -10,8 +10,8 @@ const COUNTDOWN_TARGET = new Date("2026-07-13T23:59:59+07:00");
 
 const bccLinks = [
   { href: "/", label: "Home" },
-  { href: "/#events", label: "Event" },
-  { href: "/#erc", label: "ERC" },
+  { href: "/events", label: "Event" },
+  { href: "/erc", label: "ERC" },
   { href: "/bcc", label: "BCC" },
 ];
 

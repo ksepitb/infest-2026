@@ -26,6 +26,8 @@
 @theme {
   --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-inter: var(--font-inter), ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
   --color-dark-purple: var(--dark-purple);
   --color-lighter-purple: var(--lighter-purple);
@@ -33,6 +35,12 @@
   --color-infest-pink: var(--infest-pink);
   --color-infest-white: var(--infest-white);
   --color-accent-color: var(--accent-color);
+
+  /* ── Figma-aligned semantic tokens (ERC / BCC pages) ──────────── */
+  --color-infest-magenta: #e306d9;
+  --color-infest-mid-purple: #380356;
+  --color-infest-deep-purple: rgba(19, 1, 29, 0.7);
+  --color-infest-black: #000000;
 
   --background-image-gradient-1: var(--gradient-1);
   --background-image-gradient-2: var(--gradient-2);
@@ -126,6 +134,12 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
+}
+
+@utility glow-text-inter {
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 800;
+  filter: drop-shadow(0 0 24px rgba(227, 6, 217, 0.55)) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
 }
 
 
