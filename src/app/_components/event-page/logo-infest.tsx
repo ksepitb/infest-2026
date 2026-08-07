@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function HeaderLogo() {
   return (
-    <div className="mt-8 flex w-full flex-col items-center justify-center gap-4 sm:gap-6 md:flex-row md:items-center md:gap-8 lg:gap-10">
+    <div className="mt-12 flex w-full flex-col items-center justify-center gap-4 sm:gap-6 md:flex-row md:items-center md:gap-8 lg:gap-10">
       {/* INFEST Wordmark */}
       <div className="drop-shadow-[0_0_25px_rgba(255,255,255,0.5)] filter">
         <Image
@@ -11,7 +11,7 @@ export function HeaderLogo() {
           width={700}
           height={300}
           priority
-          className="h-auto w-[250px] object-contain sm:w-[350px] md:w-[420px] lg:w-[700px]"
+          className="h-auto w-[250px] object-contain sm:w-[350px] md:w-[420px] lg:w-[600px]"
         />
       </div>
 

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import { HeaderLogo } from "~/app/_components/event-page/logo-infest";
 import { DayCard, Highlight } from "~/app/_components/event-page/day-card";
-import { HighlightsCarousel } from "~/app/_components/event-page/highlight";
+import { EventsCarousel } from "../_components/landing/events-carousel";
 import { LocationPill } from "~/app/_components/event-page/location-pill";
 import { SectionBadge } from "~/app/_components/event-page/section-badge";
 import { descriptionBoxStyle } from "~/app/_components/event-page/styles";
@@ -11,7 +11,6 @@ import { GradientDivider } from "~/app/_components/event-page/theme-divider";
 import { Footer } from "~/components/footer";
 import { Navbar } from "~/components/navbar";
 import { ScrollReveal } from "~/components/scroll-reveal";
-import { EventsCarousel } from "../_components/landing/events-carousel";
 
 export const metadata: Metadata = {
   title: "Events | INFEST 2026",
@@ -88,7 +87,7 @@ export default function EventsPage() {
         <Image
           alt=""
           aria-hidden="true"
-          className="absolute right-[-40px] bottom-20 w-[300px] opacity-25 mix-blend-screen md:w-[420px]"
+          className="absolute right-[-40px] bottom-20 w-[300px] rotate-[180deg] opacity-25 mix-blend-screen md:w-[420px]"
           height={500}
           src="/images/dotted1.svg"
           width={500}
@@ -100,9 +99,9 @@ export default function EventsPage() {
         links={eventLinks}
         registerHref="/register"
       />
-      <div className="pointer-events-none absolute inset-0 top-[0] z-0 overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 top-[-5%] z-5 overflow-hidden">
         {/* Left Ornament */}
-        <div className="absolute right-[-5%] h-auto w-[1600px] opacity-80 select-none">
+        <div className="absolute right-[-1%] h-auto w-[1600px] opacity-80 select-none">
           <Image
             alt=""
             height={1600}
@@ -111,6 +110,14 @@ export default function EventsPage() {
           />
         </div>
       </div>
+      <Image
+        alt=""
+        className="z-0 absolute right-[-15%] top-[-5%] rotate-[120deg] opacity-25 mix-blend-screen md:w-[720px]"
+        height={600}
+        src="/images/dotted1.svg"
+        width={600}
+      />
+
       {/* Hero */}
       <ScrollReveal>
         <section className="relative z-10 mx-auto mt-16 flex max-w-7xl flex-col items-center px-6 pt-32 text-center">
@@ -118,10 +125,9 @@ export default function EventsPage() {
         </section>
       </ScrollReveal>
 
-
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
         {/* Left Ornament */}
-        <div className="absolute left-[0] top-[10%] h-auto w-[1600px] opacity-80 select-none">
+        <div className="absolute left-[0] top-[30%] h-auto w-[1600px] opacity-80 select-none">
           <Image
             alt=""
             height={1200}
@@ -131,12 +137,21 @@ export default function EventsPage() {
         </div>
       </div>
 
+      <Image
+        alt=""
+        className="z-0 absolute top-[18%] opacity-25 mix-blend-screen md:w-[600px]"
+        height={200}
+        src="/images/dotted1.svg"
+        width={400}
+      />
 
       {/* Pre-Events */}
-      <ScrollReveal>
-        <section className="relative z-10 mx-auto mt-32 flex max-w-5xl flex-col items-center gap-24 px-6">
+      <section className="relative z-10 mx-auto mt-32 flex max-w-5xl flex-col items-center gap-24 px-6">
+        <ScrollReveal>
           <SectionBadge>Pre-Events</SectionBadge>
+        </ScrollReveal>
 
+        <ScrollReveal delay={0.1}>
           <DayCard
             dayLabel="DAY 00"
             title="Workshop"
@@ -147,7 +162,9 @@ export default function EventsPage() {
             boxed
             priority
           />
-      
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.2}>
           <DayCard
             dayLabel="DAY 00"
             title="The 5-Day Trading Challenge"
@@ -157,18 +174,30 @@ export default function EventsPage() {
             imagePosition="left"
             boxed
           />
-        </section>
-      </ScrollReveal>
+        </ScrollReveal>
+      </section>
 
       {/* Main Event */}
-      <ScrollReveal>
-        <section className="relative z-10 mx-auto mt-32 flex max-w-5xl flex-col items-center gap-20 px-6">
+      <Image
+        alt=""
+        aria-hidden="true"
+        className="absolute right-[-0] bottom-[30%] w-[300px] rotate-[180deg] opacity-25 mix-blend-screen md:w-[420px]"
+        height={600}
+        src="/images/dotted1.svg"
+        width={600}
+      />
+      <section className="relative z-10 mx-auto mt-32 mb-24 flex max-w-5xl flex-col items-center gap-20 px-6">
+        <ScrollReveal>
           <SectionBadge>Main Event</SectionBadge>
+        </ScrollReveal>
 
-          <GradientDivider>Theme of Event</GradientDivider>
+        <GradientDivider>Theme of Event</GradientDivider>
 
+        <ScrollReveal delay={0.2}>
           <ThemeDescriptionBox />
+        </ScrollReveal>
 
+        <ScrollReveal delay={0.3}>
           <DayCard
             dayLabel="DAY 00"
             title="Judul Talkshow Main Event"
@@ -178,39 +207,43 @@ export default function EventsPage() {
             imagePosition="left"
             boxed
           />
-        </section>
-      </ScrollReveal>
+        </ScrollReveal>
+      </section>
 
       {/* Date & Location */}
-      <ScrollReveal>
-        <section className="relative z-10 mx-auto mt-20 flex max-w-5xl flex-col items-center gap-10 px-6">
-          <div className="pointer-events-none absolute top-[-60%] left-1/2 z-0 w-screen -translate-x-1/2">
-            <div className="absolute left-[-5%] opacity-80 select-none">
-              <Image
-                alt=""
-                aria-hidden="true"
-                className="w-[300px] object-contain sm:w-[600px] md:w-[1000px]"
-                height={1000}
-                src="/images/ornament3-left.png"
-                width={1000}
-              />
-            </div>
+      <section className="relative z-10 mx-auto mt-20 flex max-w-5xl flex-col items-center gap-10 px-6">
+        <div className="pointer-events-none absolute top-[15%] left-1/2 z-0 w-screen -translate-x-1/2">
+          <div className="absolute right-[-10%] opacity-80 select-none">
+            <Image
+              alt=""
+              aria-hidden="true"
+              className="w-[300px] rotate-[160deg] object-contain sm:w-[600px] md:w-[1200px]"
+              height={1000}
+              src="/images/ornament3-left.png"
+              width={1000}
+            />
           </div>
+        </div>
 
-          <GradientDivider>Date of the Event</GradientDivider>
+
+        <GradientDivider>Date of the Event</GradientDivider>
+        
+
+        <ScrollReveal delay={0.1}>
           <LocationPill location="Aula CC Timur Institut Teknologi Bandung" />
-        </section>
-      </ScrollReveal>
+        </ScrollReveal>
+      </section>
 
       {/* Highlights */}
       <ScrollReveal>
-        <section className="relative z-10 mt-16 px-6">
+        <section className="relative z-10 mt-12 px-6">
           <section className="relative z-10 px-6 py-20">
             <div className="mx-auto max-w-6xl">
               {/* Capsule Pill Header */}
               <div className="mb-12 flex justify-center">
-                <h2 className="text-highlight-gradient-dark-bg pb-2 text-3xl font-bold tracking-wide [filter:drop-shadow(0_4px_4px_rgba(0,0,0,0.25))] md:text-6xl">
-                  Last Year's Highlights
+                <h2 className="text-3xl text-infest-white font-bold tracking-wide [filter:drop-shadow(0_4px_4px_rgba(0,0,0,0.25))] md:text-6xl">
+                  <span className="glow-text-1">Last Year&apos;s </span>
+                  <span className="text-highlight-gradient-dark-bg pb-2">Highlights</span>
                 </h2>
               </div>
 
