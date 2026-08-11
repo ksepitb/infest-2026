@@ -5,11 +5,11 @@ export function GradientDivider({ children }: { children: string }) {
     <div className="relative flex w-full items-center justify-center">
       <div
         style={gradientDividerBar}
-        className="h-[50px] w-full max-w-[1574px] lg:h-[98px]"
+        className="h-[50px] w-full max-w-[1300px] lg:h-[72px]"
       />
       <span
         style={{ ...glowTextShadow, color: "#FFF", letterSpacing: "-1.2px" }}
-        className="font-poppins absolute px-4 text-center text-[28px] leading-none font-semibold italic lg:text-[60px]"
+        className="font-poppins absolute px-4 text-center text-[28px] leading-none font-semibold italic lg:text-[55px]"
       >
         {children}
       </span>

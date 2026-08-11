@@ -1,4 +1,5 @@
 import { SectionHeader } from "~/components/section-header";
+import { GradientDivider } from "../event-page/theme-divider";
 
 interface TimelineEvent {
   id: number;
@@ -17,8 +18,8 @@ const TIMELINE_EVENTS: TimelineEvent[] = [
 
 function TimelineCard({ event }: { event: TimelineEvent }) {
   return (
-    <div className="flex min-h-[140px] w-full max-w-[460px] flex-col items-center justify-center rounded-[20px] bg-[#6B0078] p-6 text-center break-words shadow-[inset_5px_6px_4.5px_0px_rgba(255,254,255,0.25)] transition-all duration-300 hover:scale-[1.02] sm:min-h-[160px] lg:h-[180px] lg:px-[28px] lg:py-[28px]">
-      <h3 className="font-poppins mb-2 text-xl leading-tight font-bold text-white sm:text-2xl lg:mb-[8px] lg:text-[28px]">
+    <div className="flex min-h-[100px] w-full max-w-[320px] flex-col items-center justify-center rounded-[20px] bg-gradient-custom p-6 text-center break-words shadow-[inset_5px_6px_4.5px_0px_rgba(255,254,255,0.25)] transition-all duration-300 hover:scale-[1.02] px-6 py-5 sm:min-h-[140px] sm:max-w-[350px] lg:px-8 lg:py-6">
+      <h3 className="font-poppins mb-2 text-xl leading-tight font-bold text-infest-white glow-text-3 sm:text-2xl lg:mb-[8px] lg:text-[28px]">
         {event.title}
       </h3>
       <p className="font-poppins text-base leading-tight font-semibold text-[#E5C7F7] drop-shadow-[0_2px_10px_rgba(227,6,217,0.4)] sm:text-lg lg:text-xl">
@@ -34,7 +35,7 @@ export function ErcTimeline() {
       className="mx-auto flex w-full max-w-[1509px] scroll-mt-32 flex-col items-center gap-10 px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:gap-[85px] lg:px-8 lg:py-24"
       id="erc-timeline"
     >
-      <SectionHeader title="Time" highlightText="line" noSpaceBeforeHighlight />
+      <GradientDivider>Timeline</GradientDivider>
       <div className="relative flex w-full flex-col items-center gap-8 lg:gap-[63px]">
         <div className="absolute top-0 bottom-0 left-1/2 z-0 hidden w-[3px] -translate-x-1/2 bg-[#E306D9] shadow-[0_0_10px_#E306D9] lg:block" />
         {TIMELINE_EVENTS.map((event, index) => {

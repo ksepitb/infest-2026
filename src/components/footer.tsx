@@ -55,9 +55,9 @@ function LineIcon({ className }: { className?: string }) {
 export function Footer({
   eventContacts = defaultEventContacts,
   competitionContacts = defaultCompetitionContacts,
-  linkedinUrl = "#",
-  instagramUrl = "#",
-  tiktokUrl = "#",
+  linkedinUrl = "https://www.linkedin.com/company/investment-festival-itb",
+  instagramUrl = "https://www.instagram.com/infest.bdg",
+  tiktokUrl = "https://www.tiktok.com/@infest.bdg",
   copyrightText = "© INFEST ITB 2026",
 }: FooterProps) {
   return (
@@ -81,15 +81,15 @@ export function Footer({
               {/* LinkedIn */}
               <a
                 aria-label="LinkedIn"
-                className="flex h-10 w-10 items-center justify-center transition-colors duration-200 hover:text-white"
+                className="flex h-12 w-12 items-center justify-center transition-colors duration-200 hover:text-white"
                 href={linkedinUrl}
               >
                 <svg
-                  className="h-8 w-8"
+                  className="mt-4 h-16 w-16"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.75a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8Z" />
+                  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
                 </svg>
               </a>
 

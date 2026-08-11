@@ -24,11 +24,11 @@ export function ErcHero() {
       className="mx-auto flex w-full max-w-[1509px] scroll-mt-32 flex-col items-center px-4 pt-44 pb-12 text-center sm:px-6 sm:pt-52 sm:pb-16 md:pt-56 md:pb-20 lg:px-8 lg:pt-60"
       id="erc-hero"
     >
-      <h1 className="font-poppins mx-auto w-full max-w-[1509px] bg-gradient-to-b from-[#E306D9] to-[#FFFEFF] bg-clip-text text-center font-sans text-[45px] leading-tight font-extrabold tracking-[-0.02em] break-words text-transparent sm:text-[54px] lg:text-[72px]">
+      <h1 className="text-highlight-gradient-dark-bg text-shadow-links mx-auto w-full max-w-[1509px] text-[45px] leading-tight font-bold tracking-normal break-words text-transparent sm:text-[54px] lg:text-[72px]">
         Equity Research Competition
       </h1>
-      <div className="mt-8 flex w-full max-w-full flex-col items-center gap-6">
-        <p className="font-inter w-full max-w-[1509px] font-sans text-[24px] leading-relaxed break-words text-[#FFFEFF] drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)] md:text-[29px] lg:text-[35px]">
+      <div className="mt-4 flex w-full max-w-full flex-col items-center gap-6">
+        <p className="font-inter text-infest-white text-shadow-links w-full max-w-[1300px] text-[24px] leading-relaxed break-words md:text-[26px] lg:text-[28px]">
           Equity Research Competition merupakan kompetisi yang akan menguji
           kemampuan peserta dalam melakukan{" "}
           <span className="bg-gradient-to-r from-[#FF5AF7] to-[#FFB800] bg-clip-text font-semibold text-transparent">
@@ -38,10 +38,10 @@ export function ErcHero() {
         </p>
         <Link
           href="/register?comp=erc"
-          className="font-poppins flex h-[64px] w-full max-w-[527px] items-center justify-center gap-3 rounded-[60px] bg-[linear-gradient(90deg,#380356_0%,#93009C_28%,#93009C_40%,#FFB800_100%)] font-sans text-lg leading-[117%] font-bold text-[#FFFEFF] shadow-[0_0_8px_#380356,0_0_8px_rgba(255,184,0,0.6),0_0_40px_rgba(255,198,50,0.6)] transition hover:brightness-110 sm:text-xl md:h-[87px] md:gap-[12px] md:text-2xl"
+          className="font-poppins bg-gradient-6 text-infest-white mt-6 flex h-[64px] w-auto items-center justify-center gap-3 rounded-[60px] px-10 text-lg leading-[117%] font-bold glow-box-golden tracking-wide transition hover:brightness-110 sm:text-xl md:h-[75px] md:gap-[12px] md:text-2xl"
         >
           <span>Daftar Sekarang</span>
-          <ArrowRight className="h-6 w-6 shrink-0 text-[#FFFEFF] md:h-7 md:w-7" />
+          <ArrowRight className="h-6 w-6 stroke-infest-white md:h-7 md:w-7" />
         </Link>
       </div>
     </section>

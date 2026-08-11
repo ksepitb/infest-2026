@@ -68,7 +68,7 @@ function ThemeDescriptionBox() {
 
 export default function EventsPage() {
   return (
-    <main className="bg-gradient-to-br from-[#6B0078] to-[#000000] relative min-h-screen overflow-x-hidden pb-24 text-white antialiased">
+    <main className="relative min-h-screen overflow-x-hidden bg-gradient-to-br from-[#6B0078] to-[#000000] pb-24 text-white antialiased">
       {/* Background Vector Ornaments & Glows */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
         {/* Glow ambient spots */}
@@ -112,7 +112,7 @@ export default function EventsPage() {
       </div>
       <Image
         alt=""
-        className="z-0 absolute right-[-15%] top-[-5%] rotate-[120deg] opacity-25 mix-blend-screen md:w-[720px]"
+        className="absolute top-[-5%] right-[-15%] z-0 rotate-[120deg] opacity-25 mix-blend-screen md:w-[720px]"
         height={600}
         src="/images/dotted1.svg"
         width={600}
@@ -127,7 +127,7 @@ export default function EventsPage() {
 
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
         {/* Left Ornament */}
-        <div className="absolute left-[0] top-[30%] h-auto w-[1600px] opacity-80 select-none">
+        <div className="absolute top-[30%] left-[0] h-auto w-[1600px] opacity-80 select-none">
           <Image
             alt=""
             height={1200}
@@ -139,7 +139,7 @@ export default function EventsPage() {
 
       <Image
         alt=""
-        className="z-0 absolute top-[18%] opacity-25 mix-blend-screen md:w-[600px]"
+        className="absolute top-[18%] z-0 opacity-25 mix-blend-screen md:w-[600px]"
         height={200}
         src="/images/dotted1.svg"
         width={400}
@@ -225,9 +225,7 @@ export default function EventsPage() {
           </div>
         </div>
 
-
         <GradientDivider>Date of the Event</GradientDivider>
-        
 
         <ScrollReveal delay={0.1}>
           <LocationPill location="Aula CC Timur Institut Teknologi Bandung" />
@@ -241,9 +239,11 @@ export default function EventsPage() {
             <div className="mx-auto max-w-6xl">
               {/* Capsule Pill Header */}
               <div className="mb-12 flex justify-center">
-                <h2 className="text-3xl text-infest-white font-bold tracking-wide [filter:drop-shadow(0_4px_4px_rgba(0,0,0,0.25))] md:text-6xl">
+                <h2 className="text-infest-white text-3xl font-bold tracking-wide [filter:drop-shadow(0_4px_4px_rgba(0,0,0,0.25))] md:text-6xl">
                   <span className="glow-text-1">Last Year&apos;s </span>
-                  <span className="text-highlight-gradient-dark-bg pb-2">Highlights</span>
+                  <span className="text-highlight-gradient-dark-bg pb-2">
+                    Highlights
+                  </span>
                 </h2>
               </div>
 

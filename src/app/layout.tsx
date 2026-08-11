@@ -30,9 +30,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${poppins.variable} ${inter.variable} scroll-smooth`}
+      className={`${poppins.variable} ${inter.variable} scroll-smooth bg-black text-white`}
     >
-      <body>
+      <body className="bg-black text-white antialiased">
         <TRPCReactProvider>
           <PageTransition>{children}</PageTransition>
         </TRPCReactProvider>

@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+html,
+body {
+  background-color: #000000;
+}
+
 
 :root {
   --dark-purple: #380356;
@@ -23,8 +28,15 @@
     var(--infest-white, #FFFEFF) 50%,
     var(--pink, #E306D9) 100%
   );
+
+  --gradient-comp: linear-gradient(0deg, rgba(227, 6, 217, 0.60) -8.52%, rgba(56, 3, 86, 0.60) 66.61%, rgba(19, 1, 29, 0.42) 119.58%, rgba(0, 0, 0, 0.60) 162.13%), linear-gradient(#000, #000);
+
+  --gradient-erc: linear-gradient(180deg, #670c71 -4.56%, rgba(56, 3, 86, 0.60) 43.48%, rgba(19, 1, 29, 0.42) 77.35%, rgba(0, 0, 0, 0.60) 104.56%), linear-gradient(#000, #000);
+
   --gradient-custom:linear-gradient(227deg, var(--dark-purple, #380356) 6.54%, var(--light-purple, #93009C) 74.3%, var(--light-purple, #93009C) 91.45%);
   --box-shadow-inset: inset 0 10px 18.8px #A68FC2;
+
+  --glow-box-golden: 0 0 8px 0 #380356, 0 0 8px 0 rgba(255, 184, 0, 0.60), 0 0 40px 0 rgba(255, 198, 50, 0.60);
 }
 @theme {
   --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif,
@@ -39,6 +51,7 @@
   --color-infest-white: var(--infest-white);
   --color-accent-color: var(--accent-color);
   
+  --background-image-gradient-comp: var(--gradient-comp);
   --background-image-bg-gradient-event: var(--bg-gradient-event);
   --background-image-highlight-gradient-regis: var(--highlight-bg-gradient-regis);
   --background-image-gradient-1: var(--gradient-1);
@@ -46,9 +59,13 @@
   --background-image-gradient-3: var(--gradient-3);
   --background-image-gradient-4: var(--gradient-4);
   --background-image-gradient-6: var(--gradient-6);
+  --background-image-gradient-erc: var(--gradient-erc);
   --background-image-highlight-light: var(--highlight-gradient-light-bg);
   --background-image-highlight-dark: var(--highlight-gradient-dark-bg);
   --background-image-gradient-custom: var(--gradient-custom);
+
+
+  --shadow-glow-box-golden: var(--glow-box-golden);
   --shadow-box-shadow-inset: var(--box-shadow-inset)
 }
 
@@ -71,6 +88,11 @@
     text-shadow: 0 0 20px rgba(240, 74, 201, 0.6);
   }
 }
+
+@utility glow-box-golden {
+  box-shadow: var(--glow-box-golden);
+}
+
 
 @utility text-highlight-gradient-dark-bg {
   background: var(--highlight-gradient-dark-bg);
