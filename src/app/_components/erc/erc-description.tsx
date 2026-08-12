@@ -1,24 +1,28 @@
+import Image from "next/image";
 import { SectionHeader } from "~/components/section-header";
 import { GradientDivider } from "../event-page/theme-divider";
 
 export function ErcDescription() {
   return (
     <section
-      className="mx-auto flex w-full max-w-[1509px] scroll-mt-32 flex-col items-center gap-10 px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:gap-[61px] lg:px-8 lg:py-24"
+      className="relative mx-auto flex w-full max-w-[1509px] scroll-mt-32 flex-col items-center gap-10 px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:gap-[61px] lg:px-8 lg:py-8"
       id="erc-description"
     >
+      {/* Ornament 2 centered behind heading */}
       <GradientDivider>What is ERC? </GradientDivider>
       <div className="flex w-full max-w-[1211px] items-center justify-center rounded-[28px] bg-[#090114]/80 px-6 py-8 shadow-[0_4px_24px_rgba(0,0,0,0.6)] backdrop-blur-md lg:px-[58px] lg:py-[54px]">
         <p className="font-poppins w-full max-w-full text-center text-base leading-[140%] font-light break-words text-white md:text-xl lg:text-[24px] lg:leading-[125%]">
           INFEST 2026, dengan tema{" "}
-          <span className="bg-gradient-to-r from-[#FF5AF7] to-[#FFB800] font-bold bg-clip-text font-bold text-transparent">
+          <span className="bg-gradient-to-r from-[#FF5AF7] to-[#FFB800] bg-clip-text font-bold text-transparent">
             &quot;Navigating the Future: Smart Investment in the Times of
             Changes,&quot;
           </span>{" "}
           berfokus pada strategi investasi cerdas untuk menghadapi masa-masa
           penuh perubahan. Acara ini akan membekali peserta dengan pola pikir
           yang{" "}
-          <span className="bg-gradient-to-r from-[#FF5AF7] to-[#FFB800] font-bold bg-clip-text font-bold text-transparent">proaktif dan tangguh</span>
+          <span className="bg-gradient-to-r from-[#FF5AF7] to-[#FFB800] bg-clip-text font-bold text-transparent">
+            proaktif dan tangguh
+          </span>
           , serta membahas pemanfaatan teknologi seperti AI dalam mengambil
           keputusan investasi di tengah dinamika pasar dan krisis ekonomi.
         </p>

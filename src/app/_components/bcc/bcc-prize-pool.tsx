@@ -34,11 +34,11 @@ const prizes: PrizeItem[] = [
   },
 ];
 
-export function ErcPrizePool() {
+export function BccPrizePool() {
   return (
     <section
       className="mx-auto flex w-full max-w-[1509px] scroll-mt-32 flex-col items-center gap-[61px] px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:px-8 lg:py-12"
-      id="erc-prize-pool"
+      id="bcc-prize-pool"
     >
       <GradientDivider>Prize Pool</GradientDivider>
       <div className="flex w-full max-w-full flex-col items-center gap-6">

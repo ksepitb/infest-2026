@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export function ErcDecorations() {
+export function BccDecorations() {
   return (
     <>
       {/* Background Vector Ornaments & Glows */}
@@ -13,14 +13,14 @@ export function ErcDecorations() {
         {/* Dotted matrix SVG ornament */}
         <Image
           alt=""
-          className="absolute bottom-[200px] left-[-10%] w-[300px] opacity-45 md:w-[420px]"
+          className="absolute bottom-[450px] left-[-40px] w-[300px] opacity-25 mix-blend-screen md:w-[420px]"
           height={500}
           src="/images/dotted1.svg"
           width={500}
         />
         <Image
           alt=""
-          className="absolute right-[-5%] bottom-5 w-[300px] rotate-[180deg] opacity-45 md:w-[420px]"
+          className="absolute right-[-40px] bottom-20 w-[300px] opacity-25 mix-blend-screen md:w-[420px]"
           height={500}
           src="/images/dotted1.svg"
           width={500}

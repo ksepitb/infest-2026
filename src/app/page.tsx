@@ -7,6 +7,7 @@ import { EventsCarousel } from "~/app/_components/landing/events-carousel";
 import { Footer } from "~/components/footer";
 import { Navbar } from "~/components/navbar";
 import { ScrollReveal } from "~/components/scroll-reveal";
+import { GradientDivider } from "./_components/event-page/theme-divider";
 
 const timelineData = [
   { title: "BCC Registration", date: "5–13 Juli 2025" },
@@ -173,21 +174,10 @@ export default function Home() {
             />
           </div>
           <div className="relative z-10 mx-auto max-w-6xl">
-            <div className="mb-14 flex items-center justify-center">
-              <div className="">
-                <h2 className="text-5xl font-bold tracking-wide sm:text-[60px]">
-                  <span className="glow-text-3 text-infest-white">
-                    What is{" "}
-                  </span>
-                  <span className="text-highlight-gradient-dark-bg glow-text-1 font-extrabold">
-                    INFEST?
-                  </span>
-                </h2>
-              </div>
-            </div>
+            <GradientDivider>What is Infest?</GradientDivider>
 
             {/* Cards Grid */}
-            <div className="grid gap-8 md:grid-cols-2">
+            <div className="mt-12 grid gap-8 md:grid-cols-2">
               {/* Card 1 */}
               <div className="bg-lighter-purple mx-auto flex h-[320px] w-full max-w-[808px] items-center justify-center rounded-[28.204px] py-[70px] pr-[37px] pl-[38px] text-center shadow-[inset_6px_6px_9.9px_rgba(255,255,255,0.33)]">
                 <p className="text-base leading-relaxed font-medium text-white/90 sm:text-lg">
@@ -377,14 +367,7 @@ export default function Home() {
           <div className="relative z-10 mx-auto max-w-4xl">
             {/* Header Banner Bar */}
             <div className="mb-14 flex items-center justify-center">
-              <h2 className="text-3xl font-bold sm:text-5xl">
-                <span className="text-infest-white glow-text-3">
-                  Frequently Asked{" "}
-                </span>
-                <span className="text-highlight-gradient-dark-bg">
-                  Questions
-                </span>
-              </h2>
+              <GradientDivider>Frequently Asked Questions</GradientDivider>
             </div>
 
             {/* Accordion List */}

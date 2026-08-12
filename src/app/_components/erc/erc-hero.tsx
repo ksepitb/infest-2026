@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 function ArrowRight({ className }: { className?: string }) {
@@ -21,9 +22,29 @@ function ArrowRight({ className }: { className?: string }) {
 export function ErcHero() {
   return (
     <section
-      className="mx-auto flex w-full max-w-[1509px] scroll-mt-32 flex-col items-center px-4 pt-44 pb-12 text-center sm:px-6 sm:pt-52 sm:pb-16 md:pt-56 md:pb-20 lg:px-8 lg:pt-60"
+      className="relative mx-auto flex w-full max-w-[1509px] scroll-mt-32 flex-col items-center px-4 pt-44 pb-12 text-center sm:px-6 sm:pt-52 sm:pb-16 md:pt-56 md:pb-20 lg:px-8 lg:pt-60"
       id="erc-hero"
     >
+      {/* Left Ornament */}
+      <div className="pointer-events-none absolute top-[20%] left-[-2%] z-0 opacity-80 select-none md:top-[25%] lg:top-[10%]">
+        <Image
+          src="/images/ornament1-left.png"
+          alt=""
+          width={600}
+          height={600}
+          className="w-[200px] object-contain sm:w-[250px] md:w-[300px] lg:w-[700px]"
+        />
+      </div>
+      {/* Right Ornament */}
+      <div className="pointer-events-none absolute top-[20%] right-[-2%] z-0 opacity-80 select-none md:top-[25%] lg:top-[10%]">
+        <Image
+          src="/images/ornament1-right.png"
+          alt=""
+          width={600}
+          height={600}
+          className="w-[200px] object-contain sm:w-[250px] md:w-[300px] lg:w-[600px]"
+        />
+      </div>
       <h1 className="text-highlight-gradient-dark-bg text-shadow-links mx-auto w-full max-w-[1509px] text-[45px] leading-tight font-bold tracking-normal break-words text-transparent sm:text-[54px] lg:text-[72px]">
         Equity Research Competition
       </h1>
@@ -38,10 +59,10 @@ export function ErcHero() {
         </p>
         <Link
           href="/register?comp=erc"
-          className="font-poppins bg-gradient-6 text-infest-white mt-6 flex h-[64px] w-auto items-center justify-center gap-3 rounded-[60px] px-10 text-lg leading-[117%] font-bold glow-box-golden tracking-wide transition hover:brightness-110 sm:text-xl md:h-[75px] md:gap-[12px] md:text-2xl"
+          className="font-poppins bg-gradient-6 text-infest-white glow-box-golden mt-6 flex h-[64px] w-auto items-center justify-center gap-3 rounded-[60px] px-10 text-lg leading-[117%] font-bold tracking-wide transition hover:brightness-110 sm:text-xl md:h-[75px] md:gap-[12px] md:text-2xl"
         >
           <span>Daftar Sekarang</span>
-          <ArrowRight className="h-6 w-6 stroke-infest-white md:h-7 md:w-7" />
+          <ArrowRight className="stroke-infest-white h-6 w-6 md:h-7 md:w-7" />
         </Link>
       </div>
     </section>

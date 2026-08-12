@@ -2,10 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { GradientDivider } from "~/app/_components/event-page/theme-divider";
-import { SectionHeader } from "~/components/section-header";
 
-/** ISO 8601 target date — ERC registration closes */
-const TARGET_DATE = new Date("2026-09-01T23:59:59+07:00");
+/** ISO 8601 target date — BCC registration closes */
+const TARGET_DATE = new Date("2026-07-13T23:59:59+07:00");
 
 interface TimeLeft {
   hours: number;
@@ -46,7 +45,7 @@ function CountdownUnit({ value, label }: CountdownUnitProps) {
   );
 }
 
-export function ErcCountdown() {
+export function BccCountdown() {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>(computeTimeLeft);
 
   useEffect(() => {
@@ -60,7 +59,7 @@ export function ErcCountdown() {
   return (
     <section
       className="relative z-10 mx-auto flex w-full max-w-[1000px] scroll-mt-32 flex-col items-center gap-8 px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:gap-[60px] lg:px-8 lg:py-24"
-      id="erc-countdown"
+      id="bcc-countdown"
     >
       <GradientDivider>Countdown</GradientDivider>
       <div className="flex w-full flex-col items-center gap-4 break-words">
