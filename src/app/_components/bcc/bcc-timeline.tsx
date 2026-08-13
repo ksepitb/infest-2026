@@ -36,16 +36,31 @@ export function BccTimeline() {
       id="bcc-timeline"
     >
       {/* Ornament 3 Left */}
-      <div className="pointer-events-none absolute top-[-60%] left-[-15%] z-0 opacity-80 select-none">
+      <div className="pointer-events-none absolute top-[-10%] left-[-12%] z-0 opacity-80 select-none">
         <Image
           src="/images/ornament3-left.png"
           alt=""
           width={1000}
           height={1000}
-          className="w-[300px] object-contain sm:w-[600px] md:w-[1000px]"
+          className="w-[300px] object-contain sm:w-[600px] md:w-[800px]"
         />
       </div>
-
+      <Image
+              alt=""
+              aria-hidden="true"
+              className="absolute right-[-50%] w-[1400px] opacity-80 backdrop-blur-lg"
+              height={900}
+              src="/images/registration/regis-circle-left.png"
+              width={900}
+            />
+            <Image
+              alt=""
+              aria-hidden="true"
+              className="absolute top-[80%] left-[-40%] z-0 w-[1400px] rotate-[45deg] opacity-70 backdrop-blur-lg"
+              height={900}
+              src="/images/registration/regis-circle-left.png"
+              width={900}
+            />
       <GradientDivider>Timeline</GradientDivider>
       <div className="relative flex w-full flex-col items-center gap-8 lg:gap-[63px]">
         <div className="bg-light-purple absolute top-0 bottom-0 left-1/2 z-0 hidden w-[3px] -translate-x-1/2 shadow-[0_0_10px_#E306D9] lg:block" />

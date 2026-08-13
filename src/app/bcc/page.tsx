@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 
 import { Navbar } from "~/components/navbar";
 import { Footer } from "~/components/footer";
@@ -10,6 +9,8 @@ import { BccDecorations } from "~/app/_components/bcc/bcc-decorations";
 import { BccPrizePool } from "~/app/_components/bcc/bcc-prize-pool";
 import { BccTimeline } from "~/app/_components/bcc/bcc-timeline";
 import { BccCountdown } from "~/app/_components/bcc/bcc-countdown";
+import { BccFaq } from "~/app/_components/bcc/bcc-faq";
+import { GradientDivider } from "~/app/_components/event-page/theme-divider";
 
 const bccLinks = [
   { href: "/", label: "Home" },
@@ -18,73 +19,31 @@ const bccLinks = [
   { href: "/bcc", label: "BCC" },
 ];
 
-const faqData = [
-  {
-    question: "Orkhan",
-    answer: "Muhammad Orkhan adalah Project Manager Website INFEST 2026.",
-  },
-  {
-    question: "When yh?",
-    answer:
-      "Rangkaian acara INFEST 2026 akan berlangsung dari bulan Juli hingga November 2026. Pantau terus linimasa dan media sosial resmi kami untuk tanggal pendaftaran pasti!",
-  },
-  {
-    question: "Bang orkhan apa rahasianya?",
-    answer:
-      "Rahasianya adalah kerja keras, dedikasi tanpa henti, riset mendalam, serta dukungan penuh dari seluruh panitia KSEP ITB dalam menyajikan festival investasi terbaik di Indonesia.",
-  },
-  {
-    question: "Bang Orkhan bagi linkedin nya dong",
-    answer:
-      "Silakan terhubung secara profesional melalui LinkedIn Muhammad Orkhan untuk berdiskusi seputar finansial, pasar modal, dan kolaborasi event!",
-  },
-  {
-    question: "Bang orkhan jomblo ga?",
-    answer:
-      "Pertanyaan menarik! Fokus utamanya saat ini adalah menyukseskan INFEST 2026. Temui Bang Orkhan secara langsung pada sesi seminar puncak 😉",
-  },
-];
-
 const competitionContacts = [
   { name: "Muhammad Orkhan", phone: "08119900125", lineId: "orkhan12345678" },
   { name: "Muhammad Orkhan", phone: "08119900125", lineId: "orkhan12345678" },
   { name: "Muhammad Orkhan", phone: "08119900125", lineId: "orkhan12345678" },
 ];
 
-function SectionHeader({ children }: { children: React.ReactNode }) {
+function ArrowRight({ className }: { className?: string }) {
   return (
-    <div className="relative mb-12 flex items-center justify-center">
-      {/* Glow bar behind */}
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-        <div
-          className="h-12 w-[200%] min-w-[800px] rounded-full opacity-100 sm:h-14 md:h-16"
-          style={{
-            background:
-              "linear-gradient(90deg, rgba(115,115,115,0) 0%, rgba(255,184,0,0.30) 15.87%, #E306D9 50%, rgba(255,184,0,0.30) 85.09%, rgba(115,115,115,0) 100%)",
-          }}
-        />
-      </div>
-      <h2
-        className="relative z-10 text-center text-[40px] leading-none font-semibold text-white italic sm:text-[50px] md:text-[60px]"
-        style={{
-          textShadow:
-            "0 0 8px rgba(0, 0, 0, 0.25), 0 0 32px rgba(255, 254, 255, 0.40), 0 0 40px rgba(255, 254, 255, 0.25)",
-          letterSpacing: "-1.2px",
-        }}
-      >
-        {children}
-      </h2>
-    </div>
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M5 12h14" />
+      <path d="m12 5 7 7-7 7" />
+    </svg>
   );
 }
 
 export default function BccPage() {
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
-
-  const toggleFaq = (index: number) => {
-    setOpenFaq(openFaq === index ? null : index);
-  };
-
   return (
     <main className="bg-gradient-3 relative min-h-screen overflow-x-hidden text-white antialiased">
       {/* Layer 2: Decorative Overlay */}
@@ -93,9 +52,9 @@ export default function BccPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative z-10 flex flex-col items-center px-6 pt-40 pb-12 text-center">
+      <section className="relative mt-20 z-10 flex flex-col items-center px-6 pt-40 pb-12 text-center">
         {/* Left Ornament */}
-        <div className="pointer-events-none absolute top-[20%] left-0 z-0 opacity-80 select-none md:top-[25%] lg:top-[10%]">
+        <div className="pointer-events-none absolute top-[20%] left-[-2%] z-0 opacity-80 select-none md:top-[25%] lg:top-[10%]">
           <Image
             src="/images/ornament1-left.png"
             alt=""
@@ -105,7 +64,7 @@ export default function BccPage() {
           />
         </div>
         {/* Right Ornament */}
-        <div className="pointer-events-none absolute top-[20%] right-0 z-0 opacity-80 select-none md:top-[25%] lg:top-[10%]">
+        <div className="pointer-events-none absolute top-[20%] right-[-2%] z-0 opacity-80 select-none md:top-[25%] lg:top-[10%]">
           <Image
             src="/images/ornament1-right.png"
             alt=""
@@ -114,11 +73,11 @@ export default function BccPage() {
             className="w-[200px] object-contain sm:w-[250px] md:w-[300px] lg:w-[600px]"
           />
         </div>
-        <h1 className="text-highlight-gradient-dark-bg relative z-10 mt-5 text-center text-[48px] leading-none font-bold not-italic sm:text-[64px] md:text-[80px] lg:text-[90px]">
+        <h1 className="text-highlight-gradient-dark-bg text-shadow-links relative z-10 mt-5 text-center text-[48px] leading-none font-bold not-italic sm:text-[64px] md:text-[70px] lg:text-[80px]">
           Business Case Competition
         </h1>
 
-        <p className="text-infest-white relative z-10 mt-6 max-w-3xl text-base leading-relaxed sm:text-lg">
+        <p className="text-infest-white relative z-10 mt-6 max-w-6xl text-base leading-relaxed sm:text-[24px]">
           Business Case Competition merupakan kompetisi yang menguji kemampuan{" "}
           <span className="bg-gradient-to-r from-[#FF5AF7] to-[#FFB800] bg-clip-text font-bold text-transparent">
             problem solving dan analytical thinking
@@ -130,28 +89,19 @@ export default function BccPage() {
         </p>
 
         <Link
-          className="relative z-10 mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#380356] via-[#E306D9] to-[#FFB800] px-8 py-3 text-lg font-bold text-white shadow-[0_0_25px_rgba(227,6,217,0.4)] transition hover:brightness-110"
-          href="#"
+          href="/register?comp=erc"
+          className="font-poppins bg-gradient-6 text-infest-white glow-box-golden mt-12 flex h-[64px] w-auto items-center justify-center gap-3 rounded-[60px] px-10 text-lg leading-[117%] font-bold tracking-wide transition hover:brightness-110 sm:text-xl md:h-[75px] md:gap-[12px] md:text-2xl"
         >
-          Daftar Sekarang
-          <span className="text-xl">→</span>
+          <span>Daftar Sekarang</span>
+          <ArrowRight className="stroke-infest-white h-6 w-6 md:h-7 md:w-7" />
         </Link>
       </section>
 
       {/* Description of BCC */}
-      <section className="relative z-10 px-6 py-16">
+      <section className="relative mt-32 z-10 px-6 py-16">
         {/* Ornament 2 centered behind heading */}
-        <div className="pointer-events-none absolute top-[-18%] left-[50%] z-0 w-full -translate-x-1/2 scale-125 opacity-85 select-none">
-          <Image
-            src="/images/ornament2.png"
-            alt=""
-            width={1920}
-            height={600}
-            className="w-full object-contain"
-          />
-        </div>
         <div className="mx-auto max-w-4xl">
-          <SectionHeader>Description of BCC</SectionHeader>
+          <GradientDivider>What is BCC?</GradientDivider>
           <div
             className="mt-8 rounded-3xl p-[2px] shadow-[0_0_30px_rgba(147,0,156,0.25)]"
             style={{
@@ -190,72 +140,7 @@ export default function BccPage() {
       <BccCountdown />
 
       {/* FAQ */}
-      <section className="relative z-10 px-6 py-16" id="faq">
-        {/* Ornament 3 Right */}
-        <div className="pointer-events-none absolute top-[-90%] right-[-20%] z-0 opacity-80 select-none">
-          <Image
-            src="/images/ornament3-right.png"
-            alt=""
-            width={1000}
-            height={1000}
-            className="w-[300px] object-contain sm:w-[600px] md:w-[1000px]"
-          />
-        </div>
-        <div className="mx-auto max-w-4xl">
-          <SectionHeader>Frequently Asked Questions</SectionHeader>
-          <div className="flex flex-col gap-4">
-            {faqData.map((faq, index) => {
-              const isOpen = openFaq === index;
-
-              return (
-                <div
-                  key={index}
-                  className="overflow-hidden backdrop-blur-md transition-all duration-300"
-                  style={{
-                    borderRadius: isOpen ? "20px" : "100px",
-                    background: "#6B0078",
-                    boxShadow:
-                      "inset 5px 6px 4.5px 0px rgba(255, 254, 255, 0.25)",
-                  }}
-                >
-                  <button
-                    className="flex w-full cursor-pointer items-center justify-between px-8 py-4 text-left text-base font-medium text-white sm:text-lg"
-                    onClick={() => toggleFaq(index)}
-                    type="button"
-                  >
-                    <span>{faq.question}</span>
-                    <span
-                      className={`text-infest-white ml-4 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/30 transition-transform duration-300 ${
-                        isOpen ? "rotate-180" : ""
-                      }`}
-                    >
-                      <svg
-                        className="h-5 w-5"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M19 9l-7 7-7-7"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2.5}
-                        />
-                      </svg>
-                    </span>
-                  </button>
-
-                  {isOpen && (
-                    <div className="border-infest-white/10 border-t px-8 py-5 text-sm leading-relaxed text-[#E5C7F7] sm:text-base">
-                      {faq.answer}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      <BccFaq />
 
       {/* Footer */}
       <Footer competitionContacts={competitionContacts} />

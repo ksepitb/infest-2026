@@ -20,7 +20,7 @@ export function BccDecorations() {
         />
         <Image
           alt=""
-          className="absolute right-[-40px] bottom-20 w-[300px] opacity-25 mix-blend-screen md:w-[420px]"
+          className="absolute right-[-40px] bottom-20 w-[300px] rotate-[180deg] opacity-25 mix-blend-screen md:w-[420px]"
           height={500}
           src="/images/dotted1.svg"
           width={500}
