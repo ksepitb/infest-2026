@@ -30,20 +30,18 @@ export function DayCard({
   const contentMaxWidth = boxed ? "760px" : "858px";
 
   const heading = (
-    <h3 className="font-poppins w-full text-left leading-tight font-bold">
+    <h3 className="font-poppins w-full text-left text-[28px] leading-tight font-bold sm:text-[36px] md:text-[44px] lg:text-[56px]">
       <span
         style={{
           ...glowTextShadow,
           color: ACCENT_GOLD,
           letterSpacing: "-1.8px",
         }}
-        className="text-[28px] sm:text-[36px] md:text-[44px] lg:text-[56px]"
       >
         {dayLabel}
       </span>{" "}
       <span
         style={{ ...glowTextShadow, color: "#FFF", letterSpacing: "-1.8px" }}
-        className="text-[28px] sm:text-[36px] md:text-[44px] lg:text-[56px]"
       >
         - {title}
       </span>

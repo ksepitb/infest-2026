@@ -330,10 +330,10 @@ export default function Home() {
                             : "md:absolute md:top-10 md:mt-2"
                         }`}
                       >
-                        <h4 className="text-xs font-bold text-white sm:text-sm">
+                        <h4 className="text-sm font-bold text-white sm:text-base">
                           {item.title}
                         </h4>
-                        <p className="mt-1.5 text-[10px] font-medium text-[#E5C7F7] sm:text-xs">
+                        <p className="mt-1.5 text-xs font-medium text-[#E5C7F7] sm:text-sm">
                           {item.date}
                         </p>
                       </div>
