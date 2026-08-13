@@ -7,7 +7,7 @@ interface RulesCardProps {
 
 export function RulesCard({ title, rules }: RulesCardProps) {
   return (
-    <section className="relative z-10 flex flex-1 flex-col items-center px-4 pt-36 pb-24 md:pt-44 md:pb-32">
+    <section className="relative z-10 flex flex-1 flex-col items-center px-4 pt-28 pb-24 md:pt-44 md:pb-32">
       <h1 className="glow-text-1 text-center text-4xl font-bold text-white md:text-6xl lg:text-[80px]">
         {title}
       </h1>

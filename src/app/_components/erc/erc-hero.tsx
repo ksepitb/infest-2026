@@ -26,26 +26,26 @@ export function ErcHero() {
       id="erc-hero"
     >
       {/* Left Ornament */}
-      <div className="pointer-events-none absolute top-[20%] left-[-2%] z-0 opacity-80 select-none md:top-[25%] lg:top-[10%]">
+      <div className="pointer-events-none absolute top-[20%] left-[-2%] z-0 opacity-80 select-none max-md:opacity-60 md:top-[25%] lg:top-[10%]">
         <Image
           src="/images/ornament1-left.png"
           alt=""
           width={600}
           height={600}
-          className="w-[200px] object-contain sm:w-[250px] md:w-[300px] lg:w-[700px]"
+          className="w-[140px] object-contain sm:w-[250px] md:w-[300px] lg:w-[700px]"
         />
       </div>
       {/* Right Ornament */}
-      <div className="pointer-events-none absolute top-[20%] right-[-2%] z-0 opacity-80 select-none md:top-[25%] lg:top-[10%]">
+      <div className="pointer-events-none absolute top-[20%] right-[-2%] z-0 opacity-80 select-none max-md:opacity-60 md:top-[25%] lg:top-[10%]">
         <Image
           src="/images/ornament1-right.png"
           alt=""
           width={600}
           height={600}
-          className="w-[200px] object-contain sm:w-[250px] md:w-[300px] lg:w-[600px]"
+          className="w-[140px] object-contain sm:w-[250px] md:w-[300px] lg:w-[600px]"
         />
       </div>
-      <h1 className="text-highlight-gradient-dark-bg text-shadow-links mx-auto w-full max-w-[1509px] text-[45px] leading-tight font-bold tracking-normal break-words text-transparent sm:text-[54px] lg:text-[72px]">
+      <h1 className="text-highlight-gradient-dark-bg text-shadow-links mx-auto w-full max-w-[1509px] text-[45px] leading-tight font-bold tracking-normal break-words text-transparent sm:text-[54px] md:text-[60px] lg:text-[72px]">
         Equity Research Competition
       </h1>
       <div className="mt-4 flex w-full max-w-full flex-col items-center gap-6">

@@ -19,7 +19,7 @@ export function HeaderLogo() {
       <div className="flex items-center gap-3 sm:gap-4 md:gap-5">
         {/* Text Title Stack */}
         <div className="flex flex-col justify-center text-left leading-none">
-          <h1 className="glow-text-1 text-[18px] leading-[1.1] font-bold text-white sm:text-[28px] md:text-7xl">
+          <h1 className="glow-text-1 text-[18px] leading-[1.1] font-bold text-white sm:text-[28px] md:text-5xl lg:text-7xl">
             <span className="block whitespace-nowrap">Pre-Event &amp;</span>
             <span className="block whitespace-nowrap">Main Event</span>
           </h1>

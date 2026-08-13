@@ -39,7 +39,7 @@ const competitionContacts: ContactInfo[] = [
 function RegistrationButton({ href, label }: { href: string; label: string }) {
   return (
     <Link
-      className="bg-gradient-6 shadow-box-shadow-inset text-infest-white relative mb-24 flex min-h-[80px] w-full items-center justify-center rounded-full px-6 py-5 text-center text-base font-bold transition hover:brightness-110 md:text-[20px]"
+      className="bg-gradient-6 shadow-box-shadow-inset text-infest-white relative flex min-h-[80px] w-full items-center justify-center rounded-full px-6 py-5 text-center text-base font-bold transition hover:brightness-110 md:text-[20px]"
       href={href}
     >
       {label}
@@ -66,7 +66,7 @@ export default function RegisterPage() {
         <Image
           alt=""
           aria-hidden="true"
-          className="absolute top-[-40%] left-[-35%] w-[1400px] opacity-80 backdrop-blur-lg"
+          className="absolute top-[-40%] left-[-35%] w-[1400px] opacity-80 backdrop-blur-lg max-md:w-[600px] max-md:opacity-40"
           height={900}
           src="/images/registration/regis-circle-left.png"
           width={900}
@@ -76,7 +76,7 @@ export default function RegisterPage() {
         <Image
           alt=""
           aria-hidden="true"
-          className="absolute top-[-10%] right-[-45%] w-[2400px] opacity-80 backdrop-blur-lg"
+          className="absolute top-[-10%] right-[-45%] w-[2400px] opacity-80 backdrop-blur-lg max-md:w-[600px] max-md:opacity-40"
           height={2400}
           src="/images/registration/regis-circle-right.png"
           width={2400}
@@ -85,7 +85,7 @@ export default function RegisterPage() {
         {/* Top Right Dotted matrix SVG ornament */}
         <Image
           alt=""
-          className="absolute top-[-5%] right-[-2%] w-[800px] rotate-135 opacity-35 mix-blend-screen md:w-[420px]"
+          className="absolute top-[-5%] right-[-2%] w-[800px] rotate-[135deg] opacity-35 mix-blend-screen max-md:w-[300px] md:w-[420px]"
           height={800}
           src="/images/dotted1.svg"
           width={800}
@@ -94,7 +94,7 @@ export default function RegisterPage() {
         {/* Bottom Left Dotted matrix SVG ornament */}
         <Image
           alt=""
-          className="absolute bottom-[30%] left-[-40px] w-[800px] rotate-[-45deg] opacity-35 mix-blend-screen md:w-[420px]"
+          className="absolute bottom-[30%] left-[-40px] w-[800px] rotate-[-45deg] opacity-35 mix-blend-screen max-md:w-[300px] md:w-[420px]"
           height={800}
           src="/images/dotted1.svg"
           width={800}

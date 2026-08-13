@@ -19,30 +19,26 @@ export function FaqAccordion({ items }: FaqAccordionProps) {
   };
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex w-full flex-col gap-4">
       {items.map((faq, index) => {
         const isOpen = openIndex === index;
 
         return (
           <div
             key={index}
-            className="overflow-hidden backdrop-blur-md transition-all duration-300"
-            style={{
-              borderRadius: isOpen ? "20px" : "100px",
-              background: "#6B0078",
-              boxShadow: "inset 5px 6px 4.5px 0px rgba(255, 254, 255, 0.25)",
-            }}
+            className="flex w-full flex-col overflow-hidden bg-[#6B0078] shadow-[inset_5px_6px_4.5px_0px_rgba(255,254,255,0.25)] backdrop-blur-md transition-all duration-300 ease-in-out"
+            style={{ borderRadius: isOpen ? "20px" : "100px" }}
           >
             <button
-              aria-expanded={isOpen}
-              className="flex w-full cursor-pointer items-center justify-between px-8 py-4 text-left text-base font-medium text-white sm:text-lg"
-              onClick={() => toggle(index)}
               type="button"
+              aria-expanded={isOpen}
+              onClick={() => toggle(index)}
+              className="flex w-full cursor-pointer items-center justify-between px-6 py-4 text-left text-base font-medium text-white sm:px-8 sm:text-lg"
             >
-              <span>{faq.question}</span>
+              <span className="pr-4">{faq.question}</span>
               <span
-                className={`text-infest-white ml-4 flex h-8 w-8 shrink-0 items-center justify-center transition-transform duration-300 ${
-                  isOpen ? "rotate-180" : ""
+                className={`text-infest-white ml-4 flex h-8 w-8 shrink-0 items-center justify-center transition-transform duration-300 ease-in-out ${
+                  isOpen ? "rotate-180" : "rotate-0"
                 }`}
               >
                 <svg
@@ -61,11 +57,19 @@ export function FaqAccordion({ items }: FaqAccordionProps) {
               </span>
             </button>
 
-            {isOpen && (
-              <div className="border-t border-white/10 px-8 py-5 text-sm leading-relaxed text-[#E5C7F7] sm:text-base">
-                {faq.answer}
+            <div
+              className={`grid transition-all duration-300 ease-in-out ${
+                isOpen
+                  ? "grid-rows-[1fr] opacity-100"
+                  : "grid-rows-[0fr] opacity-0"
+              }`}
+            >
+              <div className="overflow-hidden">
+                <div className="border-t border-white/10 px-6 py-5 text-sm leading-relaxed text-[#E5C7F7] sm:px-8 sm:text-base">
+                  {faq.answer}
+                </div>
               </div>
-            )}
+            </div>
           </div>
         );
       })}

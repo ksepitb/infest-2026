@@ -101,7 +101,7 @@ export default function EventsPage() {
       />
       <div className="pointer-events-none absolute inset-0 top-[-5%] z-5 overflow-hidden">
         {/* Left Ornament */}
-        <div className="absolute right-[-1%] h-auto w-[1600px] opacity-80 select-none">
+        <div className="absolute right-[-1%] h-auto w-[600px] opacity-80 select-none max-md:opacity-30 md:w-[1600px]">
           <Image
             alt=""
             height={1600}
@@ -127,7 +127,7 @@ export default function EventsPage() {
 
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
         {/* Left Ornament */}
-        <div className="absolute top-[30%] left-[0] h-auto w-[1600px] opacity-80 select-none">
+        <div className="absolute top-[30%] left-[0] h-auto w-[600px] opacity-80 select-none max-md:opacity-30 md:w-[1600px]">
           <Image
             alt=""
             height={1200}
@@ -234,22 +234,20 @@ export default function EventsPage() {
 
       {/* Highlights */}
       <ScrollReveal>
-        <section className="relative z-10 mt-12 px-6">
-          <section className="relative z-10 px-6 py-20">
-            <div className="mx-auto max-w-6xl">
-              {/* Capsule Pill Header */}
-              <div className="mb-12 flex justify-center">
-                <h2 className="text-infest-white text-3xl font-bold tracking-wide [filter:drop-shadow(0_4px_4px_rgba(0,0,0,0.25))] md:text-6xl">
-                  <span className="glow-text-1">Last Year&apos;s </span>
-                  <span className="text-highlight-gradient-dark-bg pb-2">
-                    Highlights
-                  </span>
-                </h2>
-              </div>
-
-              <EventsCarousel />
+        <section className="relative z-10 px-6 py-20">
+          <div className="mx-auto max-w-6xl">
+            {/* Capsule Pill Header */}
+            <div className="mb-12 flex justify-center">
+              <h2 className="text-infest-white text-3xl font-bold tracking-wide [filter:drop-shadow(0_4px_4px_rgba(0,0,0,0.25))] md:text-6xl">
+                <span className="glow-text-1">Last Year&apos;s </span>
+                <span className="text-highlight-gradient-dark-bg pb-2">
+                  Highlights
+                </span>
+              </h2>
             </div>
-          </section>
+
+            <EventsCarousel />
+          </div>
         </section>
       </ScrollReveal>
 

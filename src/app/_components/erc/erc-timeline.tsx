@@ -50,7 +50,7 @@ export function ErcTimeline() {
       <Image
         alt=""
         aria-hidden="true"
-        className="absolute right-[-50%] w-[1400px] opacity-80 backdrop-blur-lg"
+        className="absolute right-[-50%] w-[1400px] opacity-80 backdrop-blur-lg max-md:w-[600px] max-md:opacity-40"
         height={900}
         src="/images/registration/regis-circle-left.png"
         width={900}
@@ -58,7 +58,7 @@ export function ErcTimeline() {
       <Image
         alt=""
         aria-hidden="true"
-        className="absolute top-[90%] left-[-40%] z-0 w-[1400px] rotate-[45deg] opacity-70 backdrop-blur-lg"
+        className="absolute top-[90%] left-[-40%] z-0 w-[1400px] rotate-[45deg] opacity-70 backdrop-blur-lg max-md:w-[600px] max-md:opacity-40"
         height={900}
         src="/images/registration/regis-circle-left.png"
         width={900}

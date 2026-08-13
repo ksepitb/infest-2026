@@ -38,7 +38,7 @@ export function LocationPill({ location }: LocationPillProps) {
 
         <div
           style={locationPillStyle}
-          className="z-0 -ml-10 flex w-full items-center gap-4 py-3 pr-8 pl-8 lg:-ml-16 lg:h-[85px] lg:gap-6 lg:pr-12 lg:pl-20"
+          className="z-0 -ml-10 flex w-full items-center gap-4 py-3 pr-8 pl-10 sm:pl-12 lg:-ml-16 lg:h-[85px] lg:gap-6 lg:pr-12 lg:pl-20"
         >
           <p
             style={{ textShadow: "0 4px 4px rgba(0,0,0,0.25)" }}

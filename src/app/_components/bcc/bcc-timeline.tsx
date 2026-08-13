@@ -46,21 +46,21 @@ export function BccTimeline() {
         />
       </div>
       <Image
-              alt=""
-              aria-hidden="true"
-              className="absolute right-[-50%] w-[1400px] opacity-80 backdrop-blur-lg"
-              height={900}
-              src="/images/registration/regis-circle-left.png"
-              width={900}
-            />
-            <Image
-              alt=""
-              aria-hidden="true"
-              className="absolute top-[80%] left-[-40%] z-0 w-[1400px] rotate-[45deg] opacity-70 backdrop-blur-lg"
-              height={900}
-              src="/images/registration/regis-circle-left.png"
-              width={900}
-            />
+        alt=""
+        aria-hidden="true"
+        className="absolute right-[-50%] w-[1400px] opacity-80 backdrop-blur-lg max-md:w-[600px] max-md:opacity-40"
+        height={900}
+        src="/images/registration/regis-circle-left.png"
+        width={900}
+      />
+      <Image
+        alt=""
+        aria-hidden="true"
+        className="absolute top-[80%] left-[-40%] z-0 w-[1400px] rotate-[45deg] opacity-70 backdrop-blur-lg max-md:w-[600px] max-md:opacity-40"
+        height={900}
+        src="/images/registration/regis-circle-left.png"
+        width={900}
+      />
       <GradientDivider>Timeline</GradientDivider>
       <div className="relative flex w-full flex-col items-center gap-8 lg:gap-[63px]">
         <div className="bg-light-purple absolute top-0 bottom-0 left-1/2 z-0 hidden w-[3px] -translate-x-1/2 shadow-[0_0_10px_#E306D9] lg:block" />

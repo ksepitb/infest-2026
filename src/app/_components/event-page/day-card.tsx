@@ -37,13 +37,13 @@ export function DayCard({
           color: ACCENT_GOLD,
           letterSpacing: "-1.8px",
         }}
-        className="text-[28px] lg:text-[56px]"
+        className="text-[28px] sm:text-[36px] md:text-[44px] lg:text-[56px]"
       >
         {dayLabel}
       </span>{" "}
       <span
         style={{ ...glowTextShadow, color: "#FFF", letterSpacing: "-1.8px" }}
-        className="text-[28px] lg:text-[56px]"
+        className="text-[28px] sm:text-[36px] md:text-[44px] lg:text-[56px]"
       >
         - {title}
       </span>
@@ -77,7 +77,7 @@ export function DayCard({
   );
 
   const image = (
-    <div className="relative flex h-[360px] w-[270px] shrink-0 items-end justify-center lg:h-[460px] lg:w-[350px]">
+    <div className="relative mx-auto flex h-[280px] w-[220px] shrink-0 items-end justify-center sm:h-[320px] sm:w-[240px] lg:h-[460px] lg:w-[350px]">
       <div
         className="relative h-[72%] w-full rounded-[28px]"
         style={{

@@ -75,10 +75,10 @@ function MobileMenu({
               return (
                 <Link
                   key={link.href}
-                  className={`text-shadow-links text-sm font-semibold transition ${
+                  className={`text-shadow-links py-3 text-sm font-semibold transition ${
                     isActive
-                      ? "text-highlight-gradient-dark-bg"
-                      : "text-infest-white hover:text-highlight-gradient-dark-bg"
+                      ? "text-infest-pink font-bold"
+                      : "text-infest-white hover:text-infest-pink"
                   }`}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
@@ -88,7 +88,7 @@ function MobileMenu({
               );
             })}
             <Link
-              className="text-dark-purple rounded-full bg-white px-6 py-2 text-center text-xs font-black tracking-wider uppercase transition hover:bg-white/90"
+              className="text-dark-purple min-h-11 rounded-full bg-white px-6 py-2 text-center text-xs font-black tracking-wider uppercase transition hover:bg-white/90"
               href={registerHref}
               onClick={() => setIsOpen(false)}
             >
@@ -173,7 +173,7 @@ export function Navbar({
               >
                 {link.label}
                 {isActive && (
-                  <span className="bg-highlight-dark absolute right-0 bottom-0 left-0 h-[2px] rounded-full" />
+                  <span className="bg-infest-pink absolute right-0 bottom-0 left-0 h-[2px] rounded-full shadow-[0_0_8px_#E306D9]" />
                 )}
               </Link>
             );

@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
 
 import { EventsCarousel } from "~/app/_components/landing/events-carousel";
+import { FaqAccordion } from "~/components/faq-accordion";
 import { Footer } from "~/components/footer";
 import { Navbar } from "~/components/navbar";
 import { ScrollReveal } from "~/components/scroll-reveal";
@@ -20,38 +20,33 @@ const timelineData = [
 
 const faqData = [
   {
-    question: "Orkhan",
-    answer: "Muhammad Orkhan adalah Project Manager Website INFEST 2026.",
+    question: "Apa itu INFEST?",
+    answer:
+      "INFEST (Investment Festival) adalah acara tahunan yang diselenggarakan KSEP ITB untuk memberikan edukasi investasi dan pasar modal, dimeriahkan kompetisi ERC dan BCC serta talkshow/seminar utama.",
   },
   {
-    question: "When yh?",
+    question: "Kapan INFEST 2026 berlangsung?",
     answer:
-      "Rangkaian acara INFEST 2026 akan berlangsung dari bulan Juli hingga November 2026. Pantau terus linimasa dan media sosial resmi kami untuk tanggal pendaftaran pasti!",
+      "Rangkaian acara berlangsung dari Juli hingga November 2026. Pantau linimasa dan media sosial resmi untuk tanggal pasti.",
   },
   {
-    question: "Bang orkhan apa rahasianya?",
+    question: "Di mana lokasi acara diadakan?",
     answer:
-      "Rahasianya adalah kerja keras, dedikasi tanpa henti, riset mendalam, serta dukungan penuh dari seluruh panitia KSEP ITB dalam menyajikan festival investasi terbaik di Indonesia.",
+      "Main event digelar di Aula CC Timur Institut Teknologi Bandung. Detail venue pre-event akan diumumkan lebih lanjut.",
   },
   {
-    question: "Bang Orkhan bagi linkedin nya dong",
+    question: "Apakah acara ini gratis?",
     answer:
-      "Silakan terhubung secara profesional melalui LinkedIn Muhammad Orkhan untuk berdiskusi seputar finansial, pasar modal, dan kolaborasi event!",
+      "Informasi tiket dan biaya pendaftaran kompetisi akan diumumkan melalui guidebook dan media sosial resmi.",
   },
   {
-    question: "Bang orkhan jomblo ga?",
+    question: "Bagaimana cara menghubungi panitia?",
     answer:
-      "Pertanyaan menarik! Fokus utamanya saat ini adalah menyukseskan INFEST 2026. Temui Bang Orkhan secara langsung pada sesi seminar puncak 😉",
+      "Hubungi panitia melalui Instagram @infest.bdg atau kontak yang tertera di bagian footer website.",
   },
 ];
 
 export default function Home() {
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
-
-  const toggleFaq = (index: number) => {
-    setOpenFaq(openFaq === index ? null : index);
-  };
-
   return (
     <main className="bg-gradient-1 relative min-h-screen overflow-x-hidden text-white antialiased">
       {/* Background Vector Ornaments & Glows */}
@@ -87,23 +82,23 @@ export default function Home() {
           id="home"
         >
           {/* Left Ornament */}
-          <div className="pointer-events-none absolute top-[20%] left-0 z-0 opacity-80 select-none md:top-[25%] lg:top-[10%]">
+          <div className="pointer-events-none absolute top-[20%] left-0 z-0 opacity-80 select-none max-md:opacity-60 md:top-[25%] lg:top-[10%]">
             <Image
               src="/images/ornament1-left.png"
               alt=""
               width={600}
               height={600}
-              className="w-[200px] object-contain sm:w-[250px] md:w-[300px] lg:w-[600px]"
+              className="w-[140px] object-contain sm:w-[250px] md:w-[300px] lg:w-[600px]"
             />
           </div>
           {/* Right Ornament */}
-          <div className="pointer-events-none absolute top-[20%] right-0 z-0 opacity-80 select-none md:top-[25%] lg:top-[10%]">
+          <div className="pointer-events-none absolute top-[20%] right-0 z-0 opacity-80 select-none max-md:opacity-60 md:top-[25%] lg:top-[10%]">
             <Image
               src="/images/ornament1-right.png"
               alt=""
               width={600}
               height={600}
-              className="w-[200px] object-contain sm:w-[250px] md:w-[300px] lg:w-[600px]"
+              className="w-[140px] object-contain sm:w-[250px] md:w-[300px] lg:w-[600px]"
             />
           </div>
           {/* Badge */}
@@ -179,7 +174,7 @@ export default function Home() {
             {/* Cards Grid */}
             <div className="mt-12 grid gap-8 md:grid-cols-2">
               {/* Card 1 */}
-              <div className="bg-lighter-purple mx-auto flex h-[320px] w-full max-w-[808px] items-center justify-center rounded-[28.204px] py-[70px] pr-[37px] pl-[38px] text-center shadow-[inset_6px_6px_9.9px_rgba(255,255,255,0.33)]">
+              <div className="bg-lighter-purple mx-auto flex min-h-[320px] w-full max-w-[808px] items-center justify-center rounded-[28.204px] px-6 py-10 text-center shadow-[inset_6px_6px_9.9px_rgba(255,255,255,0.33)] sm:px-[38px] sm:py-[70px]">
                 <p className="text-base leading-relaxed font-medium text-white/90 sm:text-lg">
                   Acara tahunan yang diselenggarakan oleh{" "}
                   <strong className="text-accent-color font-bold">
@@ -200,7 +195,7 @@ export default function Home() {
               </div>
 
               {/* Card 2 */}
-              <div className="bg-lighter-purple mx-auto flex h-[320px] w-full max-w-[808px] items-center justify-center rounded-[28.204px] py-[70px] pr-[37px] pl-[38px] text-center shadow-[inset_6px_6px_9.9px_rgba(255,255,255,0.33)]">
+              <div className="bg-lighter-purple mx-auto flex min-h-[320px] w-full max-w-[808px] items-center justify-center rounded-[28.204px] px-6 py-10 text-center shadow-[inset_6px_6px_9.9px_rgba(255,255,255,0.33)] sm:px-[38px] sm:py-[70px]">
                 <p className="text-base leading-relaxed font-medium text-white/90 sm:text-lg">
                   INFEST 2025, dengan tema{" "}
                   <strong className="text-accent-color font-bold">
@@ -269,14 +264,14 @@ export default function Home() {
             </div>
 
             {/* Timeline Track with Staggered Cards */}
-            <div className="relative mt-40 mb-28">
+            <div className="relative mt-10 mb-10 md:mt-40 md:mb-28">
               {/* Horizontal Glowing Axis Line */}
-              <div className="bg-light-purple absolute top-1/2 right-0 left-0 h-1 -translate-y-1/2 rounded-full" />
+              <div className="bg-light-purple absolute top-1/2 right-0 left-0 hidden h-1 -translate-y-1/2 rounded-full md:block" />
 
               {/* Navigation Arrows at line ends */}
               <button
                 aria-label="Previous timeline"
-                className="absolute top-1/2 -left-6 z-20 -translate-y-1/2 text-white/70 transition duration-200 hover:scale-125 hover:text-white md:-left-12"
+                className="absolute top-1/2 -left-6 z-20 hidden -translate-y-1/2 text-white/70 transition duration-200 hover:scale-125 hover:text-white md:-left-12 md:block"
                 type="button"
               >
                 <svg
@@ -296,7 +291,7 @@ export default function Home() {
 
               <button
                 aria-label="Next timeline"
-                className="absolute top-1/2 -right-6 z-20 -translate-y-1/2 text-white/70 transition duration-200 hover:scale-125 hover:text-white md:-right-12"
+                className="absolute top-1/2 -right-6 z-20 hidden -translate-y-1/2 text-white/70 transition duration-200 hover:scale-125 hover:text-white md:-right-12 md:block"
                 type="button"
               >
                 <svg
@@ -315,14 +310,14 @@ export default function Home() {
               </button>
 
               {/* Nodes and Cards Grid */}
-              <div className="grid grid-cols-2 gap-y-16 md:grid-cols-6 md:gap-y-0">
+              <div className="flex flex-col items-center gap-6 md:grid md:grid-cols-6 md:gap-0">
                 {timelineData.map((item, index) => {
                   const isTop = index % 2 === 0;
 
                   return (
                     <div
                       key={index}
-                      className="relative flex flex-col items-center justify-center"
+                      className="relative flex flex-col items-center justify-center gap-2"
                     >
                       {/* Node Circle on Axis Line */}
                       <div className="bg-infest-pink z-10 h-5 w-5 rounded-full shadow-[0_0_15px_#EF35DB]" />
@@ -331,8 +326,8 @@ export default function Home() {
                       <div
                         className={`bg-gradient-custom w-36 rounded-2xl p-4 text-center backdrop-blur-md sm:w-44 ${
                           isTop
-                            ? "absolute bottom-10 mb-2"
-                            : "absolute top-10 mt-2"
+                            ? "md:absolute md:bottom-10 md:mb-2"
+                            : "md:absolute md:top-10 md:mt-2"
                         }`}
                       >
                         <h4 className="text-xs font-bold text-white sm:text-sm">
@@ -371,57 +366,7 @@ export default function Home() {
             </div>
 
             {/* Accordion List */}
-            <div className="flex flex-col gap-4">
-              {faqData.map((faq, index) => {
-                const isOpen = openFaq === index;
-
-                return (
-                  <div
-                    key={index}
-                    className="overflow-hidden backdrop-blur-md transition-all duration-300"
-                    style={{
-                      borderRadius: isOpen ? "20px" : "100px",
-                      background: "#6B0078",
-                      boxShadow:
-                        "inset 5px 6px 4.5px 0px rgba(255, 254, 255, 0.25)",
-                    }}
-                  >
-                    <button
-                      className="flex w-full cursor-pointer items-center justify-between px-8 py-4 text-left text-base font-medium text-white sm:text-lg"
-                      onClick={() => toggleFaq(index)}
-                      type="button"
-                    >
-                      <span>{faq.question}</span>
-                      <span
-                        className={`text-infest-white ml-4 flex h-8 w-8 shrink-0 items-center justify-center transition-transform duration-300 ${
-                          isOpen ? "rotate-180" : ""
-                        }`}
-                      >
-                        <svg
-                          className="h-6 w-6"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            d="M19 9l-7 7-7-7"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2.5}
-                          />
-                        </svg>
-                      </span>
-                    </button>
-
-                    {isOpen && (
-                      <div className="border-infest-white/10 border-t px-8 py-5 text-sm leading-relaxed text-[#E5C7F7] sm:text-base">
-                        {faq.answer}
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
+            <FaqAccordion items={faqData} />
           </div>
         </section>
       </ScrollReveal>

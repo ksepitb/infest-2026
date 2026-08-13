@@ -50,7 +50,7 @@ export function ErcPrizePool() {
             <div className={item.badgeClassName}>
               <span className={item.textClassName}>{item.rank}</span>
             </div>
-            <p className="font-poppins text-shadow-link text-center text-xl leading-[100%] font-semibold text-white sm:text-left md:text-3xl lg:text-[36px]">
+            <p className="font-poppins text-shadow-links text-center text-xl leading-[100%] font-semibold text-white sm:text-left md:text-3xl lg:text-[36px]">
               {item.prize}
             </p>
           </div>

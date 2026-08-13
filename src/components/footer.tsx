@@ -85,7 +85,7 @@ export function Footer({
                 href={linkedinUrl}
               >
                 <svg
-                  className="mt-4 h-16 w-16"
+                  className="h-8 w-8"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -96,7 +96,7 @@ export function Footer({
               {/* Instagram */}
               <a
                 aria-label="Instagram"
-                className="flex h-10 w-10 items-center justify-center rounded-full transition-colors duration-200 hover:text-white"
+                className="flex h-12 w-12 items-center justify-center rounded-full transition-colors duration-200 hover:text-white"
                 href={instagramUrl}
               >
                 <svg
@@ -111,7 +111,7 @@ export function Footer({
               {/* TikTok */}
               <a
                 aria-label="TikTok"
-                className="flex h-10 w-10 items-center justify-center transition-colors duration-200 hover:text-white"
+                className="flex h-12 w-12 items-center justify-center transition-colors duration-200 hover:text-white"
                 href={tiktokUrl}
               >
                 <svg
@@ -135,7 +135,7 @@ export function Footer({
 
             <div className="mt-6 grid w-full max-w-lg grid-cols-2 gap-x-16 gap-y-8 text-xs text-white/90 sm:text-sm">
               {/* Event Contacts */}
-              <div className="text-left">
+              <div className="text-center sm:text-left">
                 <h4 className="text-infest-white mb-4 text-xl font-bold">
                   Event
                 </h4>
@@ -143,11 +143,11 @@ export function Footer({
                   {eventContacts.map((contact, index) => (
                     <div key={index} className="space-y-1">
                       <p className="font-semibold text-white">{contact.name}</p>
-                      <p className="flex items-center justify-start gap-1.5 text-white/70">
+                      <p className="flex items-center justify-center gap-1.5 text-white/70 sm:justify-start">
                         <WhatsappIcon className="h-4 w-4 shrink-0 text-white/70" />
                         <span>{contact.phone}</span>
                       </p>
-                      <p className="flex items-center justify-start gap-1.5 text-white/70">
+                      <p className="flex items-center justify-center gap-1.5 text-white/70 sm:justify-start">
                         <LineIcon className="h-4 w-4 shrink-0 text-white/70" />
                         <span>{contact.lineId}</span>
                       </p>
@@ -157,7 +157,7 @@ export function Footer({
               </div>
 
               {/* Competition Contacts */}
-              <div className="text-right">
+              <div className="text-center sm:text-right">
                 <h4 className="text-infest-white mb-4 text-xl font-bold">
                   Competition
                 </h4>
@@ -165,11 +165,11 @@ export function Footer({
                   {competitionContacts.map((contact, index) => (
                     <div key={index} className="space-y-1">
                       <p className="font-semibold text-white">{contact.name}</p>
-                      <p className="flex items-center justify-end gap-1.5 text-white/70">
+                      <p className="flex items-center justify-center gap-1.5 text-white/70 sm:justify-end">
                         <span>{contact.phone}</span>
                         <WhatsappIcon className="h-4 w-4 shrink-0 text-white/70" />
                       </p>
-                      <p className="flex items-center justify-end gap-1.5 text-white/70">
+                      <p className="flex items-center justify-center gap-1.5 text-white/70 sm:justify-end">
                         <span>{contact.lineId}</span>
                         <LineIcon className="h-4 w-4 shrink-0 text-white/70" />
                       </p>

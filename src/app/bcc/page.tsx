@@ -52,25 +52,25 @@ export default function BccPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative mt-20 z-10 flex flex-col items-center px-6 pt-40 pb-12 text-center">
+      <section className="relative z-10 mt-20 flex flex-col items-center px-6 pt-40 pb-12 text-center">
         {/* Left Ornament */}
-        <div className="pointer-events-none absolute top-[20%] left-[-2%] z-0 opacity-80 select-none md:top-[25%] lg:top-[10%]">
+        <div className="pointer-events-none absolute top-[20%] left-[-2%] z-0 opacity-80 select-none max-md:opacity-60 md:top-[25%] lg:top-[10%]">
           <Image
             src="/images/ornament1-left.png"
             alt=""
             width={600}
             height={600}
-            className="w-[200px] object-contain sm:w-[250px] md:w-[300px] lg:w-[600px]"
+            className="w-[140px] object-contain sm:w-[250px] md:w-[300px] lg:w-[600px]"
           />
         </div>
         {/* Right Ornament */}
-        <div className="pointer-events-none absolute top-[20%] right-[-2%] z-0 opacity-80 select-none md:top-[25%] lg:top-[10%]">
+        <div className="pointer-events-none absolute top-[20%] right-[-2%] z-0 opacity-80 select-none max-md:opacity-60 md:top-[25%] lg:top-[10%]">
           <Image
             src="/images/ornament1-right.png"
             alt=""
             width={600}
             height={600}
-            className="w-[200px] object-contain sm:w-[250px] md:w-[300px] lg:w-[600px]"
+            className="w-[140px] object-contain sm:w-[250px] md:w-[300px] lg:w-[600px]"
           />
         </div>
         <h1 className="text-highlight-gradient-dark-bg text-shadow-links relative z-10 mt-5 text-center text-[48px] leading-none font-bold not-italic sm:text-[64px] md:text-[70px] lg:text-[80px]">
@@ -89,7 +89,7 @@ export default function BccPage() {
         </p>
 
         <Link
-          href="/register?comp=erc"
+          href="/register?comp=bcc"
           className="font-poppins bg-gradient-6 text-infest-white glow-box-golden mt-12 flex h-[64px] w-auto items-center justify-center gap-3 rounded-[60px] px-10 text-lg leading-[117%] font-bold tracking-wide transition hover:brightness-110 sm:text-xl md:h-[75px] md:gap-[12px] md:text-2xl"
         >
           <span>Daftar Sekarang</span>
@@ -98,7 +98,7 @@ export default function BccPage() {
       </section>
 
       {/* Description of BCC */}
-      <section className="relative mt-32 z-10 px-6 py-16">
+      <section className="relative z-10 mt-32 px-6 py-16">
         {/* Ornament 2 centered behind heading */}
         <div className="mx-auto max-w-4xl">
           <GradientDivider>What is BCC?</GradientDivider>
