@@ -49,7 +49,7 @@ export function ErcHero() {
         Equity Research Competition
       </h1>
       <div className="mt-4 flex w-full max-w-full flex-col items-center gap-6">
-        <p className="font-inter text-infest-white text-shadow-links w-full max-w-[1300px] text-[24px] leading-relaxed break-words md:text-[26px] lg:text-[28px]">
+        <p className="font-inter text-infest-white text-shadow-links text-md w-full max-w-[1300px] leading-relaxed break-words md:text-[26px] lg:text-[28px]">
           Equity Research Competition merupakan kompetisi yang akan menguji
           kemampuan peserta dalam melakukan{" "}
           <span className="bg-gradient-to-r from-[#FF5AF7] to-[#FFB800] bg-clip-text font-semibold text-transparent">

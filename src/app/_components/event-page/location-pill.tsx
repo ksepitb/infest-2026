@@ -9,7 +9,7 @@ type LocationPillProps = {
 export function LocationPill({ location }: LocationPillProps) {
   return (
     <div className="flex justify-center">
-      <div className="relative flex w-full max-w-[800px] items-center">
+      <div className="relative flex w-full max-w-[400px] items-center md:max-w-[800px]">
         {/* Container Ikon */}
         <div className="relative z-10 -ml-6 flex h-20 w-20 shrink-0 items-center justify-center lg:-ml-12 lg:h-[120px] lg:w-[120px]">
           <div className="absolute inset-0">
@@ -42,7 +42,7 @@ export function LocationPill({ location }: LocationPillProps) {
         >
           <p
             style={{ textShadow: "0 4px 4px rgba(0,0,0,0.25)" }}
-            className="font-poppins text-xl leading-none font-bold text-white lg:text-2xl"
+            className="font-poppins text-center text-lg leading-none font-bold text-white lg:text-2xl"
           >
             {location}
           </p>

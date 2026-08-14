@@ -40,9 +40,7 @@ export function DayCard({
       >
         {dayLabel}
       </span>{" "}
-      <span
-        style={{ ...glowTextShadow, color: "#FFF", letterSpacing: "-1.8px" }}
-      >
+      <span style={{ ...glowTextShadow, color: "#FFF", letterSpacing: "" }}>
         - {title}
       </span>
     </h3>

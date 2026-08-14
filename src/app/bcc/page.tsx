@@ -52,7 +52,7 @@ export default function BccPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative z-10 mt-20 flex flex-col items-center px-6 pt-40 pb-12 text-center">
+      <section className="relative z-10 mt-8 flex flex-col items-center px-6 pt-40 pb-12 text-center md:mt-20">
         {/* Left Ornament */}
         <div className="pointer-events-none absolute top-[20%] left-[-2%] z-0 opacity-80 select-none max-md:opacity-60 md:top-[25%] lg:top-[10%]">
           <Image
@@ -73,13 +73,13 @@ export default function BccPage() {
             className="w-[140px] object-contain sm:w-[250px] md:w-[300px] lg:w-[600px]"
           />
         </div>
-        <h1 className="text-highlight-gradient-dark-bg text-shadow-links relative z-10 mt-5 text-center text-[48px] leading-none font-bold not-italic sm:text-[64px] md:text-[70px] lg:text-[80px]">
+        <h1 className="text-highlight-gradient-dark-bg text-shadow-links relative z-10 text-center text-[48px] leading-none font-bold not-italic sm:text-[64px] md:text-[70px] lg:text-[72px]">
           Business Case Competition
         </h1>
 
-        <p className="text-infest-white relative z-10 mt-6 max-w-6xl text-base leading-relaxed sm:text-[24px]">
+        <p className="text-infest-white text-md relative z-10 mt-6 max-w-[1300px] leading-relaxed sm:text-[28px]">
           Business Case Competition merupakan kompetisi yang menguji kemampuan{" "}
-          <span className="bg-gradient-to-r from-[#FF5AF7] to-[#FFB800] bg-clip-text font-bold text-transparent">
+          <span className="text-golden-gradient">
             problem solving dan analytical thinking
           </span>{" "}
           dalam konteks bisnis. Business Case Competition akan terbagi menjadi 3
@@ -111,14 +111,14 @@ export default function BccPage() {
             <div className="rounded-3xl bg-[#020003] px-8 py-10 text-center shadow-[inset_2px_2px_8px_rgba(255,255,255,0.08)] sm:px-14 sm:py-14">
               <p className="text-base leading-relaxed text-white/90 sm:text-lg">
                 INFEST 2025, dengan tema{" "}
-                <span className="bg-gradient-to-r from-[#FF5AF7] to-[#FFB800] bg-clip-text font-bold text-transparent">
+                <span className="text-golden-gradient">
                   &quot;Navigating the Future: Smart Investment in the Times of
                   Changes,&quot;
                 </span>{" "}
                 berfokus pada strategi investasi cerdas untuk menghadapi
                 masa-masa penuh perubahan. Acara ini akan membekali peserta
                 dengan pola pikir yang{" "}
-                <span className="bg-gradient-to-r from-[#FF5AF7] to-[#FFB800] bg-clip-text font-bold text-transparent">
+                <span className="text-golden-gradient">
                   proaktif dan tangguh
                 </span>
                 , serta membahas pemanfaatan teknologi seperti AI dalam

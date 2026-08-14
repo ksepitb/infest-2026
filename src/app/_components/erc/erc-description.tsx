@@ -19,17 +19,15 @@ export function ErcDescription() {
         <div className="rounded-3xl bg-[#020003] px-8 py-10 text-center shadow-[inset_2px_2px_8px_rgba(255,255,255,0.08)] sm:px-14 sm:py-14">
           <p className="text-base leading-relaxed text-white/90 sm:text-lg">
             INFEST 2025, dengan tema{" "}
-            <span className="bg-gradient-to-r from-[#FF5AF7] to-[#FFB800] bg-clip-text font-bold text-transparent">
+            <span className="text-golden-gradient">
               &quot;Navigating the Future: Smart Investment in the Times of
               Changes,&quot;
             </span>{" "}
             berfokus pada strategi investasi cerdas untuk menghadapi masa-masa
             penuh perubahan. Acara ini akan membekali peserta dengan pola pikir
             yang{" "}
-            <span className="bg-gradient-to-r from-[#FF5AF7] to-[#FFB800] bg-clip-text font-bold text-transparent">
-              proaktif dan tangguh
-            </span>
-            , serta membahas pemanfaatan teknologi seperti AI dalam mengambil
+            <span className="text-golden-gradient">proaktif dan tangguh</span>,
+            serta membahas pemanfaatan teknologi seperti AI dalam mengambil
             keputusan investasi di tengah dinamika pasar dan krisis ekonomi.
           </p>
         </div>

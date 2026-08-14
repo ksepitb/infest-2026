@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useRef } from "react";
 import { GradientDivider } from "../event-page/theme-divider";
 
 interface TimelineEvent {
@@ -30,6 +33,15 @@ function TimelineCard({ event }: { event: TimelineEvent }) {
 }
 
 export function BccTimeline() {
+  const trackRef = useRef<HTMLDivElement>(null);
+
+  const scrollTrack = (direction: 1 | -1) => {
+    trackRef.current?.scrollBy({
+      left: (trackRef.current.clientWidth / 2) * direction,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section
       className="relative mx-auto flex w-full max-w-[1509px] scroll-mt-32 flex-col items-center gap-10 px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:gap-[85px] lg:px-8 lg:py-24"
@@ -62,34 +74,83 @@ export function BccTimeline() {
         width={900}
       />
       <GradientDivider>Timeline</GradientDivider>
-      <div className="relative flex w-full flex-col items-center gap-8 lg:gap-[63px]">
-        <div className="bg-light-purple absolute top-0 bottom-0 left-1/2 z-0 hidden w-[3px] -translate-x-1/2 shadow-[0_0_10px_#E306D9] lg:block" />
-        {TIMELINE_EVENTS.map((event, index) => {
-          const isLeft = index % 2 === 0;
 
-          return (
-            <div
-              key={event.id}
-              className="relative z-10 grid w-full grid-cols-1 items-center gap-6 sm:gap-8 md:gap-10 lg:grid-cols-2 lg:gap-x-12 xl:gap-x-16"
-            >
-              {isLeft ? (
-                <div className="ml-auto flex w-full justify-center justify-self-end lg:mr-8 lg:w-[460px] lg:justify-end xl:mr-12">
-                  <TimelineCard event={event} />
-                </div>
-              ) : (
-                <div className="hidden lg:block" />
-              )}
-              <div className="bg-infest-pink absolute top-1/2 left-1/2 z-20 hidden h-[38px] w-[38px] shrink-0 -translate-x-1/2 -translate-y-1/2 rounded-full shadow-[0_0_12px_rgba(255,255,255,0.8),0_0_20px_#E306D9] lg:block" />
-              {isLeft ? (
-                <div className="hidden lg:block" />
-              ) : (
-                <div className="mr-auto flex w-full justify-center justify-self-start lg:ml-8 lg:w-[460px] lg:justify-start xl:ml-12">
-                  <TimelineCard event={event} />
-                </div>
-              )}
-            </div>
-          );
-        })}
+      {/* Mobile horizontal carousel / desktop alternating timeline */}
+      <div className="relative w-full">
+        <div
+          ref={trackRef}
+          className="no-scrollbar relative flex w-full snap-x snap-mandatory items-center gap-8 overflow-x-auto scroll-smooth lg:flex-col lg:gap-[63px] lg:overflow-visible"
+        >
+          <div className="bg-light-purple absolute top-0 bottom-0 left-1/2 z-0 hidden w-[3px] -translate-x-1/2 shadow-[0_0_10px_#E306D9] lg:block" />
+          {TIMELINE_EVENTS.map((event, index) => {
+            const isLeft = index % 2 === 0;
+
+            return (
+              <div
+                key={event.id}
+                className="relative z-10 grid w-1/2 shrink-0 snap-center grid-cols-1 items-center gap-6 sm:gap-8 md:gap-10 lg:w-auto lg:grid-cols-2 lg:gap-x-12 xl:gap-x-16"
+              >
+                {isLeft ? (
+                  <div className="ml-auto flex w-full justify-center justify-self-end lg:mr-8 lg:w-[460px] lg:justify-end xl:mr-12">
+                    <TimelineCard event={event} />
+                  </div>
+                ) : (
+                  <div className="hidden lg:block" />
+                )}
+                <div className="bg-infest-pink absolute top-1/2 left-1/2 z-20 hidden h-[38px] w-[38px] shrink-0 -translate-x-1/2 -translate-y-1/2 rounded-full shadow-[0_0_12px_rgba(255,255,255,0.8),0_0_20px_#E306D9] lg:block" />
+                {isLeft ? (
+                  <div className="hidden lg:block" />
+                ) : (
+                  <div className="mr-auto flex w-full justify-center justify-self-start lg:ml-8 lg:w-[460px] lg:justify-start xl:ml-12">
+                    <TimelineCard event={event} />
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Mobile carousel arrows */}
+        <button
+          aria-label="Previous timeline"
+          className="absolute top-1/2 -left-2 z-20 -translate-y-1/2 text-white/70 transition duration-200 hover:scale-125 hover:text-white lg:hidden"
+          onClick={() => scrollTrack(-1)}
+          type="button"
+        >
+          <svg
+            className="h-8 w-8 cursor-pointer"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M15 19l-7-7 7-7"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+            />
+          </svg>
+        </button>
+        <button
+          aria-label="Next timeline"
+          className="absolute top-1/2 -right-2 z-20 -translate-y-1/2 text-white/70 transition duration-200 hover:scale-125 hover:text-white lg:hidden"
+          onClick={() => scrollTrack(1)}
+          type="button"
+        >
+          <svg
+            className="h-8 w-8 cursor-pointer"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M9 5l7 7-7 7"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+            />
+          </svg>
+        </button>
       </div>
     </section>
   );

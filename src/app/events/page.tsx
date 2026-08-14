@@ -146,7 +146,7 @@ export default function EventsPage() {
       />
 
       {/* Pre-Events */}
-      <section className="relative z-10 mx-auto mt-32 flex max-w-5xl flex-col items-center gap-24 px-6">
+      <section className="relative z-10 mx-auto mt-24 flex max-w-5xl flex-col items-center gap-24 px-6">
         <ScrollReveal>
           <SectionBadge>Pre-Events</SectionBadge>
         </ScrollReveal>
@@ -237,8 +237,8 @@ export default function EventsPage() {
         <section className="relative z-10 px-6 py-20">
           <div className="mx-auto max-w-6xl">
             {/* Capsule Pill Header */}
-            <div className="mb-12 flex justify-center">
-              <h2 className="text-infest-white text-3xl font-bold tracking-wide [filter:drop-shadow(0_4px_4px_rgba(0,0,0,0.25))] md:text-6xl">
+            <div className="flex justify-center">
+              <h2 className="text-infest-white text-4xl font-bold tracking-wide [filter:drop-shadow(0_4px_4px_rgba(0,0,0,0.25))] md:text-6xl">
                 <span className="glow-text-1">Last Year&apos;s </span>
                 <span className="text-highlight-gradient-dark-bg pb-2">
                   Highlights
