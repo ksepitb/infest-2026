@@ -1,11 +1,10 @@
 import Image from "next/image";
-import { SectionHeader } from "@/components/section-header";
 import { GradientDivider } from "@/app/_components/event-page/theme-divider";
 
 export function ErcDescription() {
   return (
     <section
-      className="relative mx-auto flex w-full max-w-6xl scroll-mt-32 flex-col items-center gap-10 px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:gap-[61px] lg:px-8 lg:py-8"
+      className="relative mx-auto mt-36 flex w-full max-w-6xl scroll-mt-32 flex-col items-center gap-10 px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:gap-[61px] lg:px-8 lg:py-8"
       id="erc-description"
     >
       {/* Ornament 2 centered behind heading */}

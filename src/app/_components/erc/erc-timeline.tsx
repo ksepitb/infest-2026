@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useRef } from "react";
-import { SectionHeader } from "@/components/section-header";
 import { GradientDivider } from "@/app/_components/event-page/theme-divider";
 
 interface TimelineEvent {

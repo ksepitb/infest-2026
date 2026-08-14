@@ -75,7 +75,7 @@ function MobileMenu({
               return (
                 <Link
                   key={link.href}
-                  className={`text-shadow-links text-md py-3 font-semibold transition-all duration-300 ${
+                  className={`text-shadow-links text-md py-3 font-bold transition-[transform,background-color] duration-300 ${
                     isActive
                       ? "text-highlight-gradient-dark-bg font-bold"
                       : "text-infest-white hover:text-highlight-gradient-dark-bg"
@@ -182,7 +182,7 @@ export function Navbar({
 
         <div className="hidden items-center gap-4 pr-4 md:flex">
           <Link
-            className="text-md flex items-center justify-center rounded-[100px] bg-white px-6 py-2 font-extrabold tracking-wider shadow-[inset_-4px_5px_4.1px_rgba(0,0,0,0.25)] transition-[transform,background-color] duration-300 hover:scale-105 transition-all active:scale-95"
+            className="text-md flex items-center justify-center rounded-[100px] bg-white px-6 py-2 font-extrabold tracking-wider shadow-[inset_-4px_5px_4.1px_rgba(0,0,0,0.25)] transition-[transform,background-color] transition-all duration-300 hover:scale-105 active:scale-95"
             href={registerHref}
           >
             <span className="text-highlight-gradient-light-bg">Daftar</span>

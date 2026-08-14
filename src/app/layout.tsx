@@ -4,6 +4,7 @@ import { type Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 
 import { PageTransition } from "@/components/page-transition";
+import { SmoothScrolling } from "@/components/smooth-scrolling";
 import { TRPCReactProvider } from "@/trpc/react";
 
 export const metadata: Metadata = {
@@ -30,11 +31,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${poppins.variable} ${inter.variable} scroll-smooth bg-black text-white`}
+      className={`${poppins.variable} ${inter.variable} bg-black text-white`}
     >
       <body className="bg-black text-white antialiased">
         <TRPCReactProvider>
-          <PageTransition>{children}</PageTransition>
+          <SmoothScrolling>
+            <PageTransition>{children}</PageTransition>
+          </SmoothScrolling>
         </TRPCReactProvider>
       </body>
     </html>
