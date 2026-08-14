@@ -32,7 +32,7 @@ export default function ErcPage() {
       <Navbar />
 
       {/* Layer 3: Main Sections Stack */}
-      <div className="relative z-10 flex w-full flex-col items-center gap-20 md:gap-32">
+      <div className="relative z-10 flex w-full flex-col items-center gap-20 md:gap-0">
         <ErcHero />
         <ErcDescription />
         <ErcPrizePool />
