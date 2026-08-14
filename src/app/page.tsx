@@ -83,7 +83,7 @@ export default function Home() {
           id="home"
         >
           {/* Left Ornament */}
-          <div className="pointer-events-none absolute top-[20%] left-0 z-0 opacity-80 select-none max-md:opacity-60 md:top-[25%] lg:top-[10%]">
+          <div className="pointer-events-none absolute top-[30%] left-[-2%] z-0 opacity-80 select-none max-md:opacity-60 md:top-[25%] lg:top-[10%]">
             <Image
               src="/images/ornament1-left.png"
               alt=""
@@ -93,7 +93,7 @@ export default function Home() {
             />
           </div>
           {/* Right Ornament */}
-          <div className="pointer-events-none absolute top-[20%] right-0 z-0 opacity-80 select-none max-md:opacity-60 md:top-[25%] lg:top-[10%]">
+          <div className="pointer-events-none absolute top-[30%] right-[-2%] z-0 opacity-80 select-none max-md:opacity-60 md:top-[25%] lg:top-[10%]">
             <Image
               src="/images/ornament1-right.png"
               alt=""
