@@ -39,7 +39,7 @@ const competitionContacts: ContactInfo[] = [
 function RegistrationButton({ href, label }: { href: string; label: string }) {
   return (
     <Link
-      className="bg-gradient-5 shadow-box-shadow-inset text-infest-white relative flex min-h-[80px] w-full items-center justify-center rounded-full px-6 py-5 text-center text-base font-bold transition hover:brightness-110 md:text-[20px]"
+      className="bg-gradient-5 shadow-box-shadow-inset text-infest-white relative flex min-h-[80px] w-full items-center justify-center rounded-full px-6 py-5 text-center text-base font-bold transition-all duration-300 hover:scale-[1.03] hover:brightness-110 active:scale-95 md:text-[20px]"
       href={href}
     >
       {label}

@@ -27,13 +27,13 @@ export function RulesCard({ title, rules }: RulesCardProps) {
 
       <div className="mt-10 grid w-full max-w-5xl gap-4 sm:grid-cols-2 sm:gap-8 md:mt-14">
         <Link
-          className="bg-gradient-5 text-infest-white shadow-box-shadow-inset relative flex min-h-[72px] items-center justify-center rounded-full px-6 py-4 text-center text-base font-bold transition hover:brightness-110 md:text-[18px]"
+          className="bg-gradient-5 text-infest-white shadow-box-shadow-inset relative flex min-h-[72px] items-center justify-center rounded-full px-6 py-4 text-center text-base font-bold transition-all duration-300 hover:scale-[1.03] hover:brightness-110 active:scale-95 md:text-[18px]"
           href="/register"
         >
           Kembali
         </Link>
         <Link
-          className="bg-gradient-5 text-infest-white shadow-box-shadow-inset relative flex min-h-[72px] items-center justify-center rounded-full px-6 py-4 text-center text-base font-bold transition hover:brightness-110 md:text-[18px]"
+          className="bg-gradient-5 text-infest-white shadow-box-shadow-inset relative flex min-h-[72px] items-center justify-center rounded-full px-6 py-4 text-center text-base font-bold transition-all duration-300 hover:scale-[1.03] hover:brightness-110 active:scale-95 md:text-[18px]"
           href="#"
         >
           Daftar Sekarang

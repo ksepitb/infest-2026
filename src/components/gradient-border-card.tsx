@@ -21,7 +21,7 @@ export function GradientBorderCard({
 }: GradientBorderCardProps) {
   return (
     <div
-      className={`max-w-4xl rounded-3xl p-[2px] shadow-[0_0_30px_rgba(147,0,156,0.25)] ${className}`}
+      className={`max-w-4xl rounded-3xl p-[2px] shadow-[0_0_30px_rgba(147,0,156,0.25)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_0_45px_rgba(227,6,217,0.35)] ${className}`}
       style={{
         background: "linear-gradient(180deg, #FFEED2, #683A9C)",
       }}

@@ -117,7 +117,6 @@ export function EventsCarousel() {
                   alt={event.title}
                   className="h-full w-full object-cover"
                   fill
-                  priority={isCenter}
                   src={event.image}
                 />
 
@@ -134,7 +133,7 @@ export function EventsCarousel() {
                   </p>
                   <div className="flex justify-end">
                     <a
-                      className="bg-infest-white hover:bg-infest-white/70 inline-flex cursor-pointer items-center justify-center rounded-full px-6 py-2 text-sm font-bold tracking-wide shadow-[0_0_15px_rgba(255,255,255,0.4)] transition"
+                      className="bg-infest-white hover:bg-infest-white/70 inline-flex cursor-pointer items-center justify-center rounded-full px-6 py-2 text-sm font-bold tracking-wide shadow-[0_0_15px_rgba(255,255,255,0.4)] transition-all duration-300 hover:scale-105 active:scale-95"
                       href="#register"
                     >
                       <span className="text-gradient-4 drop-shadow-[6px_4px_22.1px_rgba(0,0,0,0.50)]">
@@ -180,8 +179,8 @@ export function EventsCarousel() {
               aria-label={`Go to slide ${i + 1}`}
               className={`rounded-full transition-all duration-300 ${
                 i === activeIndex
-                  ? "bg-infest-pink h-3.5 w-3.5 shadow-[0_0_10px_#F04AC9]"
-                  : "h-2.5 w-2.5 bg-white/30 hover:bg-white/60"
+                  ? "bg-infest-pink animate-glow-pulse h-3.5 w-3.5 shadow-[0_0_10px_#F04AC9]"
+                  : "h-2.5 w-2.5 bg-white/30 hover:scale-125 hover:bg-white/60"
               }`}
               onClick={() => setActiveIndex(i)}
               type="button"

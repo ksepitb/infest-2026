@@ -39,7 +39,7 @@ function MobileMenu({
     <div className="md:hidden">
       <button
         aria-label="Toggle menu"
-        className="rounded-lg p-2 text-white hover:bg-white/10"
+        className="cursor-pointer rounded-lg p-2 text-white transition-transform duration-300 hover:scale-110 active:scale-95"
         onClick={() => setIsOpen((open) => !open)}
         type="button"
       >
@@ -68,17 +68,17 @@ function MobileMenu({
       </button>
 
       {isOpen && (
-        <div className="bg-gradient-2 absolute top-full right-0 left-0 z-40 rounded-3xl px-6 py-4 shadow-[inset_2px_4px_4px_rgba(255,255,255,0.25),0_4px_4px_rgba(0,0,0,0.25)] backdrop-blur-md">
+        <div className="bg-gradient-2 absolute top-full right-0 left-0 z-40 rounded-2xl px-6 py-4 shadow-[inset_2px_4px_4px_rgba(255,255,255,0.25),0_4px_4px_rgba(0,0,0,0.25)] backdrop-blur-md">
           <nav className="flex flex-col gap-4">
             {links.map((link) => {
               const isActive = isLinkActive(link.href);
               return (
                 <Link
                   key={link.href}
-                  className={`text-shadow-links py-3 text-sm font-semibold transition ${
+                  className={`text-shadow-links text-md py-3 font-semibold transition-all duration-300 ${
                     isActive
-                      ? "text-infest-pink font-bold"
-                      : "text-infest-white hover:text-infest-pink"
+                      ? "text-highlight-gradient-dark-bg font-bold"
+                      : "text-infest-white hover:text-highlight-gradient-dark-bg"
                   }`}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
@@ -88,11 +88,11 @@ function MobileMenu({
               );
             })}
             <Link
-              className="text-dark-purple min-h-11 rounded-full bg-white px-6 py-2 text-center text-xs font-black tracking-wider uppercase transition hover:bg-white/90"
+              className="shadow-box-shadow-inset bg-infest-white flex min-h-11 items-center justify-center rounded-full px-6 py-2 text-center text-lg font-extrabold tracking-wider transition-[transform,background-color] duration-300 hover:scale-105 hover:bg-white/90 active:scale-95"
               href={registerHref}
               onClick={() => setIsOpen(false)}
             >
-              Daftar
+              <span className="text-highlight-gradient-light-bg">Daftar</span>
             </Link>
           </nav>
         </div>
@@ -164,7 +164,7 @@ export function Navbar({
             return (
               <Link
                 key={link.href}
-                className={`text-shadow-links relative py-1 text-lg font-bold tracking-wide transition-colors duration-300 ${
+                className={`text-shadow-links relative py-1 text-lg font-bold tracking-wide transition-[color,transform] duration-300 ${
                   isActive
                     ? "text-highlight-gradient-dark-bg"
                     : "hover:text-highlight-gradient-dark-bg text-white"
@@ -173,7 +173,7 @@ export function Navbar({
               >
                 {link.label}
                 {isActive && (
-                  <span className="bg-infest-pink absolute right-0 bottom-0 left-0 h-[2px] rounded-full shadow-[0_0_8px_#E306D9]" />
+                  <span className="bg-highlight-dark absolute right-0 bottom-0 left-0 h-[2px] rounded-full shadow-[0_0_8px_#E306D9]" />
                 )}
               </Link>
             );
@@ -182,12 +182,10 @@ export function Navbar({
 
         <div className="hidden items-center gap-4 pr-4 md:flex">
           <Link
-            className="text-md flex items-center justify-center rounded-[100px] bg-white px-6 py-2 font-black tracking-wider shadow-[inset_-4px_5px_4.1px_rgba(0,0,0,0.25)] transition hover:bg-white/50"
+            className="text-md flex items-center justify-center rounded-[100px] bg-white px-6 py-2 font-extrabold tracking-wider shadow-[inset_-4px_5px_4.1px_rgba(0,0,0,0.25)] transition-[transform,background-color] duration-300 hover:scale-105 transition-all active:scale-95"
             href={registerHref}
           >
-            <span className="text-highlight-gradient-light-bg uppercase">
-              Daftar
-            </span>
+            <span className="text-highlight-gradient-light-bg">Daftar</span>
           </Link>
         </div>
 

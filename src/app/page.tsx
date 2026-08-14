@@ -1,15 +1,25 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import Image from "next/image";
 
-import { EventsCarousel } from "@/app/_components/landing/events-carousel";
-import { TimelineCarousel } from "@/app/_components/landing/timeline-carousel";
-import { FaqAccordion } from "@/components/faq-accordion";
-import { Footer } from "@/components/footer";
 import { GradientBorderCard } from "@/components/gradient-border-card";
+import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { GradientDivider } from "./_components/event-page/theme-divider";
+
+const EventsCarousel = dynamic(() =>
+  import("./_components/landing/events-carousel").then((m) => m.EventsCarousel),
+);
+const TimelineCarousel = dynamic(() =>
+  import("./_components/landing/timeline-carousel").then(
+    (m) => m.TimelineCarousel,
+  ),
+);
+const FaqAccordion = dynamic(() =>
+  import("../components/faq-accordion").then((m) => m.FaqAccordion),
+);
 
 const timelineData = [
   { title: "BCC Registration", date: "5–13 Juli 2025" },
@@ -84,7 +94,7 @@ export default function Home() {
           id="home"
         >
           {/* Left Ornament */}
-          <div className="pointer-events-none absolute top-[30%] left-[-2%] z-0 opacity-80 select-none max-md:opacity-60 md:top-[25%] lg:top-[10%]">
+          <div className="animate-float pointer-events-none absolute top-[30%] left-[-2%] z-0 opacity-80 select-none max-md:opacity-60 md:top-[25%] lg:top-[10%]">
             <Image
               src="/images/ornament1-left.png"
               alt=""
@@ -94,7 +104,7 @@ export default function Home() {
             />
           </div>
           {/* Right Ornament */}
-          <div className="pointer-events-none absolute top-[30%] right-[-2%] z-0 opacity-80 select-none max-md:opacity-60 md:top-[25%] lg:top-[10%]">
+          <div className="animate-float pointer-events-none absolute top-[30%] right-[-2%] z-0 opacity-80 select-none [animation-delay:1.5s] max-md:opacity-60 md:top-[25%] lg:top-[10%]">
             <Image
               src="/images/ornament1-right.png"
               alt=""
@@ -104,7 +114,7 @@ export default function Home() {
             />
           </div>
           {/* Badge */}
-          <div className="bg-light-purple mt-10 inline-flex h-[36px] w-[170px] items-center justify-center gap-1.5 rounded-[30px] text-xs font-bold tracking-wider text-white shadow-[0_4px_4px_rgba(0,0,0,0.25),inset_0_10px_18.8px_#A68FC2] backdrop-blur-md sm:h-[50px] sm:w-[230px] sm:gap-2 sm:rounded-[41px] sm:text-sm">
+          <div className="bg-light-purple mt-10 inline-flex h-[36px] w-[170px] items-center justify-center gap-1.5 rounded-[30px] text-xs font-bold tracking-wider text-white shadow-[0_4px_4px_rgba(0,0,0,0.25),inset_0_10px_18.8px_#A68FC2] backdrop-blur-md transition-all duration-300 sm:h-[50px] sm:w-[230px] sm:gap-2 sm:rounded-[41px] sm:text-sm">
             <Image
               alt="KSEP ITB"
               className="h-5 w-5 object-contain sm:h-8 sm:w-8"
@@ -116,7 +126,7 @@ export default function Home() {
           </div>
 
           {/* Big Styled Title Logo: INFEST 2026 */}
-          <div className="flex flex-col items-center justify-center">
+          <div className="animate-float-medium flex flex-col items-center justify-center">
             <Image
               alt="INFEST 2026 Logo"
               className="mt-10 h-auto w-full max-w-[280px] drop-shadow-[0_0_35px_rgba(240,74,201,0.5)] sm:max-w-[450px] md:max-w-[600px] lg:max-w-[720px]"

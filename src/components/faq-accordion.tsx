@@ -33,7 +33,7 @@ export function FaqAccordion({ items }: FaqAccordionProps) {
               type="button"
               aria-expanded={isOpen}
               onClick={() => toggle(index)}
-              className="flex w-full cursor-pointer items-center justify-between px-6 py-4 text-left text-base font-medium text-white sm:px-8 sm:text-lg"
+              className="flex w-full cursor-pointer items-center justify-between px-6 py-4 text-left text-base font-medium text-white transition-colors duration-300 hover:bg-white/5 sm:px-8 sm:text-lg"
             >
               <span className="pr-4">{faq.question}</span>
               <span

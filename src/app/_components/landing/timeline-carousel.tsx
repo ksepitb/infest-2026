@@ -24,7 +24,7 @@ export function TimelineCarousel({ items }: { items: TimelineItem[] }) {
   return (
     <section className="relative z-10 px-6 py-24" id="timeline">
       {/* Ornament 3 Left */}
-      <div className="pointer-events-none absolute top-[10%] left-[-15%] z-0 opacity-80 select-none md:top-[-60%]">
+      <div className="pointer-events-none absolute top-[10%] left-[-15%] z-0 opacity-80 select-none md:top-[-30%]">
         <Image
           src="/images/ornament3-left.png"
           alt=""
@@ -52,11 +52,11 @@ export function TimelineCarousel({ items }: { items: TimelineItem[] }) {
               return (
                 <div key={index} className="relative shrink-0">
                   {/* Node Circle on Axis Line */}
-                  <div className="bg-infest-pink absolute top-1/2 left-1/2 z-10 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full shadow-[0_0_12px_rgba(227,6,217,0.8)]" />
+                  <div className="bg-infest-pink animate-glow-pulse absolute top-1/2 left-1/2 z-10 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full shadow-[0_0_12px_rgba(227,6,217,0.8)]" />
 
                   {/* Card (Top or Bottom) */}
                   <div
-                    className={`bg-gradient-custom flex w-32 flex-col items-center justify-center rounded-2xl p-4 text-center md:min-h-24 md:w-48 ${
+                    className={`bg-gradient-custom flex w-32 flex-col items-center justify-center rounded-2xl p-4 text-center transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(227,6,217,0.3)] md:min-h-24 md:w-48 ${
                       isTop ? "mb-32" : "mt-32"
                     }`}
                   >
@@ -75,7 +75,7 @@ export function TimelineCarousel({ items }: { items: TimelineItem[] }) {
           {/* Navigation Arrows at line ends */}
           <button
             aria-label="Previous timeline"
-            className="bg-dark-purple/60 absolute top-1/2 left-0 z-20 -translate-y-1/2 rounded-full p-2 text-white transition-colors hover:bg-white/20"
+            className="bg-dark-purple/60 absolute top-1/2 left-0 z-20 -translate-y-1/2 rounded-full p-2 text-white transition-all duration-200 hover:scale-110 hover:bg-white/20 active:scale-95"
             onClick={() => scrollByCard(-1)}
             type="button"
           >
@@ -96,7 +96,7 @@ export function TimelineCarousel({ items }: { items: TimelineItem[] }) {
 
           <button
             aria-label="Next timeline"
-            className="bg-dark-purple/60 absolute top-1/2 right-0 z-20 -translate-y-1/2 rounded-full p-2 text-white transition-colors hover:bg-white/20"
+            className="bg-dark-purple/60 absolute top-1/2 right-0 z-20 -translate-y-1/2 rounded-full p-2 text-white transition-all duration-200 hover:scale-110 hover:bg-white/20 active:scale-95"
             onClick={() => scrollByCard(1)}
             type="button"
           >

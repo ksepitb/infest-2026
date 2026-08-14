@@ -81,7 +81,7 @@ export function Footer({
               {/* LinkedIn */}
               <a
                 aria-label="LinkedIn"
-                className="flex h-12 w-12 items-center justify-center transition-colors duration-200 hover:text-white"
+                className="flex h-12 w-12 items-center justify-center transition-all duration-300 hover:-translate-y-0.5 hover:scale-110 hover:text-white"
                 href={linkedinUrl}
               >
                 <svg
@@ -96,7 +96,7 @@ export function Footer({
               {/* Instagram */}
               <a
                 aria-label="Instagram"
-                className="flex h-12 w-12 items-center justify-center rounded-full transition-colors duration-200 hover:text-white"
+                className="flex h-12 w-12 items-center justify-center rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:scale-110 hover:text-white"
                 href={instagramUrl}
               >
                 <svg
@@ -111,7 +111,7 @@ export function Footer({
               {/* TikTok */}
               <a
                 aria-label="TikTok"
-                className="flex h-12 w-12 items-center justify-center transition-colors duration-200 hover:text-white"
+                className="flex h-12 w-12 items-center justify-center transition-all duration-300 hover:-translate-y-0.5 hover:scale-110 hover:text-white"
                 href={tiktokUrl}
               >
                 <svg
