@@ -125,7 +125,7 @@ Deploy to Vercel, or any platform that supports Next.js:
 2. Run `pnpm db:migrate` against your production database.
 3. Build and start the app.
 
-For detailed guides, see the docs at [T3 deployment docs](https://create.t3.gg/en/deployment).
+For detailed guide, see the docs at [T3 deployment docs](https://create.t3.gg/en/deployment).
 
 ## The Team
 
