@@ -85,7 +85,7 @@ export function Footer({
                 href={linkedinUrl}
               >
                 <svg
-                  className="h-8 w-8"
+                  className="mt-4 h-11 w-11"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
