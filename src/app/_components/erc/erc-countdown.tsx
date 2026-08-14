@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { GradientDivider } from "~/app/_components/event-page/theme-divider";
+import { GradientBorderCard } from "~/components/gradient-border-card";
 import { SectionHeader } from "~/components/section-header";
 
 /** ISO 8601 target date — ERC registration closes */
@@ -64,11 +65,14 @@ export function ErcCountdown() {
     >
       <GradientDivider>Countdown</GradientDivider>
       <div className="flex w-full flex-col items-center gap-4 break-words">
-        <div className="bg-gradient-6 shadow-box-shadow-inset flex min-h-[120px] w-full max-w-[300px] items-center justify-between gap-4 rounded-[26.2px] p-4 text-center md:max-w-[462px] lg:h-[200px] lg:gap-[52px] lg:p-8">
+        <GradientBorderCard
+          className="w-full max-w-[300px] md:max-w-[462px]"
+          innerClassName="flex min-h-[120px] items-center justify-between gap-4 p-4 text-center lg:h-[200px] lg:gap-[52px] lg:p-8"
+        >
           <CountdownUnit label="Hours" value={timeLeft.hours} />
           <CountdownUnit label="Minutes" value={timeLeft.minutes} />
           <CountdownUnit label="Seconds" value={timeLeft.seconds} />
-        </div>
+        </GradientBorderCard>
       </div>
     </section>
   );

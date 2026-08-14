@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function HeaderLogo() {
   return (
-    <div className="mt-0 md:mt-12 flex w-full items-center justify-center gap-2 sm:gap-6 md:gap-8 lg:gap-10">
+    <div className="mt-0 flex w-full items-center justify-center gap-2 sm:gap-6 md:mt-12 md:gap-8 lg:gap-10">
       {/* INFEST Wordmark */}
       <div className="shrink-0 drop-shadow-[0_0_25px_rgba(255,255,255,0.5)] filter">
         <Image

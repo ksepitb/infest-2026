@@ -77,7 +77,7 @@ export default function BccPage() {
           Business Case Competition
         </h1>
 
-        <p className="text-infest-white text-md relative z-10 mt-6 max-w-[1300px] leading-relaxed sm:text-[28px]">
+        <p className="text-infest-white text-md relative z-10 mt-6 max-w-6xl leading-relaxed sm:text-lg">
           Business Case Competition merupakan kompetisi yang menguji kemampuan{" "}
           <span className="text-golden-gradient">
             problem solving dan analytical thinking
@@ -90,7 +90,7 @@ export default function BccPage() {
 
         <Link
           href="/register?comp=bcc"
-          className="font-poppins bg-gradient-6 text-infest-white glow-box-golden mt-12 flex h-[64px] w-auto items-center justify-center gap-3 rounded-[60px] px-10 text-lg leading-[117%] font-bold tracking-wide transition hover:brightness-110 sm:text-xl md:h-[75px] md:gap-[12px] md:text-2xl"
+          className="font-poppins bg-gradient-5 text-infest-white glow-box-golden mt-12 flex h-[64px] w-auto items-center justify-center gap-3 rounded-[60px] px-10 text-lg leading-[117%] font-bold tracking-wide transition hover:brightness-110 sm:text-xl md:h-[75px] md:gap-[12px] md:text-2xl"
         >
           <span>Daftar Sekarang</span>
           <ArrowRight className="stroke-infest-white h-6 w-6 md:h-7 md:w-7" />

@@ -48,8 +48,8 @@ export function ErcHero() {
       <h1 className="text-highlight-gradient-dark-bg text-shadow-links mx-auto w-full max-w-[1509px] text-[45px] leading-tight font-bold tracking-normal break-words text-transparent sm:text-[54px] md:text-[60px] lg:text-[72px]">
         Equity Research Competition
       </h1>
-      <div className="mt-4 flex w-full max-w-full flex-col items-center gap-6">
-        <p className="font-inter text-infest-white text-shadow-links text-md w-full max-w-[1300px] leading-relaxed break-words md:text-[26px] lg:text-[28px]">
+      <div className="mt-4 flex w-full max-w-6xl flex-col items-center gap-6">
+        <p className="font-inter text-infest-white text-shadow-links text-md w-full max-w-[1300px] leading-relaxed break-words md:text-lg">
           Equity Research Competition merupakan kompetisi yang akan menguji
           kemampuan peserta dalam melakukan{" "}
           <span className="bg-gradient-to-r from-[#FF5AF7] to-[#FFB800] bg-clip-text font-semibold text-transparent">
@@ -59,7 +59,7 @@ export function ErcHero() {
         </p>
         <Link
           href="/register?comp=erc"
-          className="font-poppins bg-gradient-6 text-infest-white glow-box-golden mt-6 flex h-[64px] w-auto items-center justify-center gap-3 rounded-[60px] px-10 text-lg leading-[117%] font-bold tracking-wide transition hover:brightness-110 sm:text-xl md:h-[75px] md:gap-[12px] md:text-2xl"
+          className="font-poppins bg-gradient-5 text-infest-white glow-box-golden mt-6 flex h-[64px] w-auto items-center justify-center gap-3 rounded-[60px] px-10 text-lg leading-[117%] font-bold tracking-wide transition hover:brightness-110 sm:text-xl md:h-[75px] md:gap-[12px] md:text-2xl"
         >
           <span>Daftar Sekarang</span>
           <ArrowRight className="stroke-infest-white h-6 w-6 md:h-7 md:w-7" />

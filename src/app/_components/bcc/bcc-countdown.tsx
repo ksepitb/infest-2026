@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { GradientDivider } from "~/app/_components/event-page/theme-divider";
+import { GradientBorderCard } from "~/components/gradient-border-card";
 
 /** ISO 8601 target date — BCC registration closes */
 const TARGET_DATE = new Date("2026-07-13T23:59:59+07:00");
@@ -63,11 +64,14 @@ export function BccCountdown() {
     >
       <GradientDivider>Countdown</GradientDivider>
       <div className="flex w-full flex-col items-center gap-4 break-words">
-        <div className="bg-gradient-6 glow-box-golden flex min-h-[180px] w-full max-w-[462px] items-center justify-between gap-4 rounded-[26.2px] p-6 text-center lg:h-[200px] lg:gap-[52px] lg:p-10">
+        <GradientBorderCard
+          className="w-full max-w-[462px]"
+          innerClassName="flex min-h-[180px] items-center justify-between gap-4 p-6 text-center lg:h-[200px] lg:gap-[52px] lg:p-10"
+        >
           <CountdownUnit label="Hours" value={timeLeft.hours} />
           <CountdownUnit label="Minutes" value={timeLeft.minutes} />
           <CountdownUnit label="Seconds" value={timeLeft.seconds} />
-        </div>
+        </GradientBorderCard>
       </div>
     </section>
   );

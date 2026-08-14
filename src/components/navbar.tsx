@@ -145,7 +145,7 @@ export function Navbar({
   };
 
   return (
-    <header className="bg-lighter-purple fixed top-6 left-1/2 z-50 h-[75px] w-[calc(100%-2rem)] max-w-[900px] -translate-x-1/2 rounded-[100px] px-8 shadow-[inset_2px_4px_4px_rgba(255,255,255,0.25),0_4px_4px_rgba(0,0,0,0.25)] backdrop-blur-[50px] transition-all">
+    <header className="bg-lighter-purple/80 fixed top-6 left-1/2 z-50 h-[75px] w-[calc(100%-2rem)] max-w-[900px] -translate-x-1/2 rounded-[100px] px-8 shadow-[inset_2px_4px_4px_rgba(255,255,255,0.25),0_4px_4px_rgba(0,0,0,0.25)] backdrop-blur-sm transition-all">
       <div className="flex h-full items-center justify-between">
         <Link className="flex items-center gap-2 pl-4" href="/#home">
           <Image

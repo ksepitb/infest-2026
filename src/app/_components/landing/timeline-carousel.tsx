@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useRef } from "react";
+import { GradientDivider } from "../event-page/theme-divider";
 
 interface TimelineItem {
   title: string;
@@ -15,7 +16,7 @@ export function TimelineCarousel({ items }: { items: TimelineItem[] }) {
     const track = trackRef.current;
     if (!track) return;
     track.scrollBy({
-      left: (track.clientWidth / 2) * direction,
+      left: 300 * direction,
       behavior: "smooth",
     });
   };
@@ -32,24 +33,49 @@ export function TimelineCarousel({ items }: { items: TimelineItem[] }) {
           className="w-[300px] object-contain sm:w-[600px] md:w-[1000px]"
         />
       </div>
-      <div className="relative z-10 mx-auto max-w-5xl">
+      <div className="relative z-10 mx-auto w-full max-w-[1509px]">
         {/* Section Title */}
-        <div className="text-center md:text-left">
-          <h2 className="text-4xl font-bold sm:text-6xl">
-            <span className="text-infest-white glow-text-3">The </span>
-            <span className="text-highlight-gradient-dark-bg">Timeline</span>
-          </h2>
-        </div>
+        <GradientDivider>Timeline</GradientDivider>
 
         {/* Timeline Track with Staggered Cards */}
-        <div className="relative mt-10 mb-10 md:mt-40 md:mb-28">
-          {/* Horizontal Glowing Axis Line */}
-          <div className="bg-light-purple absolute top-1/2 right-0 left-0 hidden h-1 -translate-y-1/2 rounded-full md:block" />
+        <div className="relative mx-auto mt-10 mb-10 md:mt-24 md:mb-16">
+          <div
+            ref={trackRef}
+            className="no-scrollbar flex items-center gap-8 overflow-x-auto scroll-smooth px-4 py-12 md:gap-16 md:px-8"
+          >
+            {/* Horizontal Glowing Axis Line */}
+            <div className="bg-infest-pink/40 absolute top-1/2 left-0 h-0.5 w-full -translate-y-1/2 shadow-[0_0_10px_#E306D9]" />
+
+            {items.map((item, index) => {
+              const isTop = index % 2 === 0;
+
+              return (
+                <div key={index} className="relative shrink-0">
+                  {/* Node Circle on Axis Line */}
+                  <div className="bg-infest-pink absolute top-1/2 left-1/2 z-10 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full shadow-[0_0_12px_rgba(227,6,217,0.8)]" />
+
+                  {/* Card (Top or Bottom) */}
+                  <div
+                    className={`bg-gradient-custom flex w-32 flex-col items-center justify-center rounded-2xl p-4 text-center md:min-h-24 md:w-48 ${
+                      isTop ? "mb-32" : "mt-32"
+                    }`}
+                  >
+                    <h4 className="text-sm font-bold text-white md:text-base">
+                      {item.title}
+                    </h4>
+                    <p className="mt-1 text-xs font-medium text-[#E5C7F7] md:text-sm">
+                      {item.date}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
 
           {/* Navigation Arrows at line ends */}
           <button
             aria-label="Previous timeline"
-            className="absolute top-1/2 -left-6 z-20 -translate-y-1/2 text-white/70 transition duration-200 hover:scale-125 hover:text-white md:-left-12 md:hidden"
+            className="bg-dark-purple/60 absolute top-1/2 left-0 z-20 -translate-y-1/2 rounded-full p-2 text-white transition-colors hover:bg-white/20"
             onClick={() => scrollByCard(-1)}
             type="button"
           >
@@ -70,7 +96,7 @@ export function TimelineCarousel({ items }: { items: TimelineItem[] }) {
 
           <button
             aria-label="Next timeline"
-            className="absolute top-1/2 -right-6 z-20 -translate-y-1/2 text-white/70 transition duration-200 hover:scale-125 hover:text-white md:-right-12 md:hidden"
+            className="bg-dark-purple/60 absolute top-1/2 right-0 z-20 -translate-y-1/2 rounded-full p-2 text-white transition-colors hover:bg-white/20"
             onClick={() => scrollByCard(1)}
             type="button"
           >
@@ -88,42 +114,6 @@ export function TimelineCarousel({ items }: { items: TimelineItem[] }) {
               />
             </svg>
           </button>
-
-          {/* Nodes and Cards Grid */}
-          <div
-            ref={trackRef}
-            className="no-scrollbar flex snap-x snap-mandatory items-start gap-4 overflow-x-auto scroll-smooth md:grid md:grid-cols-6 md:gap-0 md:overflow-visible"
-          >
-            {items.map((item, index) => {
-              const isTop = index % 2 === 0;
-
-              return (
-                <div
-                  key={index}
-                  className="relative flex w-1/2 shrink-0 snap-center flex-col items-center justify-center gap-2 md:w-auto"
-                >
-                  {/* Node Circle on Axis Line */}
-                  <div className="bg-infest-pink z-10 h-5 w-5 shrink-0 rounded-full shadow-[0_0_15px_#EF35DB]" />
-
-                  {/* Card (Top or Bottom) */}
-                  <div
-                    className={`bg-gradient-custom w-full max-w-[280px] rounded-2xl p-4 text-center backdrop-blur-md md:w-44 ${
-                      isTop
-                        ? "md:absolute md:bottom-10 md:mb-2"
-                        : "md:absolute md:top-10 md:mt-2"
-                    }`}
-                  >
-                    <h4 className="text-sm font-bold text-white sm:text-base">
-                      {item.title}
-                    </h4>
-                    <p className="mt-1.5 text-xs font-medium text-[#E5C7F7] sm:text-sm">
-                      {item.date}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
         </div>
       </div>
     </section>

@@ -20,19 +20,6 @@ const TIMELINE_EVENTS: TimelineEvent[] = [
   { id: 6, title: "Awarding Day", date: "15 Agustus 2025" },
 ];
 
-function TimelineCard({ event }: { event: TimelineEvent }) {
-  return (
-    <div className="bg-gradient-custom flex min-h-[100px] w-full max-w-[320px] flex-col items-center justify-center rounded-[20px] p-6 px-6 py-5 text-center break-words shadow-[inset_5px_6px_4.5px_0px_rgba(255,254,255,0.25)] transition-all duration-300 hover:scale-[1.02] sm:min-h-[140px] sm:max-w-[350px] lg:px-8 lg:py-6">
-      <h3 className="font-poppins text-infest-white glow-text-3 mb-2 text-xl leading-tight font-bold sm:text-2xl lg:mb-[8px] lg:text-[28px]">
-        {event.title}
-      </h3>
-      <p className="font-poppins text-base leading-tight font-semibold text-[#E5C7F7] drop-shadow-[0_2px_10px_rgba(227,6,217,0.4)] sm:text-lg lg:text-xl">
-        {event.date}
-      </p>
-    </div>
-  );
-}
-
 export function ErcTimeline() {
   const trackRef = useRef<HTMLDivElement>(null);
 
@@ -40,7 +27,7 @@ export function ErcTimeline() {
     const track = trackRef.current;
     if (!track) return;
     track.scrollBy({
-      left: (track.clientWidth / 2) * direction,
+      left: 300 * direction,
       behavior: "smooth",
     });
   };
@@ -79,45 +66,45 @@ export function ErcTimeline() {
       />
       <GradientDivider>Timeline</GradientDivider>
 
-      {/* Mobile horizontal carousel / desktop alternating timeline */}
-      <div className="relative w-full">
+      {/* Horizontal timeline carousel */}
+      <div className="relative mx-auto w-full">
         <div
           ref={trackRef}
-          className="no-scrollbar relative flex w-full snap-x snap-mandatory items-center gap-8 overflow-x-auto scroll-smooth lg:flex-col lg:gap-[63px] lg:overflow-visible"
+          className="no-scrollbar flex items-center gap-8 overflow-x-auto scroll-smooth px-4 py-12 md:gap-16 md:px-8"
         >
-          <div className="bg-light-purple absolute top-0 bottom-0 left-1/2 z-0 hidden w-[3px] -translate-x-1/2 shadow-[0_0_10px_#E306D9] lg:block" />
+          {/* Horizontal Glowing Axis Line */}
+          <div className="bg-infest-pink/40 absolute top-1/2 left-0 h-0.5 w-full -translate-y-1/2 shadow-[0_0_10px_#E306D9]" />
+
           {TIMELINE_EVENTS.map((event, index) => {
-            const isLeft = index % 2 === 0;
+            const isTop = index % 2 === 0;
 
             return (
-              <div
-                key={event.id}
-                className="relative z-10 grid w-1/2 shrink-0 snap-center grid-cols-1 items-center gap-6 sm:gap-8 md:gap-10 lg:w-auto lg:grid-cols-2 lg:gap-x-12 xl:gap-x-16"
-              >
-                {isLeft ? (
-                  <div className="ml-auto flex w-full justify-center justify-self-end lg:mr-8 lg:w-[460px] lg:justify-end xl:mr-12">
-                    <TimelineCard event={event} />
-                  </div>
-                ) : (
-                  <div className="hidden lg:block" />
-                )}
-                <div className="bg-infest-pink absolute top-1/2 left-1/2 z-20 hidden h-[38px] w-[38px] shrink-0 -translate-x-1/2 -translate-y-1/2 rounded-full shadow-[0_0_12px_rgba(255,255,255,0.8),0_0_20px_#E306D9] lg:block" />
-                {isLeft ? (
-                  <div className="hidden lg:block" />
-                ) : (
-                  <div className="mr-auto flex w-full justify-center justify-self-start lg:ml-8 lg:w-[460px] lg:justify-start xl:ml-12">
-                    <TimelineCard event={event} />
-                  </div>
-                )}
+              <div key={event.id} className="relative shrink-0">
+                {/* Node Circle on Axis Line */}
+                <div className="bg-infest-pink absolute top-1/2 left-1/2 z-10 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full shadow-[0_0_12px_rgba(227,6,217,0.8)]" />
+
+                {/* Card (Top or Bottom) */}
+                <div
+                  className={`bg-gradient-custom flex w-32 flex-col items-center justify-center rounded-2xl p-4 text-center md:min-h-24 md:w-48 ${
+                    isTop ? "mb-32" : "mt-32"
+                  }`}
+                >
+                  <h3 className="text-sm font-bold text-white md:text-base">
+                    {event.title}
+                  </h3>
+                  <p className="mt-1 text-xs font-medium text-[#E5C7F7] md:text-sm">
+                    {event.date}
+                  </p>
+                </div>
               </div>
             );
           })}
         </div>
 
-        {/* Mobile carousel arrows */}
+        {/* Navigation Arrows */}
         <button
           aria-label="Previous timeline"
-          className="absolute top-1/2 -left-2 z-20 -translate-y-1/2 text-white/70 transition duration-200 hover:scale-125 hover:text-white lg:hidden"
+          className="bg-dark-purple/60 absolute top-1/2 left-0 z-20 -translate-y-1/2 rounded-full p-2 text-white transition-colors hover:bg-white/20"
           onClick={() => scrollTrack(-1)}
           type="button"
         >
@@ -137,7 +124,7 @@ export function ErcTimeline() {
         </button>
         <button
           aria-label="Next timeline"
-          className="absolute top-1/2 -right-2 z-20 -translate-y-1/2 text-white/70 transition duration-200 hover:scale-125 hover:text-white lg:hidden"
+          className="bg-dark-purple/60 absolute top-1/2 right-0 z-20 -translate-y-1/2 rounded-full p-2 text-white transition-colors hover:bg-white/20"
           onClick={() => scrollTrack(1)}
           type="button"
         >

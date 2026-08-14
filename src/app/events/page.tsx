@@ -6,7 +6,7 @@ import { DayCard, Highlight } from "~/app/_components/event-page/day-card";
 import { EventsCarousel } from "../_components/landing/events-carousel";
 import { LocationPill } from "~/app/_components/event-page/location-pill";
 import { SectionBadge } from "~/app/_components/event-page/section-badge";
-import { descriptionBoxStyle } from "~/app/_components/event-page/styles";
+import { GradientBorderCard } from "~/components/gradient-border-card";
 import { GradientDivider } from "~/app/_components/event-page/theme-divider";
 import { Footer } from "~/components/footer";
 import { Navbar } from "~/components/navbar";
@@ -51,9 +51,9 @@ function ThemeDescription() {
 function ThemeDescriptionBox() {
   return (
     <div className="flex w-full justify-center px-6">
-      <div
-        style={descriptionBoxStyle}
-        className="w-full max-w-4xl px-8 py-8 text-center sm:px-12 sm:py-10"
+      <GradientBorderCard
+        className="w-full"
+        innerClassName="px-8 py-8 text-center sm:px-12 sm:py-10"
       >
         <p
           style={{ textShadow: "0 4px 9.3px rgba(0,0,0,.25)" }}
@@ -61,7 +61,7 @@ function ThemeDescriptionBox() {
         >
           <ThemeDescription />
         </p>
-      </div>
+      </GradientBorderCard>
     </div>
   );
 }

@@ -6,6 +6,7 @@ import { EventsCarousel } from "~/app/_components/landing/events-carousel";
 import { TimelineCarousel } from "~/app/_components/landing/timeline-carousel";
 import { FaqAccordion } from "~/components/faq-accordion";
 import { Footer } from "~/components/footer";
+import { GradientBorderCard } from "~/components/gradient-border-card";
 import { Navbar } from "~/components/navbar";
 import { ScrollReveal } from "~/components/scroll-reveal";
 import { GradientDivider } from "./_components/event-page/theme-divider";
@@ -173,10 +174,13 @@ export default function Home() {
             <GradientDivider>What is Infest?</GradientDivider>
 
             {/* Cards Grid */}
-            <div className="mt-12 grid gap-8 md:grid-cols-2">
+            <div className="mt-12 grid gap-4 md:grid-cols-2 md:gap-8">
               {/* Card 1 */}
-              <div className="bg-lighter-purple mx-auto flex min-h-[320px] w-full max-w-[808px] items-center justify-center rounded-[28.204px] px-6 py-10 text-center shadow-[inset_6px_6px_9.9px_rgba(255,255,255,0.33)] sm:px-[38px] sm:py-[70px]">
-                <p className="text-infest-white leading-relaxed font-medium sm:text-lg">
+              <GradientBorderCard
+                className="mx-auto w-full max-w-[808px]"
+                innerClassName="flex min-h-[150px] items-center justify-center px-5 py-5 text-center sm:min-h-[220px] sm:px-6 sm:py-8"
+              >
+                <p className="text-infest-white text-xs leading-relaxed font-medium sm:text-sm">
                   Acara tahunan yang diselenggarakan oleh{" "}
                   <strong className="text-golden-gradient font-bold">
                     KSEP ITB
@@ -197,27 +201,26 @@ export default function Home() {
                   </strong>{" "}
                   yang menjadi acara utama.
                 </p>
-              </div>
+              </GradientBorderCard>
 
               {/* Card 2 */}
-              <div className="bg-lighter-purple mx-auto flex min-h-[320px] w-full max-w-[808px] items-center justify-center rounded-[28.204px] px-6 py-10 text-center shadow-[inset_6px_6px_9.9px_rgba(255,255,255,0.33)] sm:px-[38px] sm:py-[70px]">
-                <p className="text-infest-white leading-relaxed font-medium sm:text-lg">
+              <GradientBorderCard
+                className="mx-auto w-full max-w-[808px]"
+                innerClassName="flex min-h-[150px] items-center justify-center px-4 py-5 text-center sm:min-h-[220px] sm:px-6 sm:py-8"
+              >
+                <p className="text-infest-white text-xs leading-relaxed font-medium sm:text-sm">
                   INFEST 2025, dengan tema{" "}
-                  <strong className="text-golden-gradient font-bold">
+                  <span className="text-golden-gradient">
                     &quot;Navigating the Future: Smart Investment in the Times
-                    of Changes,&quot;
-                  </strong>{" "}
-                  berfokus pada strategi investasi cerdas untuk menghadapi
+                    of Changes&quot;
+                  </span>
+                  , berfokus pada strategi investasi cerdas untuk menghadapi
                   masa-masa penuh perubahan. Acara ini akan membekali peserta
-                  dengan pola pikir yang{" "}
-                  <strong className="text-golden-gradient font-bold">
-                    proaktif dan tangguh
-                  </strong>
-                  , serta membahas pemanfaatan teknologi seperti AI dalam
-                  mengambil keputusan investasi di tengah dinamika pasar dan
-                  krisis ekonomi.
+                  dengan pola pikir yang proaktif dan tangguh, serta membahas
+                  pemanfaatan teknologi seperti AI dalam mengambil keputusan
+                  investasi di tengah dinamika pasar dan krisis ekonomi.
                 </p>
-              </div>
+              </GradientBorderCard>
             </div>
           </div>
         </section>
