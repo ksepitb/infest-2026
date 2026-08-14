@@ -36,7 +36,7 @@ Also read:
 
 ## 4. Code Conventions
 
-- Use the `~/*` path alias for imports from `src/`.
+- Use the `@/*` path alias for imports from `src/`.
 - Write TypeScript with strict mode enabled.
 - **Strictly forbidden:**
   - `as any`
