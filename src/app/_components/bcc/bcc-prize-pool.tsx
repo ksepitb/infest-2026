@@ -1,4 +1,4 @@
-import { GradientDivider } from "../event-page/theme-divider";
+import { GradientDivider } from "@/app/_components/event-page/theme-divider";
 
 interface PrizeItem {
   rank: string;

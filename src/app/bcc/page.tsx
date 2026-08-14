@@ -3,14 +3,14 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Navbar } from "~/components/navbar";
-import { Footer } from "~/components/footer";
-import { BccDecorations } from "~/app/_components/bcc/bcc-decorations";
-import { BccPrizePool } from "~/app/_components/bcc/bcc-prize-pool";
-import { BccTimeline } from "~/app/_components/bcc/bcc-timeline";
-import { BccCountdown } from "~/app/_components/bcc/bcc-countdown";
-import { BccFaq } from "~/app/_components/bcc/bcc-faq";
-import { GradientDivider } from "~/app/_components/event-page/theme-divider";
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
+import { BccDecorations } from "@/app/_components/bcc/bcc-decorations";
+import { BccPrizePool } from "@/app/_components/bcc/bcc-prize-pool";
+import { BccTimeline } from "@/app/_components/bcc/bcc-timeline";
+import { BccCountdown } from "@/app/_components/bcc/bcc-countdown";
+import { BccFaq } from "@/app/_components/bcc/bcc-faq";
+import { GradientDivider } from "@/app/_components/event-page/theme-divider";
 
 const bccLinks = [
   { href: "/", label: "Home" },

@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { SectionHeader } from "~/components/section-header";
-import { GradientDivider } from "../event-page/theme-divider";
+import { SectionHeader } from "@/components/section-header";
+import { GradientDivider } from "@/app/_components/event-page/theme-divider";
 
 export function ErcDescription() {
   return (

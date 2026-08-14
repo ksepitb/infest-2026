@@ -2,13 +2,13 @@
 
 import Image from "next/image";
 
-import { EventsCarousel } from "~/app/_components/landing/events-carousel";
-import { TimelineCarousel } from "~/app/_components/landing/timeline-carousel";
-import { FaqAccordion } from "~/components/faq-accordion";
-import { Footer } from "~/components/footer";
-import { GradientBorderCard } from "~/components/gradient-border-card";
-import { Navbar } from "~/components/navbar";
-import { ScrollReveal } from "~/components/scroll-reveal";
+import { EventsCarousel } from "@/app/_components/landing/events-carousel";
+import { TimelineCarousel } from "@/app/_components/landing/timeline-carousel";
+import { FaqAccordion } from "@/components/faq-accordion";
+import { Footer } from "@/components/footer";
+import { GradientBorderCard } from "@/components/gradient-border-card";
+import { Navbar } from "@/components/navbar";
+import { ScrollReveal } from "@/components/scroll-reveal";
 import { GradientDivider } from "./_components/event-page/theme-divider";
 
 const timelineData = [

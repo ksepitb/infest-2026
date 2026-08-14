@@ -92,7 +92,7 @@ function MobileMenu({
               href={registerHref}
               onClick={() => setIsOpen(false)}
             >
-              DAFTAR
+              Daftar
             </Link>
           </nav>
         </div>
@@ -186,7 +186,7 @@ export function Navbar({
             href={registerHref}
           >
             <span className="text-highlight-gradient-light-bg uppercase">
-              DAFTAR
+              Daftar
             </span>
           </Link>
         </div>

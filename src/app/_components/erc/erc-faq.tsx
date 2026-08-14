@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 
-import { FaqAccordion } from "~/components/faq-accordion";
-import { SectionHeader } from "~/components/section-header";
-import { GradientDivider } from "../event-page/theme-divider";
+import { FaqAccordion } from "@/components/faq-accordion";
+import { SectionHeader } from "@/components/section-header";
+import { GradientDivider } from "@/app/_components/event-page/theme-divider";
 
 export type FaqItem = {
   question: string;

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 
-import type { ContactInfo } from "~/components/footer";
-import { Footer } from "~/components/footer";
-import { Navbar } from "~/components/navbar";
+import type { ContactInfo } from "@/components/footer";
+import { Footer } from "@/components/footer";
+import { Navbar } from "@/components/navbar";
 
-import { RulesCard } from "../../_components/register/rules-card";
+import { RulesCard } from "@/app/_components/register/rules-card";
 
 export const metadata: Metadata = {
   title: "Ketentuan Umum ERC | INFEST 2026",

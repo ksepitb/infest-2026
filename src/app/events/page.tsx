@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 
-import { HeaderLogo } from "~/app/_components/event-page/logo-infest";
-import { DayCard, Highlight } from "~/app/_components/event-page/day-card";
-import { EventsCarousel } from "../_components/landing/events-carousel";
-import { LocationPill } from "~/app/_components/event-page/location-pill";
-import { SectionBadge } from "~/app/_components/event-page/section-badge";
-import { GradientBorderCard } from "~/components/gradient-border-card";
-import { GradientDivider } from "~/app/_components/event-page/theme-divider";
-import { Footer } from "~/components/footer";
-import { Navbar } from "~/components/navbar";
-import { ScrollReveal } from "~/components/scroll-reveal";
+import { HeaderLogo } from "@/app/_components/event-page/logo-infest";
+import { DayCard, Highlight } from "@/app/_components/event-page/day-card";
+import { EventsCarousel } from "@/app/_components/landing/events-carousel";
+import { LocationPill } from "@/app/_components/event-page/location-pill";
+import { SectionBadge } from "@/app/_components/event-page/section-badge";
+import { GradientBorderCard } from "@/components/gradient-border-card";
+import { GradientDivider } from "@/app/_components/event-page/theme-divider";
+import { Footer } from "@/components/footer";
+import { Navbar } from "@/components/navbar";
+import { ScrollReveal } from "@/components/scroll-reveal";
 
 export const metadata: Metadata = {
   title: "Events | INFEST 2026",

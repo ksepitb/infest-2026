@@ -1,10 +1,10 @@
-import "~/styles/globals.css";
+import "@/styles/globals.css";
 
 import { type Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 
-import { PageTransition } from "~/components/page-transition";
-import { TRPCReactProvider } from "~/trpc/react";
+import { PageTransition } from "@/components/page-transition";
+import { TRPCReactProvider } from "@/trpc/react";
 
 export const metadata: Metadata = {
   title: "INFEST 2026",

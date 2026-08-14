@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 
-import { FaqAccordion } from "~/components/faq-accordion";
-import { GradientDivider } from "../event-page/theme-divider";
+import { FaqAccordion } from "@/components/faq-accordion";
+import { GradientDivider } from "@/app/_components/event-page/theme-divider";
 
 export type FaqItem = {
   question: string;

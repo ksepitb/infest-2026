@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useRef } from "react";
-import { GradientDivider } from "../event-page/theme-divider";
+import { GradientDivider } from "@/app/_components/event-page/theme-divider";
 
 interface TimelineEvent {
   id: number;

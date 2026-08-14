@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { GradientBorderCard } from "~/components/gradient-border-card";
+import { GradientBorderCard } from "@/components/gradient-border-card";
 
 interface RulesCardProps {
   title: string;

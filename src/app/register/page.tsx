@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-import type { ContactInfo } from "~/components/footer";
-import { Footer } from "~/components/footer";
-import { Navbar } from "~/components/navbar";
+import type { ContactInfo } from "@/components/footer";
+import { Footer } from "@/components/footer";
+import { Navbar } from "@/components/navbar";
 
 export const metadata: Metadata = {
   title: "Registration | INFEST 2026",

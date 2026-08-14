@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { GradientDivider } from "~/app/_components/event-page/theme-divider";
-import { GradientBorderCard } from "~/components/gradient-border-card";
-import { SectionHeader } from "~/components/section-header";
+import { GradientDivider } from "@/app/_components/event-page/theme-divider";
+import { GradientBorderCard } from "@/components/gradient-border-card";
+import { SectionHeader } from "@/components/section-header";
 
 /** ISO 8601 target date — ERC registration closes */
 const TARGET_DATE = new Date("2026-09-01T23:59:59+07:00");

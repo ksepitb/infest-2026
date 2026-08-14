@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 
-import { ErcCountdown } from "~/app/_components/erc/erc-countdown";
-import { ErcDecorations } from "~/app/_components/erc/erc-decorations";
-import { ErcDescription } from "~/app/_components/erc/erc-description";
-import { ErcFaq } from "~/app/_components/erc/erc-faq";
-import { ErcHero } from "~/app/_components/erc/erc-hero";
-import { ErcPrizePool } from "~/app/_components/erc/erc-prize-pool";
-import { ErcTimeline } from "~/app/_components/erc/erc-timeline";
-import { Footer } from "~/components/footer";
-import { Navbar } from "~/components/navbar";
+import { ErcCountdown } from "@/app/_components/erc/erc-countdown";
+import { ErcDecorations } from "@/app/_components/erc/erc-decorations";
+import { ErcDescription } from "@/app/_components/erc/erc-description";
+import { ErcFaq } from "@/app/_components/erc/erc-faq";
+import { ErcHero } from "@/app/_components/erc/erc-hero";
+import { ErcPrizePool } from "@/app/_components/erc/erc-prize-pool";
+import { ErcTimeline } from "@/app/_components/erc/erc-timeline";
+import { Footer } from "@/components/footer";
+import { Navbar } from "@/components/navbar";
 
 export const metadata: Metadata = {
   title: "Equity Research Competition | INFEST 2026",
