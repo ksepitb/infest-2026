@@ -117,7 +117,11 @@ export default function BccRulesPage() {
         registerHref="/register"
       />
 
-      <RulesCard rules={bccRules} title="Ketentuan Umum BCC" />
+      <RulesCard
+        registerHref="https://bit.ly/PendaftaranBCCINFEST2026"
+        rules={bccRules}
+        title="Ketentuan Umum BCC"
+      />
 
       <div className="relative z-10 bg-black">
         <Footer

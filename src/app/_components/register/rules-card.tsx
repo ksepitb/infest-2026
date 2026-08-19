@@ -5,9 +5,14 @@ import { GradientBorderCard } from "@/components/gradient-border-card";
 interface RulesCardProps {
   title: string;
   rules: string[];
+  registerHref?: string;
 }
 
-export function RulesCard({ title, rules }: RulesCardProps) {
+export function RulesCard({
+  title,
+  rules,
+  registerHref = "#",
+}: RulesCardProps) {
   return (
     <section className="relative z-10 flex flex-1 flex-col items-center px-4 pt-28 pb-24 md:pt-44 md:pb-32">
       <h1 className="glow-text-1 text-center text-4xl font-bold text-white md:text-6xl lg:text-[80px]">
@@ -32,12 +37,14 @@ export function RulesCard({ title, rules }: RulesCardProps) {
         >
           <span className="text-shadow-links">Kembali</span>
         </Link>
-        <Link
+        <a
           className="bg-gradient-5 text-infest-white shadow-box-shadow-inset relative flex min-h-[72px] items-center justify-center rounded-full px-6 py-4 text-center text-base font-bold transition-all duration-300 hover:scale-[1.03] active:scale-95 md:text-[18px]"
-          href="#"
+          href={registerHref}
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <span className="text-shadow-links">Daftar Sekarang</span>
-        </Link>
+        </a>
         <a
           className="bg-gradient-5 text-infest-white shadow-box-shadow-inset relative flex min-h-[72px] items-center justify-center rounded-full px-6 py-4 text-center text-base font-bold transition-all duration-300 hover:scale-[1.03] active:scale-95 md:text-[18px]"
           href="https://bit.ly/GuidebookINFEST2026"
