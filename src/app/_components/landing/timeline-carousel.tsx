@@ -57,7 +57,7 @@ export function TimelineCarousel({ items }: { items: TimelineItem[] }) {
                   {/* Card (Top or Bottom) */}
                   <div
                     className={`bg-gradient-custom flex w-32 flex-col items-center justify-center rounded-2xl p-4 text-center transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(227,6,217,0.3)] md:min-h-24 md:w-48 ${
-                      isTop ? "mb-32" : "mt-32"
+                      isTop ? "mb-40" : "mt-40"
                     }`}
                   >
                     <h4 className="text-sm font-bold text-white md:text-base">

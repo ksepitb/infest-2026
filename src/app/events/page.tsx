@@ -40,16 +40,17 @@ const eventLinks = [
 function ThemeDescription() {
   return (
     <>
-      INFEST 2025, dengan tema{" "}
-      <Highlight>
-        &ldquo;Navigating the Future: Smart Investment in the Times of
-        Changes,&rdquo;
-      </Highlight>{" "}
-      berfokus pada strategi investasi cerdas untuk menghadapi masa-masa penuh
-      perubahan. Acara ini akan membekali peserta dengan pola pikir yang
-      proaktif dan tangguh, serta membahas pemanfaatan teknologi seperti AI
-      dalam mengambil keputusan investasi di tengah dinamika pasar dan krisis
-      ekonomi.
+      INFEST 2026, dengan tema{" "}
+      <span className="text-golden-gradient font-bold">
+        &ldquo;Mastering Capital Horizon: Adapting to Macro Volatility Through
+        Strategic Investing&rdquo;
+      </span>{" "}
+      , berfokus pada pembentukan visi investasi jangka panjang serta kemampuan
+      beradaptasi di tengah dinamika dan gejolak makroekonomi. Acara ini akan
+      membekali peserta dengan pemahaman manajemen risiko yang terukur guna
+      menjembatani teori menuju aksi nyata, mendorong eksekusi portofolio yang
+      strategis dan rasional tanpa terjebak kepanikan pasar sesaat maupun tren
+      FOMO.
     </>
   );
 }
@@ -159,11 +160,11 @@ export default function EventsPage() {
 
         <ScrollReveal delay={0.1}>
           <DayCard
-            dayLabel="DAY 00"
-            title="Workshop"
-            description={<ThemeDescription />}
+            dayLabel="DAY 01"
+            title="Chart Your Move"
+            description="Technical Analysis Playbook for Smarter Entries & Exits : Sesi seminar online interaktif yang membedah cara membaca pergerakan harga dan momentum pasar lewat analisis teknikal seperti grafik saham, candlestick, hingga indikator populer (MA, RSI, MACD), lalu ditutup dengan praktik analisis bersama memakai grafik saham asli di pasar modal."
             imageSrc="/images/speakers/speaker.png"
-            imageAlt="Pembicara Workshop"
+            imageAlt="Pembicara Day 01"
             imagePosition="right"
             boxed
           />
@@ -171,12 +172,24 @@ export default function EventsPage() {
 
         <ScrollReveal delay={0.2}>
           <DayCard
-            dayLabel="DAY 00"
-            title="The 5-Day Trading Challenge"
-            description={<ThemeDescription />}
+            dayLabel="DAY 02"
+            title="The Big Picture"
+            description="Connecting Macro Dots to Portfolio Growth : Sesi seminar online lanjutan yang mengajarkan cara menghubungkan kondisi ekonomi global dengan pergerakan bursa, menilai kesehatan keuangan perusahaan lewat rasio penting (PER, PBV, ROE, DER), serta cara mengelola risiko investasi sebelum terjun ke kompetisi simulasi."
             imageSrc="/images/speakers/speaker.png"
-            imageAlt="Pembicara Trading Challenge"
+            imageAlt="Pembicara Day 02"
             imagePosition="left"
+            boxed
+          />
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.3}>
+          <DayCard
+            dayLabel="DAY 03"
+            title="5 Days Trading Challenge"
+            description="Kompetisi simulasi trading virtual secara mandiri selama lima hari kerja berturut-turut menggunakan modal awal virtual yang sama, di mana peserta bebas mengatur strategi jual-beli saham yang masuk dalam daftar indeks Kompas 100 untuk mengejar profit tertinggi."
+            imageSrc="/images/speakers/speaker.png"
+            imageAlt="Pembicara Day 03"
+            imagePosition="right"
             boxed
           />
         </ScrollReveal>
@@ -230,7 +243,7 @@ export default function EventsPage() {
           </div>
         </div>
 
-        <GradientDivider>Date of the Event</GradientDivider>
+        <GradientDivider>Sunday, November 8th</GradientDivider>
 
         <ScrollReveal delay={0.1}>
           <LocationPill location="Aula CC Timur Institut Teknologi Bandung" />

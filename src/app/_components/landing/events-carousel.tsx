@@ -23,28 +23,28 @@ const events: EventItem[] = [
     title: "Equity Research Competition",
     description:
       "Lomba analisis ekuitas dan saham tingkat nasional untuk menguji kemampuan riset keuangan, penilaian valuasi perusahaan, serta memberikan rekomendasi investasi profesional.",
-    image: "/images/lantik.jpg",
+    image: "/images/carousel/erc.jpg",
   },
   {
     id: 3,
     title: "Event",
     description:
-      "Rangkaian acara INFEST 2025 terdiri dari workshop online interaktif sebagai pre-event, yang dilengkapi dengan diskusi dan studi kasus. Acara ini akan ditutup dengan seminar puncak yang diselenggarakan secara hybrid, menampilkan tiga sesi berbeda yang dibawakan oleh para pembicara berpengalaman.",
-    image: "/images/lantik.jpg",
+      "Rangkaian acara INFEST 2026 terdiri dari workshop online interaktif sebagai pre-event, yang dilengkapi dengan diskusi dan studi kasus. Acara ini akan ditutup dengan seminar puncak yang diselenggarakan secara hybrid, menampilkan tiga sesi berbeda yang dibawakan oleh para pembicara berpengalaman.",
+    image: "/images/carousel/main-event.JPG",
   },
   {
     id: 4,
     title: "Business Case Competition",
     description:
       "Kompetisi studi kasus bisnis yang menantang mahasiswa dalam merumuskan strategi bisnis yang inovatif, solutif, dan berdampak nyata bagi industri pasar modal.",
-    image: "/images/lantik.jpg",
+    image: "/images/carousel/bcc.jpg",
   },
   {
     id: 5,
     title: "Awarding & Networking",
     description:
       "Malam penganugerahan bagi pemenang kompetisi INFEST 2026 serta kesempatan berjejaring dengan investor, profesional, dan peserta dari seluruh Indonesia.",
-    image: "/images/lantik.jpg",
+    image: "/images/carousel/networking.JPG",
   },
 ];
 
@@ -134,7 +134,7 @@ export function EventsCarousel() {
                   <div className="flex justify-end">
                     <a
                       className="bg-infest-white hover:bg-infest-white/70 inline-flex cursor-pointer items-center justify-center rounded-full px-6 py-2 text-sm font-bold tracking-wide shadow-[0_0_15px_rgba(255,255,255,0.4)] transition-all duration-300 hover:scale-105 active:scale-95"
-                      href="#register"
+                      href="/events"
                     >
                       <span className="text-gradient-4 drop-shadow-[6px_4px_22.1px_rgba(0,0,0,0.50)]">
                         See More
@@ -179,7 +179,7 @@ export function EventsCarousel() {
               aria-label={`Go to slide ${i + 1}`}
               className={`rounded-full transition-all duration-300 ${
                 i === activeIndex
-                  ? "bg-infest-pink animate-glow-pulse h-3.5 w-3.5 shadow-[0_0_10px_#F04AC9]"
+                  ? "bg-infest-pink h-3.5 w-3.5 shadow-[0_0_10px_#F04AC9]"
                   : "h-2.5 w-2.5 bg-white/30 hover:scale-125 hover:bg-white/60"
               }`}
               onClick={() => setActiveIndex(i)}

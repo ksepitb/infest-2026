@@ -22,12 +22,20 @@ const FaqAccordion = dynamic(() =>
 );
 
 const timelineData = [
-  { title: "BCC Registration", date: "5–13 Juli 2025" },
-  { title: "BCC Registration", date: "5–13 Juli 2025" },
-  { title: "BCC Registration", date: "5–13 Juli 2025" },
-  { title: "BCC Registration", date: "5–13 Juli 2025" },
-  { title: "BCC Registration", date: "5–13 Juli 2025" },
-  { title: "BCC Registration", date: "5–13 Juli 2025" },
+  { title: "ERC Registration", date: "20 Aug - 3 Sep 2026" },
+  { title: "BCC Registration", date: "20 Aug - 18 Sep 2026" },
+  { title: "Pre-Event Day 1", date: "05 Sep 2026" },
+  { title: "Pre-Event Day 2", date: "06 Sep 2026" },
+  { title: "5D Trading Challenge", date: "07-11 Sep 2026" },
+  {
+    title: "Preliminary Round (ERC & BCC)",
+    date: "09 Sep - 05 Oct 2026",
+  },
+  { title: "Deadline Paper Submission", date: "05 Oct 2026" },
+  { title: "Finalist Announcement (ERC & BCC)", date: "19-21 Oct 2026" },
+  { title: "Final Round (ERC & BCC)", date: "08 Nov 2026" },
+  { title: "Main Event", date: "08 Nov 2026" },
+  { title: "Gala Dinner & Awarding Night", date: "08 Nov 2026" },
 ];
 
 const faqData = [
@@ -143,7 +151,7 @@ export default function Home() {
           </div>
 
           {/* Sponsored By */}
-          <div className="mt-28 w-full max-w-5xl">
+          {/* <div className="mt-28 w-full max-w-5xl">
             <p className="mb-8 text-xs font-semibold tracking-widest text-white/70 uppercase">
               Sponsored by
             </p>
@@ -163,7 +171,7 @@ export default function Home() {
                 </span>
               ))}
             </div>
-          </div>
+          </div> */}
         </section>
       </ScrollReveal>
 
@@ -219,16 +227,18 @@ export default function Home() {
                 innerClassName="flex min-h-[150px] items-center justify-center px-4 py-5 text-center sm:min-h-[220px] sm:px-6 sm:py-8"
               >
                 <p className="text-infest-white text-xs leading-relaxed font-medium sm:text-sm">
-                  INFEST 2025, dengan tema{" "}
-                  <span className="text-golden-gradient">
-                    &quot;Navigating the Future: Smart Investment in the Times
-                    of Changes&quot;
+                  INFEST 2026, dengan tema{" "}
+                  <span className="text-golden-gradient font-bold">
+                    &quot;Mastering Capital Horizon: Adapting to Macro
+                    Volatility Through Strategic Investing&quot;
                   </span>
-                  , berfokus pada strategi investasi cerdas untuk menghadapi
-                  masa-masa penuh perubahan. Acara ini akan membekali peserta
-                  dengan pola pikir yang proaktif dan tangguh, serta membahas
-                  pemanfaatan teknologi seperti AI dalam mengambil keputusan
-                  investasi di tengah dinamika pasar dan krisis ekonomi.
+                  , berfokus pada pembentukan visi investasi jangka panjang
+                  serta kemampuan beradaptasi di tengah dinamika dan gejolak
+                  makroekonomi. Acara ini akan membekali peserta dengan
+                  pemahaman manajemen risiko yang terukur guna menjembatani
+                  teori menuju aksi nyata, mendorong eksekusi portofolio yang
+                  strategis dan rasional tanpa terjebak kepanikan pasar sesaat
+                  maupun tren FOMO.
                 </p>
               </GradientBorderCard>
             </div>

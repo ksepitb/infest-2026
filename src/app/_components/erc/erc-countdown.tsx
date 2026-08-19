@@ -66,7 +66,7 @@ export function ErcCountdown() {
       <div className="flex w-full flex-col items-center gap-4 break-words">
         <GradientBorderCard
           className="w-full max-w-[300px] md:max-w-[462px]"
-          innerClassName="flex min-h-[120px] items-center justify-between gap-3 p-4 text-center lg:h-[200px] lg:gap-[52px] lg:p-8"
+          innerClassName="flex min-h-[150px] items-center justify-between gap-3 p-4 text-center lg:h-[200px] lg:gap-[52px] lg:p-8"
         >
           <CountdownUnit label="Days" value={timeLeft.days} />
           <CountdownUnit label="Hours" value={timeLeft.hours} />
