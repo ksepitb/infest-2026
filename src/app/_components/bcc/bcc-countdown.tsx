@@ -5,23 +5,23 @@ import { GradientDivider } from "@/app/_components/event-page/theme-divider";
 import { GradientBorderCard } from "@/components/gradient-border-card";
 
 /** ISO 8601 target date — BCC registration closes */
-const TARGET_DATE = new Date("2026-07-13T23:59:59+07:00");
+const TARGET_DATE = new Date("2026-09-18T23:59:59+07:00");
 
 interface TimeLeft {
+  days: number;
   hours: number;
   minutes: number;
-  seconds: number;
 }
 
 function computeTimeLeft(): TimeLeft {
   const diff = Math.max(0, TARGET_DATE.getTime() - Date.now());
-  const totalHours = Math.floor(diff / (1000 * 60 * 60));
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
   return {
-    hours: totalHours,
+    days,
+    hours,
     minutes,
-    seconds,
   };
 }
 
@@ -68,9 +68,9 @@ export function BccCountdown() {
           className="w-full max-w-[462px]"
           innerClassName="flex min-h-[180px] items-center justify-between gap-4 p-6 text-center lg:h-[200px] lg:gap-[52px] lg:p-10"
         >
+          <CountdownUnit label="Days" value={timeLeft.days} />
           <CountdownUnit label="Hours" value={timeLeft.hours} />
           <CountdownUnit label="Minutes" value={timeLeft.minutes} />
-          <CountdownUnit label="Seconds" value={timeLeft.seconds} />
         </GradientBorderCard>
       </div>
     </section>

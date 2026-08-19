@@ -12,28 +12,30 @@ export type FaqItem = {
 
 const ercFaqItems: FaqItem[] = [
   {
-    question: "Siapa saja yang dapat mengikuti ERC INFEST 2026?",
+    question:
+      "Apakah anggota tim boleh berasal dari universitas/institusi yang berbeda?",
     answer:
-      "Mahasiswa aktif jenjang S1/D3/D4 dari seluruh perguruan tinggi di Indonesia.",
+      "Boleh, dengan syarat dapat menunjukkan KTM (Kartu Tanda Mahasiswa).",
   },
   {
-    question: "Berapa jumlah anggota dalam satu tim?",
-    answer:
-      "Setiap tim terdiri dari 2 hingga 3 orang mahasiswa dari perguruan tinggi yang sama.",
+    question:
+      "Apakah peserta diperbolehkan berada pada lebih dari 1 tim pada ERC INFEST 2026?",
+    answer: "Tidak diperbolehkan.",
   },
   {
-    question: "Bahasa apa yang digunakan dalam penyusunan paper?",
-    answer:
-      "Laporan/paper disusun menggunakan Bahasa Indonesia yang baik dan benar sesuai Guidebook.",
+    question:
+      "Apakah peserta yang sudah terdaftar boleh digantikan oleh orang lain?",
+    answer: "Tidak diperbolehkan.",
   },
   {
-    question: "Di mana peserta dapat mengunduh Guidebook ERC?",
-    answer:
-      "Guidebook dapat diunduh melalui tombol pendaftaran atau menu utama website.",
+    question:
+      "Apakah babak final akan dilaksanakan secara offline atau online?",
+    answer: "Babak final akan dilaksanakan secara offline di ITB Ganesha.",
   },
   {
-    question: "Apakah peserta boleh bergabung di lebih dari satu tim?",
-    answer: "Tidak, setiap peserta hanya boleh tergabung dalam satu tim.",
+    question: "Apakah seluruh peserta akan mendapatkan e-sertifikat?",
+    answer:
+      "Ya, seluruh peserta akan mendapatkan e-sertifikat yang menunjukkan bahwa mereka telah berpartisipasi di ERC INFEST 2026.",
   },
 ];
 

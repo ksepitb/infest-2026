@@ -11,12 +11,16 @@ interface TimelineEvent {
 }
 
 const TIMELINE_EVENTS: TimelineEvent[] = [
-  { id: 1, title: "ERC Registration", date: "5 - 13 Juli 2025" },
-  { id: 2, title: "Preliminary Stage", date: "15 - 20 Juli 2025" },
-  { id: 3, title: "Proposal Submission", date: "22 - 28 Juli 2025" },
-  { id: 4, title: "Finalist Announcement", date: "2 Agustus 2025" },
-  { id: 5, title: "Final Presentation", date: "10 Agustus 2025" },
-  { id: 6, title: "Awarding Day", date: "15 Agustus 2025" },
+  { id: 1, title: "Early Registration", date: "20 Agustus - 26 Agustus" },
+  { id: 2, title: "Normal Registration", date: "27 Agustus - 3 September" },
+  { id: 3, title: "Technical Meeting", date: "8 September" },
+  { id: 4, title: "Preliminary Round", date: "9 September - 5 Oktober" },
+  { id: 5, title: "Deadline Paper Submission", date: "5 Oktober" },
+  { id: 6, title: "Judges Review", date: "6-20 Oktober" },
+  { id: 7, title: "Finalist Announcement", date: "21 Oktober" },
+  { id: 8, title: "Mentoring", date: "22 Oktober - 1 November" },
+  { id: 9, title: "Final Round Technical Meeting", date: "2 November" },
+  { id: 10, title: "Final Presentation", date: "8 November" },
 ];
 
 export function ErcTimeline() {
@@ -84,8 +88,8 @@ export function ErcTimeline() {
 
                 {/* Card (Top or Bottom) */}
                 <div
-                  className={`bg-gradient-custom flex w-32 flex-col items-center justify-center rounded-2xl p-4 text-center transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(227,6,217,0.3)] md:min-h-24 md:w-48 ${
-                    isTop ? "mb-32" : "mt-32"
+                  className={`bg-gradient-custom text-shadow-links glow-purple flex w-32 flex-col items-center justify-center rounded-2xl p-4 text-center transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(227,6,217,0.3)] md:min-h-24 md:w-48 ${
+                    isTop ? "mb-40" : "mt-40"
                   }`}
                 >
                   <h3 className="text-sm font-bold text-white md:text-base">

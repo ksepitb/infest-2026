@@ -11,12 +11,15 @@ interface TimelineEvent {
 }
 
 const TIMELINE_EVENTS: TimelineEvent[] = [
-  { id: 1, title: "BCC Registration", date: "5 - 13 Juli 2025" },
-  { id: 2, title: "BCC Registration", date: "5 - 13 Juli 2025" },
-  { id: 3, title: "BCC Registration", date: "5 - 13 Juli 2025" },
-  { id: 4, title: "BCC Registration", date: "5 - 13 Juli 2025" },
-  { id: 5, title: "BCC Registration", date: "5 - 13 Juli 2025" },
-  { id: 6, title: "BCC Registration", date: "5 - 13 Juli 2025" },
+  { id: 1, title: "Early Bird Registration", date: "20 Agustus - 30 Agustus" },
+  { id: 2, title: "Normal Registration", date: "31 Agustus - 18 September" },
+  { id: 3, title: "Technical Meeting", date: "19 September" },
+  { id: 4, title: "Case Distribution", date: "21 September" },
+  { id: 5, title: "Preliminary Round", date: "21 September - 30 September" },
+  { id: 6, title: "Finalist Announcement", date: "19 Oktober" },
+  { id: 7, title: "Mentoring Session", date: "19 - 25 Oktober" },
+  { id: 8, title: "Final Round Technical Meeting", date: "26 Oktober" },
+  { id: 9, title: "Pitching Final Round", date: "8 November" },
 ];
 
 export function BccTimeline() {
@@ -83,8 +86,8 @@ export function BccTimeline() {
 
                 {/* Card (Top or Bottom) */}
                 <div
-                  className={`bg-gradient-custom flex w-32 flex-col items-center justify-center rounded-2xl p-4 text-center transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(227,6,217,0.3)] md:min-h-24 md:w-48 ${
-                    isTop ? "mb-32" : "mt-32"
+                  className={`bg-gradient-custom glow-pink text-shadow-links flex w-32 flex-col items-center justify-center rounded-2xl p-4 text-center transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(227,6,217,0.3)] md:min-h-24 md:w-48 ${
+                    isTop ? "mb-40" : "mt-40"
                   }`}
                 >
                   <h3 className="text-sm font-bold text-white md:text-base">

@@ -39,10 +39,10 @@ const competitionContacts: ContactInfo[] = [
 function RegistrationButton({ href, label }: { href: string; label: string }) {
   return (
     <Link
-      className="bg-gradient-5 shadow-box-shadow-inset text-infest-white relative flex min-h-[80px] w-full items-center justify-center rounded-full px-6 py-5 text-center text-base font-bold transition-all duration-300 hover:scale-[1.03] hover:brightness-110 active:scale-95 md:text-[20px]"
+      className="bg-gradient-5 shadow-box-shadow-inset text-infest-white relative flex min-h-[80px] w-full items-center justify-center rounded-full px-6 py-5 text-center text-base font-bold transition-all duration-300 hover:scale-[1.03] active:scale-95 md:text-[20px]"
       href={href}
     >
-      {label}
+      <span className="text-shadow-links">{label}</span>
     </Link>
   );
 }
@@ -120,7 +120,7 @@ export default function RegisterPage() {
           Select your competition
         </p>
 
-        <div className="glow-text-3 mt-12 grid w-full max-w-3xl gap-6 sm:mt-16 sm:grid-cols-2 sm:gap-8 md:gap-10">
+        <div className="mt-12 grid w-full max-w-3xl gap-6 sm:mt-16 sm:grid-cols-2 sm:gap-8 md:gap-10">
           <RegistrationButton
             href="/register/bcc"
             label="Business Case Competition"

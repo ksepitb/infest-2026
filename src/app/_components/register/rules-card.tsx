@@ -25,19 +25,27 @@ export function RulesCard({ title, rules }: RulesCardProps) {
         </ol>
       </GradientBorderCard>
 
-      <div className="mt-10 grid w-full max-w-5xl gap-4 sm:grid-cols-2 sm:gap-8 md:mt-14">
+      <div className="mt-10 grid w-full max-w-5xl gap-4 sm:grid-cols-3 sm:gap-8 md:mt-14">
         <Link
-          className="bg-gradient-5 text-infest-white shadow-box-shadow-inset relative flex min-h-[72px] items-center justify-center rounded-full px-6 py-4 text-center text-base font-bold transition-all duration-300 hover:scale-[1.03] hover:brightness-110 active:scale-95 md:text-[18px]"
+          className="bg-gradient-5 text-infest-white shadow-box-shadow-inset relative flex min-h-[72px] items-center justify-center rounded-full px-6 py-4 text-center text-base font-bold transition-all duration-300 hover:scale-[1.03] active:scale-95 md:text-[18px]"
           href="/register"
         >
-          Kembali
+          <span className="text-shadow-links">Kembali</span>
         </Link>
         <Link
-          className="bg-gradient-5 text-infest-white shadow-box-shadow-inset relative flex min-h-[72px] items-center justify-center rounded-full px-6 py-4 text-center text-base font-bold transition-all duration-300 hover:scale-[1.03] hover:brightness-110 active:scale-95 md:text-[18px]"
+          className="bg-gradient-5 text-infest-white shadow-box-shadow-inset relative flex min-h-[72px] items-center justify-center rounded-full px-6 py-4 text-center text-base font-bold transition-all duration-300 hover:scale-[1.03] active:scale-95 md:text-[18px]"
           href="#"
         >
-          Daftar Sekarang
+          <span className="text-shadow-links">Daftar Sekarang</span>
         </Link>
+        <a
+          className="bg-gradient-5 text-infest-white shadow-box-shadow-inset relative flex min-h-[72px] items-center justify-center rounded-full px-6 py-4 text-center text-base font-bold transition-all duration-300 hover:scale-[1.03] active:scale-95 md:text-[18px]"
+          href="https://bit.ly/GuidebookINFEST2026"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span className="text-shadow-links">Download Guidebook</span>
+        </a>
       </div>
     </section>
   );
