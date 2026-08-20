@@ -4,6 +4,7 @@ import Image from "next/image";
 
 import { HeaderLogo } from "@/app/_components/event-page/logo-infest";
 import { DayCard } from "@/app/_components/event-page/day-card";
+import { EventTimeline } from "@/app/_components/event-page/event-timeline";
 import { LocationPill } from "@/app/_components/event-page/location-pill";
 import { SectionBadge } from "@/app/_components/event-page/section-badge";
 import { GradientBorderCard } from "@/components/gradient-border-card";
@@ -40,10 +41,8 @@ const eventLinks = [
 function ThemeDescription() {
   return (
     <>
-      <span className="text-golden-gradient font-bold">
-        &ldquo;Mastering Capital Horizon: Adapting to Macro Volatility Through
-        Strategic Investing&rdquo;
-      </span>{" "}
+        Puncak dari rangkaian INFEST 2026. <span className="text-golden-gradient font-bold">The Financial Outlook Summit</span> adalah panggung eksklusif yang mempertemukan para praktisi top pasar modal dalam satu hari penuh diskusi tajam dan interaktif.
+      {" "}
     </>
   );
 }
@@ -155,9 +154,10 @@ export default function EventsPage() {
           <DayCard
             dayLabel="DAY 01"
             title="Chart Your Move"
-            description="Technical Analysis Playbook for Smarter Entries & Exits : Sesi seminar online interaktif yang membedah cara membaca pergerakan harga dan momentum pasar lewat analisis teknikal seperti grafik saham, candlestick, hingga indikator populer (MA, RSI, MACD), lalu ditutup dengan praktik analisis bersama memakai grafik saham asli di pasar modal."
+            description={<><span className="text-golden-gradient">Technical Analysis Playbook for Smarter Entries & Exits</span><br></br>Sesi seminar online interaktif yang membedah cara membaca pergerakan harga dan momentum pasar lewat analisis teknikal seperti grafik saham, candlestick, hingga indikator populer (MA, RSI, MACD), lalu ditutup dengan praktik analisis bersama memakai grafik saham asli di pasar modal.</>}
             hideImage
             boxed
+            align="left"
           />
         </ScrollReveal>
 
@@ -167,19 +167,23 @@ export default function EventsPage() {
             title="The Big Picture"
             description={
               <>
-                Connecting Macro Dots to Portfolio Growth : Sesi seminar online
-                lanjutan yang mengajarkan cara menghubungkan kondisi ekonomi
-                global dengan pergerakan bursa, menilai kesehatan keuangan
-                perusahaan lewat rasio penting (PER, PBV, ROE, DER), serta cara
-                mengelola risiko investasi sebelum terjun ke kompetisi simulasi.{" "}
                 <span className="text-golden-gradient">
-                  Speaker: Emir Parengkuan
+                  Connecting Macro Dots to Portfolio Growth
+                </span><br></br>{" "}
+                Sesi seminar online lanjutan yang mengajarkan cara
+                menghubungkan kondisi ekonomi global dengan pergerakan bursa,
+                menilai kesehatan keuangan perusahaan lewat rasio penting (PER,
+                PBV, ROE, DER), serta cara mengelola risiko investasi sebelum
+                terjun ke kompetisi simulasi.{" "}
+                <span className="text-golden-gradient">
+                  Speaker: Emir Pangrekuan
                 </span>
               </>
             }
             imageSrc="/images/speakers/emirpangrekuan.png"
             imageAlt="Emir Pangrekuan"
             imagePosition="left"
+            align="right"
             boxed
           />
         </ScrollReveal>
@@ -189,7 +193,10 @@ export default function EventsPage() {
             dayLabel="DAY 03"
             title="5 Days Trading Challenge"
             description="Kompetisi simulasi trading virtual secara mandiri selama lima hari kerja berturut-turut menggunakan modal awal virtual yang sama, di mana peserta bebas mengatur strategi jual-beli saham yang masuk dalam daftar indeks Kompas 100 untuk mengejar profit tertinggi."
-            hideImage
+            imageSrc="/images/trading.webp"
+            imageAlt="Trading Chart"
+            imagePosition="right"
+            align="left"
             boxed
           />
         </ScrollReveal>
@@ -204,7 +211,7 @@ export default function EventsPage() {
         src="/images/dotted1.svg"
         width={600}
       />
-      <section className="relative z-10 mx-auto mt-32 mb-24 flex max-w-5xl flex-col items-center gap-20 px-6">
+      <section className="relative z-10 mx-auto mt-32 mb-24 flex max-w-6xl flex-col items-center gap-12 px-6 lg:gap-20">
         <ScrollReveal>
           <SectionBadge>Main Event</SectionBadge>
         </ScrollReveal>
@@ -216,16 +223,39 @@ export default function EventsPage() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.3}>
-          <div className="flex w-full justify-center px-6">
-            <GradientBorderCard
-              className="w-full max-w-[760px]"
-              innerClassName="px-8 py-12 text-center sm:px-12 sm:py-16"
-            >
-              <p className="font-poppins text-golden-gradient glow-text-1 text-[32px] font-extrabold tracking-[0.2em] sm:text-[42px] md:text-[52px]">
-                COMING SOON
-              </p>
-            </GradientBorderCard>
-          </div>
+          <DayCard
+            dayLabel="SESI 1"
+            title="Panel Discussion"
+            description={<><span className="italic text-golden-gradient">The Algorithmic Edge: Kepresisian Operasional dan Pengolahan Data sebagai Senjata Taktis Melawan Volatilitas</span>.<br></br> Data tidak pernah bohong. Di sesi pembuka ini, para pembicara akan membedah bagaimana data menjadi jangkar pengambilan keputusan di tengah ketidakpastian pasar — mulai dari cara membaca pola historis, memfilter noise, hingga fitur algorithmic edge yang bisa dimanfaatkan investor ritel sekelas institusi.</>}
+            hideImage
+            boxed
+            align="left"
+            variant="gradientBorder"
+          />
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.4}>
+          <DayCard
+            dayLabel="SESI 2"
+            title="Interactive Discussion "
+            description={<><span className="text-golden-gradient">Riding the Bear: Seni Bernavigasi dan Mencari Peluang di Tengah Gejolak Makroekonomi </span>.<br></br> IHSG pernah anjlok lebih dari 40% dalam waktu singkat — lalu apa yang harus dilakukan investor? Sesi ini mengajak pembicara berbincang santai namun mendalam bersama peserta, membedah sebab-akibat krisis ekonomi, sektor mana yang paling terdampak, dan bagaimana justru menemukan peluang di tengah gejolak.</>}
+            hideImage
+            boxed
+            align="right"
+            variant="gradientBorder"
+          />
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.5}>
+          <DayCard
+            dayLabel="SESI 3"
+            title="Round Table"
+            description={<><span className="text-golden-gradient">The Long Game & The Next Move: Mensinergikan Visi Jangka Panjang dengan Ketepatan Eksekusi Taktis</span>.<br></br> Dua sudut pandang, satu meja, satu debat. Para ahli dengan latar belakang berbeda akan beradu argumen soal bagaimana menyeimbangkan investasi jangka panjang dengan eksekusi taktis jangka pendek.</>}
+            hideImage
+            align="left"
+            boxed
+            variant="gradientBorder"
+          />
         </ScrollReveal>
       </section>
 
@@ -250,6 +280,9 @@ export default function EventsPage() {
           <LocationPill location="Aula CC Timur Institut Teknologi Bandung" />
         </ScrollReveal>
       </section>
+
+      {/* Event Timeline */}
+      <EventTimeline />
 
       {/* Highlights */}
       <ScrollReveal>

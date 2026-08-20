@@ -22,20 +22,20 @@ const FaqAccordion = dynamic(() =>
 );
 
 const timelineData = [
-  { title: "ERC Registration", date: "20 Aug - 3 Sep 2026" },
-  { title: "BCC Registration", date: "20 Aug - 18 Sep 2026" },
-  { title: "Pre-Event Day 1", date: "05 Sep 2026" },
-  { title: "Pre-Event Day 2", date: "06 Sep 2026" },
-  { title: "5D Trading Challenge", date: "07-11 Sep 2026" },
+  { title: "ERC Registration", date: "20 Aug - 3 Sep" },
+  { title: "BCC Registration", date: "20 Aug - 18 Sep" },
+  { title: "Pre-Event Day 1", date: "05 September" },
+  { title: "Pre-Event Day 2", date: "06 September" },
+  { title: "5D Trading Challenge", date: "07-11 September" },
   {
     title: "Preliminary Round (ERC & BCC)",
-    date: "09 Sep - 05 Oct 2026",
+    date: "09 Sep - 05 Oct",
   },
-  { title: "Deadline Paper Submission", date: "05 Oct 2026" },
-  { title: "Finalist Announcement (ERC & BCC)", date: "19-21 Oct 2026" },
-  { title: "Final Round (ERC & BCC)", date: "08 Nov 2026" },
+  { title: "Deadline Paper Submission", date: "05 Oktober" },
+  { title: "Finalist Announcement (ERC & BCC)", date: "19-21 Oktober" },
+  { title: "Final Round (ERC & BCC)", date: "08 November" },
   { title: "Main Event", date: "08 Nov 2026" },
-  { title: "Gala Dinner & Awarding Night", date: "08 Nov 2026" },
+  { title: "Gala Dinner & Awarding Night", date: "08 November" },
 ];
 
 const faqData = [
