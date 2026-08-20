@@ -11,7 +11,7 @@ export function HeaderLogo() {
           width={700}
           height={300}
           priority
-          className="h-auto w-[250px] object-contain sm:w-[350px] md:w-[420px] lg:w-[600px]"
+          className="h-auto w-[200px] object-contain sm:w-[350px] md:w-[420px] lg:w-[600px]"
         />
       </div>
 
@@ -19,7 +19,7 @@ export function HeaderLogo() {
       <div className="shrink-0 gap-3 sm:gap-4 md:gap-5">
         {/* Text Title Stack */}
         <div className="justify-center text-left leading-none">
-          <h1 className="glow-text-1 text-[28px] leading-[1.1] font-bold text-white sm:text-[28px] md:text-5xl lg:text-7xl">
+          <h1 className="glow-text-1 text-[25px] leading-[1.1] font-bold text-white sm:text-[28px] md:text-5xl lg:text-7xl">
             <span className="block whitespace-nowrap">Pre-Event &amp;</span>
             <span className="block whitespace-nowrap">Main Event</span>
           </h1>

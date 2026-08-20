@@ -16,7 +16,7 @@ const events: EventItem[] = [
     title: "Pre-Event Workshop",
     description:
       "Workshop online interaktif bersama para ahli keuangan dan mentor ternama untuk membekali peserta dengan pengetahuan dasar valuasi saham dan analisis bisnis.",
-    image: "/images/lantik.jpg",
+    image: "/images/trading.webp",
   },
   {
     id: 2,

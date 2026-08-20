@@ -72,14 +72,19 @@ interface ContactPerson {
 }
 
 const EVENT_CONTACTS: ContactPerson[] = [
-  { name: "Muhammad Orkhan", phone: "08119900125", line: "orkhan12345678" },
-  { name: "TPB CAKEP", phone: "08119900125", line: "orkhan12345678" },
-  { name: "KHANOR", phone: "08119900125", line: "orkhan12345678" },
+  {
+    name: "Mirza Yudhistira Pratama",
+    phone: "083831113214",
+    line: "mirzayudhit",
+  },
 ];
 
 const COMPETITION_CONTACTS: ContactPerson[] = [
-  { name: "Muhammad Orkhan", phone: "08119900125", line: "orkhan12345678" },
-  { name: "Muhammad Orkhan", phone: "08119900125", line: "orkhan12345678" },
+  {
+    name: "Michael Nathan",
+    phone: "081290410825",
+    line: "michaelnathan555",
+  },
 ];
 
 export function ErcFooter() {

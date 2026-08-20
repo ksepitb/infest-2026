@@ -26,14 +26,19 @@ const registerLinks = [
 ];
 
 const eventContacts: ContactInfo[] = [
-  { name: "Muhammad Orkhan", phone: "08119900125", lineId: "orkhan12345678" },
-  { name: "Muhammad Orkhan", phone: "08119900125", lineId: "orkhan12345678" },
-  { name: "Muhammad Orkhan", phone: "08119900125", lineId: "orkhan12345678" },
+  {
+    name: "Mirza Yudhistira Pratama",
+    phone: "083831113214",
+    lineId: "mirzayudhit",
+  },
 ];
 
 const competitionContacts: ContactInfo[] = [
-  { name: "Muhammad Orkhan", phone: "08119900125", lineId: "orkhan12345678" },
-  { name: "Muhammad Orkhan", phone: "08119900125", lineId: "orkhan12345678" },
+  {
+    name: "Michael Nathan",
+    phone: "081290410825",
+    lineId: "michaelnathan555",
+  },
 ];
 
 const ercRules = [

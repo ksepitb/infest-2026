@@ -6,11 +6,12 @@ type DayCardProps = {
   dayLabel: string;
   title: string;
   description: ReactNode;
-  imageSrc: string;
-  imageAlt: string;
-  imagePosition: "left" | "right";
+  imageSrc?: string;
+  imageAlt?: string;
+  imagePosition?: "left" | "right";
   boxed?: boolean;
   priority?: boolean;
+  hideImage?: boolean;
 };
 
 export function Highlight({ children }: { children: ReactNode }) {
@@ -23,9 +24,10 @@ export function DayCard({
   description,
   imageSrc,
   imageAlt,
-  imagePosition,
+  imagePosition = "right",
   boxed = false,
   priority = false,
+  hideImage = false,
 }: DayCardProps) {
   const contentMaxWidth = boxed ? "760px" : "858px";
 
@@ -72,7 +74,9 @@ export function DayCard({
     </p>
   );
 
-  const image = (
+  const shouldShowImage = !hideImage && !!imageSrc && !!imageAlt;
+
+  const image = shouldShowImage ? (
     <div className="relative mx-auto flex h-[280px] w-[220px] shrink-0 items-end justify-center sm:h-[320px] sm:w-[240px] lg:h-[460px] lg:w-[350px]">
       <div
         className="relative h-[72%] w-full rounded-[28px]"
@@ -101,8 +105,8 @@ export function DayCard({
           style={{ aspectRatio: "72 / 95" }}
         >
           <Image
-            src={imageSrc}
-            alt={imageAlt}
+            src={imageSrc ?? ""}
+            alt={imageAlt ?? ""}
             fill
             priority={priority}
             className="object-contain object-bottom drop-shadow-[0_12px_24px_rgba(0,0,0,0.6)] filter"
@@ -110,7 +114,7 @@ export function DayCard({
         </div>
       </div>
     </div>
-  );
+  ) : null;
 
   const textColumn = (
     <div
@@ -121,6 +125,14 @@ export function DayCard({
       {paragraph}
     </div>
   );
+
+  if (!shouldShowImage) {
+    return (
+      <div className="flex w-full flex-col items-center justify-center">
+        {textColumn}
+      </div>
+    );
+  }
 
   return (
     <div

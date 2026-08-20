@@ -18,14 +18,19 @@ interface FooterProps {
 }
 
 const defaultEventContacts: ContactInfo[] = [
-  { name: "Muhammad Orkhan", phone: "08119900125", lineId: "orkhan12345678" },
-  { name: "Muhammad Orkhan", phone: "08119900125", lineId: "orkhan12345678" },
-  { name: "Muhammad Orkhan", phone: "08119900125", lineId: "orkhan12345678" },
+  {
+    name: "Mirza Yudhistira Pratama",
+    phone: "083831113214",
+    lineId: "mirzayudhit",
+  },
 ];
 
 const defaultCompetitionContacts: ContactInfo[] = [
-  { name: "Muhammad Orkhan", phone: "08119900125", lineId: "orkhan12345678" },
-  { name: "Muhammad Orkhan", phone: "08119900125", lineId: "orkhan12345678" },
+  {
+    name: "Michael Nathan",
+    phone: "081290410825",
+    lineId: "michaelnathan555",
+  },
 ];
 
 function WhatsappIcon({ className }: { className?: string }) {
