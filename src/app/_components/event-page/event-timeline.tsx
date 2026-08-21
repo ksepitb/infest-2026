@@ -16,19 +16,19 @@ const EVENT_TIMELINE: TimelineEvent[] = [
     id: 1,
     title: "Pre-Event : Chart Your Move",
     subtitle: "Technical Analysis Playbook",
-    date: "05 September",
+    date: "Coming Soon",
   },
   {
     id: 2,
     title: "Pre-Event : The Big Picture",
     subtitle: "Connecting Macro Dots",
-    date: "06 September",
+    date: "Coming Soon",
   },
   {
     id: 3,
     title: "Pre-Event : Trading Challenge",
     subtitle: "5 Days Simulation",
-    date: "07-11 September",
+    date: "Coming Soon",
   },
   {
     id: 4,

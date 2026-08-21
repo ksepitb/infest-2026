@@ -180,9 +180,10 @@ export default function EventsPage() {
                 </span>
               </>
             }
-            imageSrc="/images/speakers/emirpangrekuan.png"
-            imageAlt="Emir Pangrekuan"
-            imagePosition="left"
+            // imageSrc="/images/speakers/emirpangrekuan.png"
+            // imageAlt="Emir Pangrekuan"
+            // imagePosition="left"
+            hideImage
             align="right"
             boxed
           />
