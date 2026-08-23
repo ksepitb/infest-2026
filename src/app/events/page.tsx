@@ -175,9 +175,9 @@ export default function EventsPage() {
                 menilai kesehatan keuangan perusahaan lewat rasio penting (PER,
                 PBV, ROE, DER), serta cara mengelola risiko investasi sebelum
                 terjun ke kompetisi simulasi.{" "}
-                <span className="text-golden-gradient">
+                {/* <span className="text-golden-gradient">
                   Speaker: Emir Pangrekuan
-                </span>
+                </span> */}
               </>
             }
             // imageSrc="/images/speakers/emirpangrekuan.png"

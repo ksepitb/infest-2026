@@ -24,9 +24,9 @@ const FaqAccordion = dynamic(() =>
 const timelineData = [
   { title: "ERC Registration", date: "20 Aug - 3 Sep" },
   { title: "BCC Registration", date: "20 Aug - 18 Sep" },
-  { title: "Pre-Event Day 1", date: "05 September" },
-  { title: "Pre-Event Day 2", date: "06 September" },
-  { title: "5D Trading Challenge", date: "07-11 September" },
+  { title: "Pre-Event Day 1", date: "11 September" },
+  { title: "Pre-Event Day 2", date: "12 September" },
+  { title: "5D Trading Challenge", date: "12-16 September" },
   {
     title: "Preliminary Round (ERC & BCC)",
     date: "09 Sep - 05 Oct",
