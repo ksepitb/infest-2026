@@ -26,7 +26,7 @@ const timelineData = [
   { title: "BCC Registration", date: "20 Aug - 18 Sep" },
   { title: "Pre-Event Day 1", date: "11 September" },
   { title: "Pre-Event Day 2", date: "12 September" },
-  { title: "5D Trading Challenge", date: "12-16 September" },
+  { title: "5D Trading Challenge", date: "COMING SOON" },
   {
     title: "Preliminary Round (ERC & BCC)",
     date: "09 Sep - 05 Oct",
