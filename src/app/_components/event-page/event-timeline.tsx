@@ -26,9 +26,9 @@ const EVENT_TIMELINE: TimelineEvent[] = [
   },
   {
     id: 3,
-    title: "Pre-Event : Trading Challenge",
+    title: "5 Days Trading Challenge",
     subtitle: "5 Days Simulation",
-    date: "Coming Soon",
+    date: "14-19 September",
   },
   {
     id: 4,

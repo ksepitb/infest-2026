@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import Link from "next/link";
 
 import { HeaderLogo } from "@/app/_components/event-page/logo-infest";
 import { DayCard } from "@/app/_components/event-page/day-card";
@@ -18,6 +19,24 @@ const EventsCarousel = dynamic(() =>
     (m) => m.EventsCarousel,
   ),
 );
+
+function ArrowRight({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M5 12h14" />
+      <path d="m12 5 7 7-7 7" />
+    </svg>
+  );
+}
 
 export const metadata: Metadata = {
   title: "Events | INFEST 2026",
@@ -154,10 +173,15 @@ export default function EventsPage() {
           <DayCard
             dayLabel="DAY 01"
             title="Chart Your Move"
-            description={<><span className="text-golden-gradient">Technical Analysis Playbook for Smarter Entries & Exits</span><br></br>Sesi seminar online interaktif yang membedah cara membaca pergerakan harga dan momentum pasar lewat analisis teknikal seperti grafik saham, candlestick, hingga indikator populer (MA, RSI, MACD), lalu ditutup dengan praktik analisis bersama memakai grafik saham asli di pasar modal.</>}
-            hideImage
-            boxed
+            description={<><span className="text-golden-gradient">Technical Analysis Playbook for Smarter Entries & Exits</span><br></br>Stop guessing and start strategizing! The market doesn't wait for anyone, and your trading success depends on reading the signals before the crowd does. This intensive session is designed to transform complex market momentum into actionable, clear-cut strategies. Equip yourself with the exact tactical skills needed to navigate market volatility and secure your profit.{" "}<br></br>
+            <span className="text-golden-gradient">
+              Speaker : Ernest Brian Irmawan
+            </span></>}
+            imageSrc="/images/speakers/preevent-day1-ernestbrian.png"
+            imageAlt="Ernest Brian Irmawan"
+            imagePosition="right"
             align="left"
+            boxed
           />
         </ScrollReveal>
 
@@ -170,30 +194,34 @@ export default function EventsPage() {
                 <span className="text-golden-gradient">
                   Connecting Macro Dots to Portfolio Growth
                 </span><br></br>{" "}
-                Sesi seminar online lanjutan yang mengajarkan cara
-                menghubungkan kondisi ekonomi global dengan pergerakan bursa,
-                menilai kesehatan keuangan perusahaan lewat rasio penting (PER,
-                PBV, ROE, DER), serta cara mengelola risiko investasi sebelum
-                terjun ke kompetisi simulasi.{" "}
-                {/* <span className="text-golden-gradient">
-                  Speaker: Emir Pangrekuan
-                </span> */}
+                Even in a bleeding market, strategic investors know where to find opportunity. Building upon technical precision, this session expands your perspective tomacroeconomic signals and portfolio risk management. Learn how to connect macro trends to IHSG movements, evaluate key valuation ratios (PER, PBV, ROE, DER), and implement practical risk management strategies that protect your assets in both bullish and bearish cycles.{" "}<br></br>
+                <span className="text-golden-gradient">
+                  Speaker: Jefferly Helianthusonfri
+                </span>
               </>
             }
-            // imageSrc="/images/speakers/emirpangrekuan.png"
-            // imageAlt="Emir Pangrekuan"
-            // imagePosition="left"
-            hideImage
+            imageSrc="/images/speakers/preevent-day2-jefferly.png"
+            imageAlt="Jefferly Helianthusonfri"
+            imagePosition="left"
             align="right"
             boxed
           />
         </ScrollReveal>
+        <Link
+          href=" https://bit.ly/PreEventINFEST2026"
+          className="font-poppins bg-gradient-5 text-infest-white glow-box-golden flex h-[64px] w-auto items-center justify-center rounded-[60px] px-10 text-lg leading-[117%] font-bold tracking-wide transition-all duration-300 hover:scale-[1.03] hover:brightness-110 active:scale-95 sm:text-xl md:h-[75px] md:gap-[12px] md:text-2xl"
+        >
+          <span className="text-shadow-links">Pre-Event Registration</span>
+          <ArrowRight className="stroke-infest-white h-6 w-6 md:h-7 md:w-7" />
+        </Link>
 
         <ScrollReveal delay={0.3}>
           <DayCard
             dayLabel="DAY 03"
             title="5 Days Trading Challenge"
-            description="Kompetisi simulasi trading virtual secara mandiri selama lima hari kerja berturut-turut menggunakan modal awal virtual yang sama, di mana peserta bebas mengatur strategi jual-beli saham yang masuk dalam daftar indeks Kompas 100 untuk mengejar profit tertinggi."
+            description={<>Theory means nothing without execution. Immediately following our workshop, the 5-Day Trading Challenge serves as the ultimate battleground to test your strategies in real-time market conditions. Stand out to win an exclusive prize up to Rp 1 million Rupiah ! Step up to the challenge, test your limits, and claim your place at the top
+            <br></br>
+            <span className="text-golden-gradient">Guidebook : https://bit.ly/Guidebook5DaysTradingChallenge</span></>}
             imageSrc="/images/trading.webp"
             imageAlt="Trading Chart"
             imagePosition="right"
@@ -201,6 +229,14 @@ export default function EventsPage() {
             boxed
           />
         </ScrollReveal>
+
+        <Link
+          href="https://bit.ly/5DaysTradingChallengeINFEST26"
+          className="font-poppins bg-gradient-5 text-infest-white glow-box-golden flex h-[64px] w-auto items-center justify-center rounded-[60px] px-10 text-lg leading-[117%] font-bold tracking-wide transition-all duration-300 hover:scale-[1.03] hover:brightness-110 active:scale-95 sm:text-xl md:h-[75px] md:gap-[12px] md:text-2xl"
+        >
+          <span className="text-shadow-links">5D Trading Challenge Registration</span>
+          <ArrowRight className="stroke-infest-white h-6 w-6 md:h-7 md:w-7" />
+        </Link>
       </section>
 
       {/* Main Event */}
