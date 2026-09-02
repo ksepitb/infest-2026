@@ -173,7 +173,7 @@ export default function EventsPage() {
           <DayCard
             dayLabel="DAY 01"
             title="Chart Your Move"
-            description={<><span className="text-golden-gradient">Technical Analysis Playbook for Smarter Entries & Exits</span><br></br>Stop guessing and start strategizing! The market doesn't wait for anyone, and your trading success depends on reading the signals before the crowd does. This intensive session is designed to transform complex market momentum into actionable, clear-cut strategies. Equip yourself with the exact tactical skills needed to navigate market volatility and secure your profit.{" "}<br></br>
+            description={<><span className="text-golden-gradient">Technical Analysis Playbook for Smarter Entries & Exits</span><br></br>Stop guessing and start strategizing! The market doesnt wait for anyone, and your trading success depends on reading the signals before the crowd does. This intensive session is designed to transform complex market momentum into actionable, clear-cut strategies. Equip yourself with the exact tactical skills needed to navigate market volatility and secure your profit.{" "}<br></br>
             <span className="text-golden-gradient">
               Speaker : Ernest Brian Irmawan
             </span></>}
