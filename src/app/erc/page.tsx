@@ -25,23 +25,14 @@ export const metadata: Metadata = {
 export default function ErcPage() {
   return (
     <main className="bg-gradient-3 relative min-h-screen overflow-x-hidden text-white antialiased">
-      {/* Layer 2: Decorative Overlay */}
       <ErcDecorations />
-
-      {/* Navbar di luar flex gap container */}
       <Navbar />
-
-      {/* Layer 3: Main Sections Stack */}
-      <div className="relative z-10 flex w-full flex-col items-center gap-20 md:gap-0">
-        <ErcHero />
-        <ErcDescription />
-        <ErcPrizePool />
-        <ErcTimeline />
-        <ErcCountdown />
-        <ErcFaq />
-      </div>
-
-      {/* Footer independen di paling bawah */}
+      <ErcHero />
+      <ErcDescription />
+      <ErcPrizePool />
+      <ErcTimeline />
+      <ErcCountdown />
+      <ErcFaq />
       <Footer />
     </main>
   );

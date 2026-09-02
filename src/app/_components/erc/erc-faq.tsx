@@ -42,7 +42,7 @@ const ercFaqItems: FaqItem[] = [
 export function ErcFaq() {
   return (
     <section
-      className="relative z-10 mx-auto flex w-full max-w-[1509px] scroll-mt-32 flex-col items-center justify-start px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:px-8 lg:py-24"
+      className="relative z-10 mx-auto overflow-hidden flex w-full max-w-[1509px] scroll-mt-32 flex-col items-center justify-start px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:px-8 lg:py-24"
       id="erc-faq"
     >
       {/* Ornament 3 Right */}

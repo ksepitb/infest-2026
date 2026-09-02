@@ -37,7 +37,7 @@ export function ErcTimeline() {
 
   return (
     <section
-      className="relative mx-auto flex w-full max-w-[1509px] scroll-mt-32 flex-col items-center gap-10 px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:gap-[85px] lg:px-8 lg:py-24"
+      className="relative mx-auto overflow-hidden flex w-full max-w-[1509px] scroll-mt-32 flex-col items-center gap-10 px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:gap-[85px] lg:px-8 lg:py-24"
       id="erc-timeline"
     >
       {/* Ornament 3 Left */}
