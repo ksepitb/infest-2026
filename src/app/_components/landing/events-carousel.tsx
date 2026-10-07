@@ -29,7 +29,7 @@ const events: EventItem[] = [
     id: 3,
     title: "Event",
     description:
-      "Rangkaian acara INFEST 2026 terdiri dari workshop online interaktif sebagai pre-event, yang dilengkapi dengan diskusi dan studi kasus. Acara ini akan ditutup dengan seminar puncak yang diselenggarakan secara hybrid, menampilkan tiga sesi berbeda yang dibawakan oleh para pembicara berpengalaman.",
+      "Rangkaian acara INFEST 2026 terdiri dari workshop online interaktif sebagai pre-event, yang dilengkapi dengan diskusi dan studi kasus",
     image: "/images/carousel/main-event.JPG",
   },
   {

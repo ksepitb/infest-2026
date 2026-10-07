@@ -60,7 +60,7 @@ const eventLinks = [
 function ThemeDescription() {
   return (
     <>
-        Puncak dari rangkaian INFEST 2026. <span className="text-golden-gradient font-bold">The Financial Outlook Summit</span> adalah panggung eksklusif yang mempertemukan para praktisi top pasar modal dalam satu hari penuh diskusi tajam dan interaktif.
+        Puncak dari rangkaian INFEST 2026. <span className="text-golden-gradient font-bold">Mastering Capital Horizon</span> adalah panggung eksklusif yang mempertemukan para praktisi top pasar modal dalam satu hari penuh diskusi tajam dan interaktif.
       {" "}
     </>
   );
@@ -208,20 +208,19 @@ export default function EventsPage() {
           />
         </ScrollReveal>
         <Link
-          href=" https://bit.ly/PreEventINFEST2026"
+          href="#"
           className="font-poppins bg-gradient-5 text-infest-white glow-box-golden flex h-[64px] w-auto items-center justify-center rounded-[60px] px-10 text-lg leading-[117%] font-bold tracking-wide transition-all duration-300 hover:scale-[1.03] hover:brightness-110 active:scale-95 sm:text-xl md:h-[75px] md:gap-[12px] md:text-2xl"
         >
-          <span className="text-shadow-links">Pre-Event Registration</span>
-          <ArrowRight className="stroke-infest-white h-6 w-6 md:h-7 md:w-7" />
+          <span className="text-shadow-links">CLOSED</span>
         </Link>
-
-        <ScrollReveal delay={0.3}>
+            
+        <ScrollReveal delay={0.2}>
           <DayCard
             dayLabel="DAY 03"
             title="5 Days Trading Challenge"
             description={<>Theory means nothing without execution. Immediately following our workshop, the 5-Day Trading Challenge serves as the ultimate battleground to test your strategies in real-time market conditions. Stand out to win an exclusive prize up to Rp 1 million Rupiah ! Step up to the challenge, test your limits, and claim your place at the top
             <br></br>
-            <span className="text-golden-gradient">Guidebook : https://bit.ly/Guidebook5DaysTradingChallenge</span></>}
+            <span className="text-golden-gradient break-all">Guidebook : https://bit.ly/Guidebook5DaysTradingChallenge</span></>}
             imageSrc="/images/trading.webp"
             imageAlt="Trading Chart"
             imagePosition="right"
@@ -231,11 +230,10 @@ export default function EventsPage() {
         </ScrollReveal>
 
         <Link
-          href="https://bit.ly/5DaysTradingChallengeINFEST26"
+          href="#"
           className="font-poppins bg-gradient-5 text-infest-white glow-box-golden flex h-[64px] w-auto items-center justify-center rounded-[60px] px-10 text-lg leading-[117%] font-bold tracking-wide transition-all duration-300 hover:scale-[1.03] hover:brightness-110 active:scale-95 sm:text-xl md:h-[75px] md:gap-[12px] md:text-2xl"
         >
-          <span className="text-shadow-links">5D Trading Challenge Registration</span>
-          <ArrowRight className="stroke-infest-white h-6 w-6 md:h-7 md:w-7" />
+          <span className="text-shadow-links">CLOSED</span>
         </Link>
       </section>
 
@@ -248,18 +246,36 @@ export default function EventsPage() {
         src="/images/dotted1.svg"
         width={600}
       />
-      <section className="relative z-10 mx-auto mt-32 mb-24 flex max-w-6xl flex-col items-center gap-12 px-6 lg:gap-20">
+      <section className="relative z-10 mx-auto mt-24 mb-24 flex max-w-6xl flex-col items-center gap-12 px-6 lg:gap-20">
         <ScrollReveal>
           <SectionBadge>Main Event</SectionBadge>
         </ScrollReveal>
+        <ScrollReveal>
+          <Image
+          alt=""
+          aria-hidden="true"
+          className="shadow-[0_4px_4px_rgba(0,0,0,0.25)] rounded-[20px] object-contain"
+          height={500}
+          src="/images/main-event.png"
+          width={500}
+        />
+        </ScrollReveal>
+        <Link
+          href="https://bit.ly/RegistrationMainEventINFEST"
+          className="font-poppins bg-gradient-5 text-infest-white glow-box-golden flex h-[64px] w-auto items-center justify-center rounded-[60px] px-10 text-lg leading-[117%] font-bold tracking-wide transition-all duration-300 hover:scale-[1.03] hover:brightness-110 active:scale-95 sm:text-xl md:h-[75px] md:gap-[12px] md:text-2xl"
+        >
+          <span className="text-shadow-links">Sign Up Now</span>
+          <ArrowRight className="stroke-infest-white h-6 w-6 md:h-7 md:w-7" />
+        </Link>
 
         <GradientDivider>Theme of Event</GradientDivider>
 
         <ScrollReveal delay={0.2}>
           <ThemeDescriptionBox />
         </ScrollReveal>
+        
 
-        <ScrollReveal delay={0.3}>
+        {/* <ScrollReveal delay={0.3}>
           <DayCard
             dayLabel="SESI 1"
             title="Panel Discussion"
@@ -293,7 +309,7 @@ export default function EventsPage() {
             boxed
             variant="gradientBorder"
           />
-        </ScrollReveal>
+        </ScrollReveal> */}
       </section>
 
       {/* Date & Location */}

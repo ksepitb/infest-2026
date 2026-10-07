@@ -24,18 +24,18 @@ const FaqAccordion = dynamic(() =>
 const timelineData = [
   { title: "ERC Registration", date: "20 Aug - 3 Sep" },
   { title: "BCC Registration", date: "20 Aug - 18 Sep" },
-  { title: "Pre-Event Day 1", date: "12 September" },
-  { title: "Pre-Event Day 2", date: "13 September" },
-  { title: "5D Trading Challenge", date: "COMING SOON" },
+  { title: "Pre-Event Day 1", date: "12 Sep" },
+  { title: "Pre-Event Day 2", date: "13 Sep" },
+  { title: "5D Trading Challenge", date: "13-17 Sep" },
   {
     title: "Preliminary Round (ERC & BCC)",
     date: "09 Sep - 05 Oct",
   },
-  { title: "Deadline Paper Submission", date: "05 Oktober" },
-  { title: "Finalist Announcement (ERC & BCC)", date: "19-21 Oktober" },
-  { title: "Final Round (ERC & BCC)", date: "08 November" },
+  { title: "Deadline Paper Submission", date: "05 Oct" },
+  { title: "Finalist Announcement (ERC & BCC)", date: "19-21 Oct" },
+  { title: "Final Round (ERC & BCC)", date: "08 Nov" },
   { title: "Main Event", date: "08 Nov 2026" },
-  { title: "Gala Dinner & Awarding Night", date: "08 November" },
+  { title: "Gala Dinner & Awarding Night", date: "08 Nov" },
 ];
 
 const faqData = [
@@ -145,7 +145,7 @@ export default function Home() {
             />
 
             {/* Subtitle: investment festival */}
-            <p className="text-infest-white/80 glow-text-1 mt-10 text-base font-medium tracking-[0.2em] italic drop-shadow-[0_0_35px_rgba(240,74,201,0.5)] sm:text-xl md:text-2xl">
+            <p className="text-infest-white/80 glow-text-1 mt-10 text-base font-medium tracking-wider italic drop-shadow-[0_0_35px_rgba(240,74,201,0.5)] sm:text-xl md:text-2xl">
               I n v e s t m e n t &nbsp; F e s t i v a l
             </p>
           </div>
