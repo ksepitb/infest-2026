@@ -121,7 +121,7 @@ export default function ErcRulesPage() {
       />
 
       <RulesCard
-        registerHref="https://bit.ly/PendaftaranERCINFEST2026"
+        registerHref=""
         rules={ercRules}
         title="Ketentuan Umum ERC"
       />

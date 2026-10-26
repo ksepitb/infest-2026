@@ -89,14 +89,6 @@ export default function BccPage() {
           <span className="italic">preliminary stage</span>, dan{" "}
           <span className="italic">final round</span>.
         </p>
-
-        <Link
-          href="/register?comp=bcc"
-          className="font-poppins bg-gradient-5 text-infest-white glow-box-golden mt-12 flex h-[64px] w-auto items-center justify-center gap-3 rounded-[60px] px-10 text-lg leading-[117%] font-bold tracking-wide transition-all duration-300 hover:scale-[1.03] hover:brightness-110 active:scale-95 sm:text-xl md:h-[75px] md:gap-[12px] md:text-2xl"
-        >
-          <span className="text-shadow-links">Daftar Sekarang</span>
-          <ArrowRight className="stroke-infest-white h-6 w-6 md:h-7 md:w-7" />
-        </Link>
       </section>
 
       {/* Description of BCC */}

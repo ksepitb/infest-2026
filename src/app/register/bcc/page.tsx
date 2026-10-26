@@ -123,7 +123,7 @@ export default function BccRulesPage() {
       />
 
       <RulesCard
-        registerHref="https://bit.ly/PendaftaranBCCINFEST2026"
+        registerHref=""
         rules={bccRules}
         title="Ketentuan Umum BCC"
       />

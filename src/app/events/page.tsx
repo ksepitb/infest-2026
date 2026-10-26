@@ -207,12 +207,6 @@ export default function EventsPage() {
             boxed
           />
         </ScrollReveal>
-        <Link
-          href="#"
-          className="font-poppins bg-gradient-5 text-infest-white glow-box-golden flex h-[64px] w-auto items-center justify-center rounded-[60px] px-10 text-lg leading-[117%] font-bold tracking-wide transition-all duration-300 hover:scale-[1.03] hover:brightness-110 active:scale-95 sm:text-xl md:h-[75px] md:gap-[12px] md:text-2xl"
-        >
-          <span className="text-shadow-links">CLOSED</span>
-        </Link>
             
         <ScrollReveal delay={0.2}>
           <DayCard
@@ -229,12 +223,6 @@ export default function EventsPage() {
           />
         </ScrollReveal>
 
-        <Link
-          href="#"
-          className="font-poppins bg-gradient-5 text-infest-white glow-box-golden flex h-[64px] w-auto items-center justify-center rounded-[60px] px-10 text-lg leading-[117%] font-bold tracking-wide transition-all duration-300 hover:scale-[1.03] hover:brightness-110 active:scale-95 sm:text-xl md:h-[75px] md:gap-[12px] md:text-2xl"
-        >
-          <span className="text-shadow-links">CLOSED</span>
-        </Link>
       </section>
 
       {/* Main Event */}
@@ -261,7 +249,7 @@ export default function EventsPage() {
         />
         </ScrollReveal>
         <Link
-          href="https://bit.ly/RegistrationMainEventINFEST"
+          href="https://bit.ly/MaintEventINFEST2026"
           className="font-poppins bg-gradient-5 text-infest-white glow-box-golden flex h-[64px] w-auto items-center justify-center rounded-[60px] px-10 text-lg leading-[117%] font-bold tracking-wide transition-all duration-300 hover:scale-[1.03] hover:brightness-110 active:scale-95 sm:text-xl md:h-[75px] md:gap-[12px] md:text-2xl"
         >
           <span className="text-shadow-links">Sign Up Now</span>
